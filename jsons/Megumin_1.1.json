@@ -1,0 +1,110 @@
+{
+    "Armors": {
+        "Armor_826_Head": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Head",
+            "defence": "",
+            "desc": "Megumin Hat\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_826_Head",
+            "name_desc": "Megumin Hat",
+            "physics": "Armor_001_Head",
+            "price": "200",
+            "profile": "ArmorHead",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_826_Lower": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Lower",
+            "defence": "",
+            "desc": "Megumin Boots\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_826_Lower",
+            "name_desc": "Megumin Boots",
+            "physics": "Armor_001_Head",
+            "price": "200",
+            "profile": "ArmorLower",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_826_Upper": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Upper",
+            "defence": "",
+            "desc": "Megumin Skirt\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_826_Upper",
+            "name_desc": "Megumin Skirt",
+            "physics": "Armor_001_Upper",
+            "price": "200",
+            "profile": "ArmorUpper",
+            "series": "",
+            "slink": ""
+        }
+    },
+    "Weapons": {
+        "Weapon_Sword_826": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "anims": false,
+            "attack": "20",
+            "base": "Weapon_Sword_060",
+            "desc": "Megumin Staff\n",
+            "dur": "",
+            "elink": "",
+            "islifeinfinite": "False",
+            "ismagicinf": "False",
+            "magic": "GuardianMiniFinalBeam",
+            "magicgravity": "",
+            "magicpower": "",
+            "magicradius": "",
+            "magicrange": "",
+            "magicspeed": "",
+            "name": "Weapon_Sword_826",
+            "name_desc": "Megumin Staff",
+            "physics": "",
+            "price": "200",
+            "profile": "",
+            "sheath": "Weapon_Sheath_060",
+            "slink": "",
+            "subtype": ""
+        }
+    }
+}

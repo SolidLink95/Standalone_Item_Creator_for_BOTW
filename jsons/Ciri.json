@@ -1,0 +1,77 @@
+{
+    "Armors": {
+        "Armor_829_Head": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Head",
+            "defence": "10",
+            "desc": "Ciri Hair\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_829_Head",
+            "name_desc": "Ciri Hair",
+            "physics": "Armor_Default_Head",
+            "price": "11",
+            "profile": "ArmorHead",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_829_Lower": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Lower",
+            "defence": "10",
+            "desc": "Ciri Trousers\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_829_Lower",
+            "name_desc": "Ciri Trousers",
+            "physics": "",
+            "price": "11",
+            "profile": "ArmorLower",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_829_Upper": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Upper",
+            "defence": "10",
+            "desc": "Ciri Shirt\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_829_Upper",
+            "name_desc": "Ciri Shirt",
+            "physics": "",
+            "price": "11",
+            "profile": "ArmorUpper",
+            "series": "",
+            "slink": ""
+        }
+    },
+    "Weapons": {}
+}

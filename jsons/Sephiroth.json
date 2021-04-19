@@ -1,0 +1,142 @@
+{
+    "Armors": {
+        "Armor_840_Head": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Head",
+            "defence": "15",
+            "desc": "Sephiroth Hair\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_840_Head",
+            "name_desc": "Sephiroth Hair",
+            "physics": "Armor_Default_Head",
+            "price": "11",
+            "profile": "ArmorHead",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_840_Lower": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Lower",
+            "defence": "15",
+            "desc": "Sephiroth Pants\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_840_Lower",
+            "name_desc": "Sephiroth Pants",
+            "physics": "Armor_180_Upper",
+            "price": "11",
+            "profile": "ArmorLower",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_840_Upper": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Upper",
+            "defence": "15",
+            "desc": "Sephiroth Coat\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_840_Upper",
+            "name_desc": "Sephiroth Coat",
+            "physics": "Armor_171_Upper",
+            "price": "11",
+            "profile": "ArmorUpper",
+            "series": "",
+            "slink": ""
+        }
+    },
+    "Weapons": {
+        "Weapon_Shield_540": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "anims": false,
+            "attack": "25",
+            "base": "Weapon_Shield_002",
+            "desc": "Sephiroth Sword\n",
+            "dur": "99",
+            "elink": "",
+            "islifeinfinite": "False",
+            "ismagicinf": "False",
+            "magic": "",
+            "magicgravity": "",
+            "magicpower": "",
+            "magicradius": "",
+            "magicrange": "",
+            "magicspeed": "",
+            "name": "Weapon_Shield_540",
+            "name_desc": "Sephiroth Sword",
+            "physics": "",
+            "price": "11",
+            "profile": "WeaponShield",
+            "sheath": "",
+            "slink": "",
+            "subtype": ""
+        },
+        "Weapon_Sword_540": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "anims": false,
+            "attack": "25",
+            "base": "Weapon_Sword_001",
+            "desc": "Sephiroth Sword\n",
+            "dur": "99",
+            "elink": "",
+            "islifeinfinite": "False",
+            "ismagicinf": "False",
+            "magic": "",
+            "magicgravity": "",
+            "magicpower": "",
+            "magicradius": "",
+            "magicrange": "",
+            "magicspeed": "",
+            "name": "Weapon_Sword_540",
+            "name_desc": "Sephiroth Sword",
+            "physics": "",
+            "price": "11",
+            "profile": "WeaponSmallSword",
+            "sheath": "",
+            "slink": "",
+            "subtype": ""
+        }
+    }
+}

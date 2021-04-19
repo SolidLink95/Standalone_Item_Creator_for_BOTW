@@ -1,0 +1,77 @@
+{
+    "Armors": {
+        "Armor_760_Head": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Head",
+            "defence": "11",
+            "desc": "Monk's Hat\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "Priest_Boss_Normal",
+            "korok_mask": false,
+            "name": "Armor_760_Head",
+            "name_desc": "Monk's Hat",
+            "physics": "Priest_Boss_Normal",
+            "price": "10",
+            "profile": "ArmorHead",
+            "series": "",
+            "slink": "Priest_Boss_Normal"
+        },
+        "Armor_760_Lower": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Lower",
+            "defence": "11",
+            "desc": "Monk's Pants\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "Priest_Boss_Normal",
+            "korok_mask": false,
+            "name": "Armor_760_Lower",
+            "name_desc": "Monk's Pants",
+            "physics": "Priest_Boss_Normal",
+            "price": "10",
+            "profile": "ArmorLower",
+            "series": "",
+            "slink": "Priest_Boss_Normal"
+        },
+        "Armor_760_Upper": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Upper",
+            "defence": "11",
+            "desc": "Monk's Necklace\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "Priest_Boss_Normal",
+            "korok_mask": false,
+            "name": "Armor_760_Upper",
+            "name_desc": "Monk's Necklace",
+            "physics": "Priest_Boss_Normal",
+            "price": "10",
+            "profile": "ArmorUpper",
+            "series": "",
+            "slink": "Priest_Boss_Normal"
+        }
+    },
+    "Weapons": {}
+}

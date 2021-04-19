@@ -1,0 +1,137 @@
+{
+    "Armors": {
+        "Armor_771_Head": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Head",
+            "defence": "10",
+            "desc": "Young Link Hat\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "name": "Armor_771_Head",
+            "name_desc": "Young Link Hat",
+            "physics": "",
+            "price": "10",
+            "profile": "ArmorHead",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_771_Lower": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Lower",
+            "defence": "10",
+            "desc": "Young Link Boots\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "name": "Armor_771_Lower",
+            "name_desc": "Young Link Boots",
+            "physics": "",
+            "price": "10",
+            "profile": "ArmorLower",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_771_Upper": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Upper",
+            "defence": "10",
+            "desc": "Young Link Tunic\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "name": "Armor_771_Upper",
+            "name_desc": "Young Link Tunic",
+            "physics": "",
+            "price": "10",
+            "profile": "ArmorUpper",
+            "series": "",
+            "slink": ""
+        }
+    },
+    "Weapons": {
+        "Weapon_Shield_771": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "attack": "20",
+            "base": "Weapon_Shield_001",
+            "desc": "Kokiri Shield\n",
+            "dur": "99",
+            "elink": "",
+            "islifeinfinite": "False",
+            "ismagicinf": "False",
+            "magic": "",
+            "magicgravity": "",
+            "magicpower": "",
+            "magicradius": "",
+            "magicrange": "",
+            "magicspeed": "",
+            "name": "Weapon_Shield_771",
+            "name_desc": "Kokiri Shield",
+            "physics": "",
+            "price": "200",
+            "profile": "WeaponShield",
+            "sheath": "",
+            "slink": "",
+            "subtype": ""
+        },
+        "Weapon_Sword_771": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "attack": "20",
+            "base": "Weapon_Sword_001",
+            "desc": "Kokiri Sword\n",
+            "dur": "99",
+            "elink": "",
+            "islifeinfinite": "False",
+            "ismagicinf": "False",
+            "magic": "",
+            "magicgravity": "",
+            "magicpower": "",
+            "magicradius": "",
+            "magicrange": "",
+            "magicspeed": "",
+            "name": "Weapon_Sword_771",
+            "name_desc": "Kokiri Sword",
+            "physics": "",
+            "price": "200",
+            "profile": "WeaponSmallSword",
+            "sheath": "custom",
+            "slink": "",
+            "subtype": ""
+        }
+    }
+}

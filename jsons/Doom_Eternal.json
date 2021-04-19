@@ -1,0 +1,110 @@
+{
+    "Armors": {
+        "Armor_989_Head": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Head",
+            "defence": "11",
+            "desc": "Doom Eternal Helmet\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_989_Head",
+            "name_desc": "Doom Eternal Helmet",
+            "physics": "",
+            "price": "11",
+            "profile": "ArmorHead",
+            "series": "",
+            "slink": "Armor_Head_MetalHeavy"
+        },
+        "Armor_989_Lower": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Lower",
+            "defence": "11",
+            "desc": "Doom Eternal Lower Armor\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_989_Lower",
+            "name_desc": "Doom Eternal Lower Armor",
+            "physics": "",
+            "price": "11",
+            "profile": "ArmorLower",
+            "series": "",
+            "slink": "Armor_Lower_MetalHeavy"
+        },
+        "Armor_989_Upper": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Upper",
+            "defence": "11",
+            "desc": "Doom Eternal Armor\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_989_Upper",
+            "name_desc": "Doom Eternal Armor",
+            "physics": "",
+            "price": "10",
+            "profile": "ArmorUpper",
+            "series": "",
+            "slink": "Armor_Upper_MetalHeavy"
+        }
+    },
+    "Weapons": {
+        "Weapon_Sword_989": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "anims": false,
+            "attack": "35",
+            "base": "Weapon_Sword_023",
+            "desc": "Crucible\n",
+            "dur": "",
+            "elink": "",
+            "islifeinfinite": "True",
+            "ismagicinf": "False",
+            "magic": "",
+            "magicgravity": "",
+            "magicpower": "",
+            "magicradius": "",
+            "magicrange": "",
+            "magicspeed": "",
+            "name": "Weapon_Sword_989",
+            "name_desc": "Crucible",
+            "physics": "",
+            "price": "11",
+            "profile": "WeaponSmallSword",
+            "sheath": "",
+            "slink": "",
+            "subtype": ""
+        }
+    }
+}

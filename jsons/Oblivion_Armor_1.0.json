@@ -1,0 +1,74 @@
+{
+    "Armors": {
+        "Armor_759_Head": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_011_Head",
+            "defence": "10",
+            "desc": "Oblivion's guard helmet\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "name": "Armor_759_Head",
+            "name_desc": "Oblivion's guard helmet",
+            "physics": "",
+            "price": "200",
+            "profile": "ArmorHead",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_759_Lower": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_011_Lower",
+            "defence": "10",
+            "desc": "Oblivion's guard trousers\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "name": "Armor_759_Lower",
+            "name_desc": "Oblivion's guard trousers",
+            "physics": "",
+            "price": "200",
+            "profile": "ArmorLower",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_759_Upper": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_011_Upper",
+            "defence": "10",
+            "desc": "Oblivion's Guard Armor\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "name": "Armor_759_Upper",
+            "name_desc": "Oblivion's Guard Armor",
+            "physics": "Armor_171_Upper",
+            "price": "200",
+            "profile": "ArmorUpper",
+            "series": "",
+            "slink": ""
+        }
+    },
+    "Weapons": {}
+}

@@ -1,0 +1,77 @@
+{
+    "Armors": {
+        "Armor_823_Head": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Head",
+            "defence": "10",
+            "desc": "asf\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": true,
+            "name": "Armor_823_Head",
+            "name_desc": "asd",
+            "physics": "Armor_001_Head",
+            "price": "200",
+            "profile": "ArmorHead",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_823_Lower": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Lower",
+            "defence": "10",
+            "desc": "asf\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": "",
+            "name": "Armor_823_Lower",
+            "name_desc": "asd",
+            "physics": "",
+            "price": "200",
+            "profile": "ArmorLower",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_823_Upper": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Upper",
+            "defence": "10",
+            "desc": "asf\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": "",
+            "name": "Armor_823_Upper",
+            "name_desc": "asd",
+            "physics": "",
+            "price": "200",
+            "profile": "ArmorUpper",
+            "series": "",
+            "slink": ""
+        }
+    },
+    "Weapons": {}
+}

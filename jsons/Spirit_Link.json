@@ -1,0 +1,77 @@
+{
+    "Armors": {
+        "Armor_886_Head": {
+            "Crafting": {
+                "item1": "Item_Fruit_K",
+                "item1_n": "1",
+                "item2": "Item_Fruit_A",
+                "item2_n": "1",
+                "item3": "Item_Enemy_01",
+                "item3_n": "1"
+            },
+            "base": "Armor_225_Head",
+            "defence": "10",
+            "desc": "Spirit Hat",
+            "effect": "None",
+            "effect_lv": "0",
+            "elink": "GameRomHorseNushi",
+            "korok_mask": false,
+            "name": "Armor_886_Head",
+            "name_desc": "Spirit Hat",
+            "physics": "",
+            "price": "10",
+            "profile": "ArmorHead",
+            "series": "",
+            "slink": "HorseNushi"
+        },
+        "Armor_886_Lower": {
+            "Crafting": {
+                "item1": "Item_Fruit_K",
+                "item1_n": "1",
+                "item2": "Item_Fruit_A",
+                "item2_n": "1",
+                "item3": "Item_Enemy_01",
+                "item3_n": "1"
+            },
+            "base": "Armor_225_Lower",
+            "defence": "10",
+            "desc": "Spirit Trousers",
+            "effect": "None",
+            "effect_lv": "0",
+            "elink": "GameRomHorseNushi",
+            "korok_mask": false,
+            "name": "Armor_886_Lower",
+            "name_desc": "Spirit Trousers",
+            "physics": "",
+            "price": "10",
+            "profile": "ArmorLower",
+            "series": "",
+            "slink": "HorseNushi"
+        },
+        "Armor_886_Upper": {
+            "Crafting": {
+                "item1": "Item_Fruit_K",
+                "item1_n": "1",
+                "item2": "Item_Fruit_A",
+                "item2_n": "1",
+                "item3": "Item_Enemy_01",
+                "item3_n": "1"
+            },
+            "base": "Armor_225_Upper",
+            "defence": "10",
+            "desc": "Spirit Tunic",
+            "effect": "None",
+            "effect_lv": "0",
+            "elink": "GameRomHorseNushi",
+            "korok_mask": false,
+            "name": "Armor_886_Upper",
+            "name_desc": "Spirit Tunic",
+            "physics": "",
+            "price": "10",
+            "profile": "ArmorUpper",
+            "series": "",
+            "slink": "HorseNushi"
+        }
+    },
+    "Weapons": {}
+}

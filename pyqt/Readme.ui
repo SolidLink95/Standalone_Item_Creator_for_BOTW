@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1057</width>
+    <height>881</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../res/icon.ico</normaloff>../res/icon.ico</iconset>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>-11</x>
+     <y>-11</y>
+     <width>1101</width>
+     <height>941</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar {
+	
+	background-color: rgb(96, 116, 165);
+	/*color: white;*/
+	color: black;
+	border-style: none;
+	text-align: center;
+	border-radius: 10px;
+}
+
+QAbstractScrollArea{ 
+	background-color: rgb(149, 165, 166);
+	border: none;
+
+}
+
+QProgressBar::chunk {
+	border-radius: 10px;
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.534, x2:1, y2:0.522, stop:0 rgba(46, 68, 91, 255), stop:1 rgba(101, 151, 200, 255));
+}
+
+QTabWidget {
+	background-color: rgb(91, 129, 165);
+	color: black;
+	border-color: rgb(60, 85, 109);
+	gridline-color:  rgb(60, 85, 109);
+	font: 8pt &quot;Segoe MDL2 Assets&quot;;
+}
+
+QListWidget {
+	background-color: rgb(79, 104, 191);
+	color: white;
+	border-color: rgb(60, 85, 109);
+	gridline-color:  rgb(60, 85, 109);
+font: 10pt &quot;Segoe MDL2 Assets&quot;;
+}
+QLineEdit {
+	background-color: rgb(149, 165, 166);
+	color: white;
+	border: none;
+font: 10pt &quot;Segoe MDL2 Assets&quot;;
+}
+
+QTabBar::tab {
+	background: rgb(81, 85, 93);
+	color: white;
+}
+ QTabBar::tab:!selected {
+	background-color: rgb(138, 138, 138);
+	color: white;
+    }
+
+QFrame{
+	background-color: rgb(47, 49, 54);
+	color: white;
+	
+	font: 10pt &quot;Segoe MDL2 Assets&quot;;
+}
+
+QTextEdit {
+	background-color: rgb(149, 165, 166);
+	font: 10pt &quot;Segoe MDL2 Assets&quot;;
+}
+
+QLabel {
+font: 10pt &quot;Segoe MDL2 Assets&quot;;
+}
+
+QComboBox {
+	background-color: rgb(149, 165, 166);
+	border: none;
+	font: 10pt &quot;Segoe MDL2 Assets&quot;;
+	color: white;
+}
+
+    QComboBox QAbstractItemView::item
+    {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+QRadioButton {
+	color: white;
+	border-color: rgb(60, 85, 109);
+	gridline-color:  rgb(60, 85, 109);
+	font: 10pt &quot;Segoe MDL2 Assets&quot;;
+}
+QCheckBox {
+	color: white;
+	border-color: rgb(60, 85, 109);
+	gridline-color:  rgb(60, 85, 109);
+	font: 10pt &quot;Segoe MDL2 Assets&quot;;
+}
+QTabWidget::pane { 
+border: 1; 
+border-color: rgb(255, 0, 0);
+}
+
+
+QPushButton {
+	background-color: rgb(255, 173, 0);
+border-radius: 10px;
+font: 11pt &quot;Segoe MDL2 Assets&quot;;
+	border: none;
+font-weight: bold
+}
+
+QPushButton::pressed
+                             {
+                             background-color : rgb(244, 207, 0);
+                             }
+QMenuBar::item:pressed
+                             {
+                             background-color : rgb(149, 165, 166);
+                             }
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QTextBrowser" name="readme">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>1041</width>
+      <height>861</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,110 @@
+{
+    "Armors": {
+        "Armor_832_Lower": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_011_Lower",
+            "defence": "15",
+            "desc": "Madara's Lower Armor\n",
+            "effect": "AttackUp",
+            "effect_lv": "1",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_832_Lower",
+            "name_desc": "Madara's Lower Armor",
+            "physics": "",
+            "price": "200",
+            "profile": "ArmorLower",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_832_Upper": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_011_Upper",
+            "defence": "15",
+            "desc": "Madara's Armor\n",
+            "effect": "AttackUp",
+            "effect_lv": "1",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_832_Upper",
+            "name_desc": "Madara's Armor",
+            "physics": "",
+            "price": "200",
+            "profile": "ArmorUpper",
+            "series": "",
+            "slink": ""
+        },
+		"Armor_832_Head": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_011_Head",
+            "defence": "15",
+            "desc": "Madara's Rinnegan\n",
+            "effect": "AttackUp",
+            "effect_lv": "1",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_832_Head",
+            "name_desc": "Madara's Rinnegan",
+            "physics": "",
+            "price": "200",
+            "profile": "ArmorHead",
+            "series": "",
+            "slink": ""
+        }
+    },
+    "Weapons": {
+        "Weapon_Lsword_831": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "anims": false,
+            "attack": "50",
+            "base": "Weapon_Lsword_074",
+            "desc": "Madara's gunbai\n",
+            "dur": "99",
+            "elink": "Weapon_Lsword_033",
+            "islifeinfinite": "True",
+            "ismagicinf": "True",
+            "magic": "LynelFlame",
+            "magicgravity": "0.01",
+            "magicpower": "100",
+            "magicradius": "1",
+            "magicrange": "999",
+            "magicspeed": "45",
+            "name": "Weapon_Lsword_831",
+            "name_desc": "Madara's gunbai",
+            "physics": "",
+            "price": "200",
+            "profile": "WeaponLargeSword",
+            "sheath": "custom",
+            "slink": "Weapon_Lsword_033",
+            "subtype": ""
+        }
+    }
+}

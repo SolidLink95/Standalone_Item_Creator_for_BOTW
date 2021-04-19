@@ -1,0 +1,37 @@
+{
+    "Armors": {},
+    "Weapons": {
+        "Weapon_Sword_299": {
+            "Crafting": {
+                "item1": "Item_Fruit_K",
+                "item1_n": "1",
+                "item2": "Item_Fruit_A",
+                "item2_n": "1",
+                "item3": "Item_Enemy_01",
+                "item3_n": "1"
+            },
+            "anims": false,
+            "attack": "0",
+            "base": "Weapon_Sword_060",
+            "desc": "Wolf Link Clone Spawner",
+            "dur": "",
+            "elink": "Dummy",
+            "islifeinfinite": false,
+            "ismagicinf": false,
+            "magic": "",
+            "magicgravity": "",
+            "magicpower": "",
+            "magicradius": "",
+            "magicrange": "",
+            "magicspeed": "",
+            "name": "Weapon_Sword_299",
+            "name_desc": "Wolf Link Clone Spawner",
+            "physics": "",
+            "price": "10",
+            "profile": "",
+            "sheath": "",
+            "slink": "Dummy",
+            "subtype": ""
+        }
+    }
+}

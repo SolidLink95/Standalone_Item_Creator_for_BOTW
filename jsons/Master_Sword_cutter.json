@@ -1,0 +1,37 @@
+{
+    "Armors": {},
+    "Weapons": {
+        "Weapon_Sword_777": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "anims": false,
+            "attack": "60",
+            "base": "Weapon_Sword_060",
+            "desc": "Master Sword\n",
+            "dur": "99",
+            "elink": "Weapon_Sword_070",
+            "islifeinfinite": "True",
+            "ismagicinf": "True",
+            "magic": "AssassinWindCutter_playerbeam",
+            "magicgravity": "0.01",
+            "magicpower": "70",
+            "magicradius": "1.0",
+            "magicrange": "999",
+            "magicspeed": "55",
+            "name": "Weapon_Sword_777",
+            "name_desc": "Master Sword",
+            "physics": "",
+            "price": "200",
+            "profile": "WeaponSmallSword",
+            "sheath": "Weapon_Sheath_070",
+            "slink": "Weapon_Sword_070",
+            "subtype": ""
+        }
+    }
+}

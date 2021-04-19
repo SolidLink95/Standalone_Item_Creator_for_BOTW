@@ -1,0 +1,77 @@
+{
+    "Armors": {
+        "Armor_884_Head": {
+            "Crafting": {
+                "item1": "Item_Fruit_K",
+                "item1_n": "1",
+                "item2": "Item_Fruit_A",
+                "item2_n": "1",
+                "item3": "Item_Enemy_18",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Head",
+            "defence": "10",
+            "desc": "Kakashi's Mask",
+            "effect": "Quietness",
+            "effect_lv": "1",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_884_Head",
+            "name_desc": "Kakashi's Mask",
+            "physics": "",
+            "price": "10",
+            "profile": "ArmorHead",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_884_Lower": {
+            "Crafting": {
+                "item1": "Item_Fruit_K",
+                "item1_n": "1",
+                "item2": "Item_Fruit_A",
+                "item2_n": "1",
+                "item3": "Item_Enemy_18",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Lower",
+            "defence": "10",
+            "desc": "Kakashi's Trousers",
+            "effect": "Quietness",
+            "effect_lv": "1",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_884_Lower",
+            "name_desc": "Kakashi's Trousers",
+            "physics": "",
+            "price": "10",
+            "profile": "ArmorLower",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_884_Upper": {
+            "Crafting": {
+                "item1": "Item_Fruit_K",
+                "item1_n": "1",
+                "item2": "Item_Fruit_A",
+                "item2_n": "1",
+                "item3": "Item_Enemy_18",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Upper",
+            "defence": "10",
+            "desc": "Kakashi's Armor",
+            "effect": "Quietness",
+            "effect_lv": "1",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_884_Upper",
+            "name_desc": "Kakashi's Armor",
+            "physics": "",
+            "price": "10",
+            "profile": "ArmorUpper",
+            "series": "",
+            "slink": ""
+        }
+    },
+    "Weapons": {}
+}

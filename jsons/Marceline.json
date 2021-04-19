@@ -1,0 +1,77 @@
+{
+    "Armors": {
+        "Armor_840_Head": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Head",
+            "defence": "10",
+            "desc": "Marceline's hair\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_840_Head",
+            "name_desc": "Marceline's hair",
+            "physics": "Armor_Default_Head",
+            "price": "11",
+            "profile": "ArmorHead",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_840_Lower": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Lower",
+            "defence": "10",
+            "desc": "Marceline's boots\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_840_Lower",
+            "name_desc": "Marceline's boots",
+            "physics": "",
+            "price": "11",
+            "profile": "ArmorLower",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_840_Upper": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Upper",
+            "defence": "10",
+            "desc": "Marceline's shirt\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_840_Upper",
+            "name_desc": "Marceline's shirt",
+            "physics": "Armor_180_Upper",
+            "price": "11",
+            "profile": "ArmorUpper",
+            "series": "",
+            "slink": ""
+        }
+    },
+    "Weapons": {}
+}

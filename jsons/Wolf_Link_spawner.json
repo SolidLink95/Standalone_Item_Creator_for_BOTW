@@ -1,0 +1,37 @@
+{
+    "Armors": {},
+    "Weapons": {
+        "Weapon_Sword_300": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "anims": false,
+            "attack": "0",
+            "base": "Weapon_Sword_060",
+            "desc": "Wolf Link Spawner\n",
+            "dur": "99",
+            "elink": "Dummy",
+            "islifeinfinite": "True",
+            "ismagicinf": "True",
+            "magic": "WolfLink",
+            "magicgravity": "",
+            "magicpower": "",
+            "magicradius": "",
+            "magicrange": "",
+            "magicspeed": "",
+            "name": "Weapon_Sword_300",
+            "name_desc": "Wolf Link Spawner",
+            "physics": "",
+            "price": "10",
+            "profile": "WeaponSmallSword",
+            "sheath": "",
+            "slink": "Dummy",
+            "subtype": ""
+        }
+    }
+}

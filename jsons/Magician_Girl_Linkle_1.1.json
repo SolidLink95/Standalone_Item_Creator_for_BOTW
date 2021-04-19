@@ -1,0 +1,142 @@
+{
+    "Armors": {
+        "Armor_827_Head": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Head",
+            "defence": "10",
+            "desc": "Dark Magician Girl Hat\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_827_Head",
+            "name_desc": "Dark Magician Girl Hat",
+            "physics": "",
+            "price": "10",
+            "profile": "ArmorHead",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_827_Lower": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Lower",
+            "defence": "10",
+            "desc": "Dark Magician Girl Skirt\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_827_Lower",
+            "name_desc": "Dark Magician Girl Skirt",
+            "physics": "Armor_001_Upper",
+            "price": "10",
+            "profile": "ArmorLower",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_827_Upper": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_005_Upper",
+            "defence": "10",
+            "desc": "Dark Magician Girl Robes\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "korok_mask": false,
+            "name": "Armor_827_Upper",
+            "name_desc": "Dark Magician Girl Robes",
+            "physics": "Armor_001_Head",
+            "price": "10",
+            "profile": "ArmorUpper",
+            "series": "",
+            "slink": ""
+        }
+    },
+    "Weapons": {
+        "Weapon_Shield_527": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "anims": false,
+            "attack": "15",
+            "base": "Weapon_Shield_002",
+            "desc": "Magic Book\n",
+            "dur": "99",
+            "elink": "",
+            "islifeinfinite": "False",
+            "ismagicinf": "False",
+            "magic": "",
+            "magicgravity": "",
+            "magicpower": "",
+            "magicradius": "",
+            "magicrange": "",
+            "magicspeed": "",
+            "name": "Weapon_Shield_527",
+            "name_desc": "Magic Book",
+            "physics": "",
+            "price": "10",
+            "profile": "WeaponShield",
+            "sheath": "",
+            "slink": "",
+            "subtype": ""
+        },
+        "Weapon_Sword_833": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "anims": false,
+            "attack": "10",
+            "base": "Weapon_Sword_060",
+            "desc": "Dark Magician Girl Wand\n",
+            "dur": "",
+            "elink": "Weapon_Sword_062",
+            "islifeinfinite": "False",
+            "ismagicinf": "True",
+            "magic": "Lizalfos_ElectricWaterBall",
+            "magicgravity": "0.01",
+            "magicpower": "50",
+            "magicradius": "1",
+            "magicrange": "999",
+            "magicspeed": "55",
+            "name": "Weapon_Sword_833",
+            "name_desc": "Dark Magician Girl Wand",
+            "physics": "",
+            "price": "10",
+            "profile": "WeaponSmallSword",
+            "sheath": "",
+            "slink": "Weapon_Sword_Elec",
+            "subtype": ""
+        }
+    }
+}

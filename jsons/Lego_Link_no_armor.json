@@ -1,0 +1,71 @@
+{
+    "Armors": {
+        "Armor_590_Head": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_171_Head",
+            "defence": "",
+            "desc": "Lego Link Head\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "name": "Armor_590_Head",
+            "name_desc": "Lego Link Head",
+            "price": "200",
+            "profile": "ArmorHead",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_590_Lower": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_171_Lower",
+            "defence": "",
+            "desc": "Lego Link Underwear\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "name": "Armor_590_Lower",
+            "name_desc": "Lego Link Underwear",
+            "price": "200",
+            "profile": "ArmorLower",
+            "series": "",
+            "slink": ""
+        },
+        "Armor_590_Upper": {
+            "Crafting": {
+                "item1": "Item_Enemy_28",
+                "item1_n": "1",
+                "item2": "Item_Enemy_29",
+                "item2_n": "1",
+                "item3": "Item_Enemy_26",
+                "item3_n": "1"
+            },
+            "base": "Armor_171_Upper",
+            "defence": "",
+            "desc": "Lego Link Chest\n",
+            "effect": "",
+            "effect_lv": "",
+            "elink": "",
+            "name": "Armor_590_Upper",
+            "name_desc": "Lego Link Chest",
+            "price": "200",
+            "profile": "ArmorUpper",
+            "series": "",
+            "slink": ""
+        }
+    },
+    "Weapons": {}
+}
