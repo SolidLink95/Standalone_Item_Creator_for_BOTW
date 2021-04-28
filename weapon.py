@@ -143,9 +143,11 @@ class Weapon:
         if self.subtype and self.profile != 'WeaponShield':
             pio.objects[self.profile.replace('Weapon', '')].params["WeaponSubType"] = oead.aamp.Parameter(FixedSafeString32(self.subtype))
 
-        if self.profile != 'WeaponShield' and self.profile:
+        if self.profile != 'WeaponShield' and self.profile and not 'shield' in self.name.lower():
             if self.sheath == 'custom':
                 sheath = 'Weapon_Sheath_' + self.name.split('_')[-1]
+            elif self.sheath == 'none':
+                sheath = ''
             else:
                 sheath = self.sheath
             print('Sheath ' + sheath)
@@ -199,8 +201,9 @@ class Weapon:
     def do_sheath(self):
         if not 'Weapon' in self.profile: return
         if 'Shield' in self.profile: return
-        print(f'Creating {self.sheath} for {self.name}')
+        
         if self.sheath == 'custom':
+            print(f'Creating {self.sheath} for {self.name}')
             sheath = Sheath('Weapon_Sheath_001', self.name, self.pack_name)
             sheath.create_sheath()
     
