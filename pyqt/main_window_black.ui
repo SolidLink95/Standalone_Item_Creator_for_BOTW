@@ -711,7 +711,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
              <x>330</x>
              <y>40</y>
              <width>311</width>
-             <height>161</height>
+             <height>191</height>
             </rect>
            </property>
            <layout class="QFormLayout" name="formLayout_2">
@@ -770,28 +770,28 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="0">
+            <item row="3" column="0">
              <widget class="QLabel" name="label">
               <property name="text">
                <string>Bfres name</string>
               </property>
              </widget>
             </item>
-            <item row="3" column="0">
+            <item row="4" column="0">
              <widget class="QLabel" name="label_2">
               <property name="text">
                <string>Model name</string>
               </property>
              </widget>
             </item>
-            <item row="4" column="0">
+            <item row="5" column="0">
              <widget class="QLabel" name="label_25">
               <property name="text">
                <string/>
               </property>
              </widget>
             </item>
-            <item row="2" column="1">
+            <item row="3" column="1">
              <widget class="QLineEdit" name="bfres">
               <property name="minimumSize">
                <size>
@@ -807,8 +807,8 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
               </property>
              </widget>
             </item>
-            <item row="3" column="1">
-             <widget class="QLineEdit" name="model">
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="mainmodel">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -823,10 +823,33 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
               </property>
              </widget>
             </item>
-            <item row="4" column="1">
+            <item row="5" column="1">
              <widget class="QCheckBox" name="korok_mask">
               <property name="text">
                <string>Custom head armor animations</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_27">
+              <property name="text">
+               <string>Bfres template</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="bfres_template">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>25</height>
+               </size>
               </property>
              </widget>
             </item>
@@ -836,7 +859,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
            <property name="geometry">
             <rect>
              <x>330</x>
-             <y>301</y>
+             <y>290</y>
              <width>311</width>
              <height>211</height>
             </rect>
@@ -1319,19 +1342,6 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
             <string>Add weapon</string>
            </property>
           </widget>
-          <widget class="QLabel" name="label_60">
-           <property name="geometry">
-            <rect>
-             <x>320</x>
-             <y>290</y>
-             <width>201</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Crafting requirements</string>
-           </property>
-          </widget>
           <widget class="QWidget" name="formLayoutWidget_6">
            <property name="geometry">
             <rect>
@@ -1539,55 +1549,55 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
            <property name="geometry">
             <rect>
              <x>330</x>
-             <y>310</y>
+             <y>290</y>
              <width>311</width>
-             <height>191</height>
+             <height>211</height>
             </rect>
            </property>
            <layout class="QFormLayout" name="formLayout_11">
-            <item row="0" column="0">
+            <item row="1" column="0">
              <widget class="QLabel" name="label_55">
               <property name="text">
                <string>First item name</string>
               </property>
              </widget>
             </item>
-            <item row="1" column="0">
+            <item row="2" column="0">
              <widget class="QLabel" name="label_76">
               <property name="text">
                <string>First item amount</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="0">
+            <item row="3" column="0">
              <widget class="QLabel" name="label_77">
               <property name="text">
                <string>Second item name</string>
               </property>
              </widget>
             </item>
-            <item row="3" column="0">
+            <item row="4" column="0">
              <widget class="QLabel" name="label_78">
               <property name="text">
                <string>Second item amount</string>
               </property>
              </widget>
             </item>
-            <item row="5" column="0">
+            <item row="6" column="0">
              <widget class="QLabel" name="label_79">
               <property name="text">
                <string>Third item amount</string>
               </property>
              </widget>
             </item>
-            <item row="4" column="0">
+            <item row="5" column="0">
              <widget class="QLabel" name="label_80">
               <property name="text">
                <string>Third item name</string>
               </property>
              </widget>
             </item>
-            <item row="1" column="1">
+            <item row="2" column="1">
              <widget class="QLineEdit" name="item1_n_2">
               <property name="minimumSize">
                <size>
@@ -1603,7 +1613,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
               </property>
              </widget>
             </item>
-            <item row="3" column="1">
+            <item row="4" column="1">
              <widget class="QLineEdit" name="item2_n_2">
               <property name="minimumSize">
                <size>
@@ -1619,7 +1629,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
               </property>
              </widget>
             </item>
-            <item row="5" column="1">
+            <item row="6" column="1">
              <widget class="QLineEdit" name="item3_n_2">
               <property name="minimumSize">
                <size>
@@ -1635,7 +1645,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
               </property>
              </widget>
             </item>
-            <item row="0" column="1">
+            <item row="1" column="1">
              <widget class="QComboBox" name="item1_2">
               <property name="minimumSize">
                <size>
@@ -1645,7 +1655,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="1">
+            <item row="3" column="1">
              <widget class="QComboBox" name="item2_2">
               <property name="minimumSize">
                <size>
@@ -1655,13 +1665,20 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
               </property>
              </widget>
             </item>
-            <item row="4" column="1">
+            <item row="5" column="1">
              <widget class="QComboBox" name="item3_2">
               <property name="minimumSize">
                <size>
                 <width>0</width>
                 <height>25</height>
                </size>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_60">
+              <property name="text">
+               <string>Crafting requirements</string>
               </property>
              </widget>
             </item>

@@ -16,7 +16,10 @@ class Bfres_Dup:
     
     def duplicate(self):
         base, name = self.base, self.name
-        base, name = check_base(base, name, self.profile)
+        try:
+            base, name = check_base(base, name, self.profile)
+        except:
+            pass
         path = f'{get_def_path()}\\Model\\'
         if get_endianness():
             base_bfres = [path + base + '.sbfres', path + base + '.Tex1.sbfres', path + base + '.Tex2.sbfres']

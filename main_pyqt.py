@@ -130,9 +130,11 @@ class Window(QMainWindow, Ui_SIC):
             self.effect.addItem(QIcon(f'res\\{elem}.png'), effects_adv[elem])
 
     def edit_click(self):
+        print('edit click')
         try:
             x = self.Mod_content.currentItem().text()
         except:
+            print('Error editing item')
             return
         if not x: return
         if x in self.data['Armors']:
@@ -144,6 +146,9 @@ class Window(QMainWindow, Ui_SIC):
                 arm = deepcopy(self.data['Armors'][x])
                 self.name.setText(arm['name'])
                 self.defence.setText(arm['defence'])
+                if 'bfres_template' in arm: self.bfres_template.setText(arm['bfres_template'])
+                if 'bfres' in arm: self.bfres.setText(arm['bfres'])
+                if 'mainmodel' in arm: self.mainmodel.setText(arm['mainmodel'])
                 self.elink.setText(arm['elink'])
                 self.slink.setText(arm['slink'])
                 self.profile.setCurrentText(arm['profile'])
@@ -305,6 +310,9 @@ class Window(QMainWindow, Ui_SIC):
         self.data['Armors'][self.name.text()] = {
             "base": self.armors[base],
             "name": self.name.text(),
+            "bfres_template": self.bfres_template.text(),
+            "bfres": self.bfres.text(),
+            "mainmodel": self.mainmodel.text(),
             "defence": self.defence.text(),
             "elink": self.elink.text(),
             "slink": self.slink.text(),
@@ -407,8 +415,10 @@ mode = wiiu""")
             sg.popup_error(f'Path \n{PATH} \ndoes not exist. Program will now exit')
             sys.exit()
 
-
+def test():
+    Load_Input(file_to_json('jsons\\chuchu.json'), 'chuchu', 'Bootup_EUen', None).create_pack()
 
 if __name__ == '__main__':
     #init()
     main()
+    #test()

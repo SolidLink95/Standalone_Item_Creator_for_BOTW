@@ -9,6 +9,10 @@ from shutil import copyfile
 
 class Armor:
     def __init__(self, data, armor, pack_name):
+        self.bfres = ''
+        self.mainmodel = ''
+        self.bfres_template = ''
+
         self.base = str(data['Armors'][armor]['base'])
         self.name = str(data['Armors'][armor]['name'])
         self.defence = str(data['Armors'][armor]['defence'])
@@ -20,6 +24,9 @@ class Armor:
         self.profile = str(data['Armors'][armor]['profile'])
         self.series = str(data['Armors'][armor]['series'])
         self.price = str(data['Armors'][armor]['price'])
+        if 'bfres' in data['Armors'][armor]: self.bfres = str(data['Armors'][armor]['bfres'])
+        if 'mainmodel' in data['Armors'][armor]: self.mainmodel = str(data['Armors'][armor]['mainmodel'])
+        if 'bfres_template' in data['Armors'][armor]: self.bfres_template = str(data['Armors'][armor]['bfres_template'])
         self.name_desc = str(data['Armors'][armor]['name_desc'])
         self.desc = str(data['Armors'][armor]['desc'])
         self.item1 = data['Armors'][armor]['Crafting']['item1']
@@ -127,11 +134,15 @@ class Armor:
         old_name = self.get_name_from_sarc('bmodellist')
         new_name = f'Actor/ModelList/{self.name}.bmodellist'
         pio = get_raw_data(self.data.data_sarc, old_name)
+        if self.bfres: bfres = self.bfres
+        else: bfres = self.bfres_folder
+        if self.mainmodel: mainmodel = self.mainmodel
+        else: mainmodel = self.name
 
         pio.lists['ModelData'].lists['ModelData_0'].objects['Base'].params['Folder'] \
-            = oead.FixedSafeString64(self.bfres_folder)
+            = oead.FixedSafeString64(bfres)
         pio.lists['ModelData'].lists['ModelData_0'].lists['Unit'].objects['Unit_0'].params['UnitName'] \
-            = oead.FixedSafeString64(self.name)
+            = oead.FixedSafeString64(mainmodel)
 
         update_sarc(pio, self.data, old_name, new_name)
 
@@ -217,7 +228,12 @@ class Armor:
         self.get_recipe()
         self.do_gparam()
         self.do_model()
-        Bfres_Dup(self.base, self.name, self.profile, self.pack_name).duplicate()
+        if self.bfres_template: base = self.bfres_template
+        else: base = self.base
+        if self.bfres: name = self.bfres
+        else: name = self.name
+
+        Bfres_Dup(base, name, self.profile, self.pack_name).duplicate()
         actorpack = f'{self.pack_name}\\content\\Actor\\Pack\\{self.name}.sbactorpack'
         if not os.path.exists(actorpack):
             with open(actorpack, 'wb') as f:

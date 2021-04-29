@@ -33,35 +33,35 @@ class Load_Input:
         step = 100 / (len(Weapons) + len(Armors) + 6)
 
         #print('Creating actorpacks...')
-        self.progressbar.setFormat('Creating actorpacks')
-        self.progressbar.setValue(step)
+        if self.progressbar: self.progressbar.setFormat('Creating actorpacks')
+        if self.progressbar: self.progressbar.setValue(step)
         for wep in Weapons:
-            self.progressbar.setFormat('Creating actorpacks: ' + wep.name_desc)
-            self.progressbar.setValue(self.progressbar.value() + step)
+            if self.progressbar: self.progressbar.setFormat('Creating actorpacks: ' + wep.name_desc)
+            if self.progressbar: self.progressbar.setValue(self.progressbar.value() + step)
             wep.create_weapon()
         for armor in Armors:
-            self.progressbar.setFormat('Creating actorpacks: ' + armor.name_desc)
-            self.progressbar.setValue(self.progressbar.value() + step)
+            if self.progressbar: self.progressbar.setFormat('Creating actorpacks: ' + armor.name_desc)
+            if self.progressbar: self.progressbar.setValue(self.progressbar.value() + step)
             armor.create_armor()
 
-        self.progressbar.setFormat('Creating actorinfo entries')
-        self.progressbar.setValue(self.progressbar.value() + step)
+        if self.progressbar: self.progressbar.setFormat('Creating actorinfo entries')
+        if self.progressbar: self.progressbar.setValue(self.progressbar.value() + step)
         #print('Creating actorinfo entries...')
         actorinfo = Actorinfo(Weapons, Armors, self.pack_name)
         actorinfo.do_actorinfo()
         boot = BootupPack(Weapons, Armors, self.pack_name, self.lang)
         if data['Weapons']:
             #print('Creating Save flags...')
-            self.progressbar.setFormat('Creating Save flags')
-            self.progressbar.setValue(self.progressbar.value() + step)
+            if self.progressbar: self.progressbar.setFormat('Creating Save flags')
+            if self.progressbar: self.progressbar.setValue(self.progressbar.value() + step)
             boot.insert_hashes()
         #print('Creating descriptions...')
-        self.progressbar.setFormat('Creating descriptions...')
-        self.progressbar.setValue(self.progressbar.value() + step)
+        if self.progressbar: self.progressbar.setFormat('Creating descriptions...')
+        if self.progressbar: self.progressbar.setValue(self.progressbar.value() + step)
         boot.insert_descriptions()
         #print('Inserting oven...')
-        self.progressbar.setFormat('Inserting oven...')
-        self.progressbar.setValue(self.progressbar.value() + step)
+        if self.progressbar: self.progressbar.setFormat('Inserting oven...')
+        if self.progressbar: self.progressbar.setValue(self.progressbar.value() + step)
         oven = AncientOven(self.pack_name)
         oven.create_oven()
         if not get_endianness():
@@ -69,8 +69,8 @@ class Load_Input:
             move(f'{self.pack_name}\\content', f'{self.pack_name}\\01007EF00011E000\\romfs')
             
         #print('Done')
-        self.progressbar.setFormat(f'Mod {os.path.basename(self.pack_name)} created successfully')
-        self.progressbar.setValue(100)
+        if self.progressbar: self.progressbar.setFormat(f'Mod {os.path.basename(self.pack_name)} created successfully')
+        if self.progressbar: self.progressbar.setValue(100)
 
 
 
