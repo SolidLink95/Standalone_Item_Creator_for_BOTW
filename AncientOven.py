@@ -37,7 +37,8 @@ class AncientOven:
         pio = get_raw_data(self.data.data_sarc, old_name)
 
         actors = dir_to_list(f'{self.pack_name}\\content\\Actor\\Pack')
-        iter = int(pio.objects['Ancient'].params['ColumnNum'].v) + 2
+        #iter = int(pio.objects['Ancient'].params['ColumnNum'].v) + 2
+        iter = int(pio.objects['Ancient'].params['ColumnNum'].v) 
         size = len(actors)
         #for elem in pio.objects['Ancient'].params:
         #    if not 'ColumnNum' in elem:
