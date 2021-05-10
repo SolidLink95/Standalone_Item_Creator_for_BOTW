@@ -8,14 +8,16 @@ from PyQt5 import QtCore
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QCompleter, QWidget, QSizePolicy, QHBoxLayout
 from Option_w import options_window
+from ShopData import get_raw_data
 from files_manage import create_folder, get_main_json, file_to_json, get_mods_path, get_res, json_to_file, file_to_str, \
-    get_langs, get_endianness
+    get_langs, get_endianness, get_def_path
 import oead
 from load_input import Load_Input
 from files_manage import clear_json
 from Pyqt_gui import Ui_SIC
 from Select_file import Select_file
 from Readme import readme_window
+from sarc_class import Sarc_file
 
 config_file = 'config.ini'
 valid_rgb = 'rgb(21, 155, 130)'
@@ -101,6 +103,7 @@ class Window(QMainWindow, Ui_SIC):
         self.sheath.setMaxVisibleItems(medium_h)
         self.effect.setMaxVisibleItems(medium_h)
         self.series.setMaxVisibleItems(medium_h)
+        self.shop.setMaxVisibleItems(big_h)
 
         #radio buttons
         if get_endianness(): self.wiiu_radiobutton.setChecked(True)
@@ -446,7 +449,18 @@ def test():
     except:
         pass
     create_folder('MODS')
-    Load_Input(file_to_json('jsons\\Madara.json'), 'chuchu', 'Bootup_EUen', None).create_pack()
+    #Load_Input(file_to_json('jsons\\Madara.json'), 'chuchu', 'Bootup_EUen', None).create_pack()
+    shops_rev = get_res('shops_rev')
+    res = file_to_json('res\\res.json')
+    shops = file_to_json('res\\shops.json')
+    botw_names = file_to_json('res\\botw_names.json')
+    tmp = []
+    for elem in shops:
+        name = botw_names[elem]
+        res['shops'][name] = elem
+        res['shops_rev'][elem] = name
+
+    json_to_file('res\\res1.json', res)
 
 if __name__ == '__main__':
     #init()

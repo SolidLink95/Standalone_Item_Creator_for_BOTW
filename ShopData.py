@@ -92,7 +92,9 @@ def get_raw_data(data_sarc, file):
     return pio
 
 def update_sarc(pio, data, old_name, new_name):
-    del data.data_writer.files[old_name]
+    if old_name in data.data_writer.files:
+        if old_name != new_name:
+            del data.data_writer.files[old_name]
     data.data_writer.files[new_name] = oead.aamp.ParameterIO.to_binary(pio)
 
 def create_shops(pack_name, data):
@@ -115,9 +117,7 @@ def create_shops(pack_name, data):
         else:                               shop = def_shop
         if not shop in res: res[shop] = []
         res[shop].append(elem)
-    print(def_shop)
     for shop in res:
-        print(res[shop], len(res[shop]))
         shopdata = ShopData(pack_name,shop, list(res[shop]))
         shopdata.create_shop()
 
