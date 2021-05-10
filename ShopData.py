@@ -6,7 +6,7 @@ from files_manage import get_def_path, dir_to_list, get_endianness
 from sarc_class import Sarc_file
 from Actorinfo import create_hash, get_arr_index
 
-class AncientOven:
+class ShopData:
     def __init__(self, pack_name, shop, data_json):
         self.data_json = data_json
         self.shop = shop
@@ -30,11 +30,15 @@ class AncientOven:
         #update_sarc(pio, self.data, old_name, new_name)
 
     def get_pio_object(self, pio):
-        available = ['Ancient', 'Normal']
-        for ob in available:
-            if ob in pio.objects:
-                return ob
-        return ''
+        try:
+            return str(pio.objects['Header'].params['Table01'])
+        except:
+            print('Didnt work')
+            available = ['Ancient', 'Normal']
+            for ob in available:
+                if ob in pio.objects:
+                    return ob
+            return ''
 
     def do_shopdata(self):
         old_name = f'Actor/ShopData/{self.bshop}.bshop'
@@ -43,7 +47,7 @@ class AncientOven:
         table = self.get_pio_object(pio)
         #actors = dir_to_list(f'{self.pack_name}\\content\\Actor\\Pack')
         #iter = int(pio.objects[table].params['ColumnNum'].v) + 2
-        iter = int(pio.objects[table].params['ColumnNum'].v) + 1
+        iter = int(pio.objects[table].params['ColumnNum'].v)
         size = 0
 
 

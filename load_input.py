@@ -7,7 +7,7 @@ from files_manage import get_mods_path, create_folder, get_endianness
 from weapon import Weapon
 from BootupPack import BootupPack
 from Actorinfo import Actorinfo
-from AncientOven import AncientOven
+from ShopData import ShopData
 from Armor import Armor
 
 class Load_Input:
@@ -62,7 +62,7 @@ class Load_Input:
         #print('Inserting oven...')
         if self.progressbar: self.progressbar.setFormat('Inserting oven...')
         if self.progressbar: self.progressbar.setValue(self.progressbar.value() + step)
-        oven = AncientOven(self.pack_name, 'TwnObj_AncientOven_A_01', data)
+        oven = ShopData(self.pack_name, 'TwnObj_AncientOven_A_01', data)
         oven.create_oven()
         if not get_endianness():
             create_folder(f'{self.pack_name}\\01007EF00011E000')
