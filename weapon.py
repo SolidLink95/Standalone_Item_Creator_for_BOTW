@@ -150,7 +150,7 @@ class Weapon:
                 sheath = ''
             else:
                 sheath = self.sheath
-            print('Sheath ' + sheath)
+            #print('Sheath ' + sheath)
             pio.objects[self.profile.replace('Weapon', '')].params["PodName"] = oead.aamp.Parameter(oead.FixedSafeString32(sheath))
 
 
@@ -203,7 +203,7 @@ class Weapon:
         if 'Shield' in self.profile: return
         
         if self.sheath == 'custom':
-            print(f'Creating {self.sheath} for {self.name}')
+            print(f'Creating custom sheath for {self.name}')
             sheath = Sheath('Weapon_Sheath_001', self.name, self.pack_name)
             sheath.create_sheath()
     

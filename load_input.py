@@ -11,15 +11,15 @@ from AncientOven import AncientOven
 from Armor import Armor
 
 class Load_Input:
-    def __init__(self, file, pack_name, lang, progressbar):
+    def __init__(self, data, pack_name, lang, progressbar):
         self.progressbar = progressbar
-        self.file = file
+        self.data = data
         self.pack_name = f'{get_mods_path()}\\{pack_name}'
         self.lang = lang
 
     def create_pack(self):
         self.create_tree()
-        data = self.file
+        data = self.data
         Weapons = []
         Armors = []
         for wep in data['Weapons']:
@@ -62,7 +62,7 @@ class Load_Input:
         #print('Inserting oven...')
         if self.progressbar: self.progressbar.setFormat('Inserting oven...')
         if self.progressbar: self.progressbar.setValue(self.progressbar.value() + step)
-        oven = AncientOven(self.pack_name)
+        oven = AncientOven(self.pack_name, 'TwnObj_AncientOven_A_01', data)
         oven.create_oven()
         if not get_endianness():
             create_folder(f'{self.pack_name}\\01007EF00011E000')

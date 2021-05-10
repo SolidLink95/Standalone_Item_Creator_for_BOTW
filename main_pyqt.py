@@ -416,7 +416,12 @@ mode = wiiu""")
             sys.exit()
 
 def test():
-    Load_Input(file_to_json('jsons\\chuchu.json'), 'chuchu', 'Bootup_EUen', None).create_pack()
+    try:
+        shutil.rmtree('MODS')
+    except:
+        pass
+    create_folder('MODS')
+    Load_Input(file_to_json('jsons\\Madara.json'), 'chuchu', 'Bootup_EUen', None).create_pack()
 
 if __name__ == '__main__':
     #init()

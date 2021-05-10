@@ -7,64 +7,77 @@ from sarc_class import Sarc_file
 from Actorinfo import create_hash, get_arr_index
 
 class AncientOven:
-    def __init__(self, pack_name):
-        self.name = 'TwnObj_AncientOven_A_01'
-        self.bshop = 'TwnObj_AncientOven_A_01'
+    def __init__(self, pack_name, shop, data_json):
+        self.data_json = data_json
+        self.shop = shop
         self.pack_name = pack_name
         self.data = Sarc_file(self.init_oven())
+        self.bshop = self.do_actorlink()
 
 
     def init_oven(self):
-        O = 'TwnObj_AncientOven_A_01'
-        path = f'{get_def_path()}\\Actor\\Pack\\{O}.sbactorpack'
-        if not os.path.exists(f'cache\\{O}.sbactorpack'):
-            copyfile(path, f'cache\\{O}.sbactorpack')
-        return f'cache\\{O}.sbactorpack'
+        path = f'{get_def_path()}\\Actor\\Pack\\{self.shop}.sbactorpack'
+        if not os.path.exists(f'cache\\{self.shop}.sbactorpack'):
+            copyfile(path, f'cache\\{self.shop}.sbactorpack')
+        return f'cache\\{self.shop}.sbactorpack'
 
     def do_actorlink(self):
-        old_name = f'Actor/ActorLink/TwnObj_AncientOven_A_01.bxml'
-        new_name = f'Actor/ActorLink/{self.name}.bxml'
-        pio = get_raw_data(self.data.data_sarc, old_name)
+        pio = get_raw_data(self.data.data_sarc, f'Actor/ActorLink/{self.shop}.bxml')
 
         pio.objects['LinkTarget'].params['ActorNameJpn'] = 'asdf'
-        pio.objects['LinkTarget'].params['ShopDataUser'] = self.bshop
+        return str(pio.objects['LinkTarget'].params['ShopDataUser'])
 
-        update_sarc(pio, self.data, old_name, new_name)
+        #update_sarc(pio, self.data, old_name, new_name)
+
+    def get_pio_object(self, pio):
+        available = ['Ancient', 'Normal']
+        for ob in available:
+            if ob in pio.objects:
+                return ob
+        return ''
 
     def do_shopdata(self):
-        old_name = f'Actor/ShopData/TwnObj_AncientOven_A_01.bshop'
+        old_name = f'Actor/ShopData/{self.bshop}.bshop'
         new_name = f'Actor/ShopData/{self.bshop}.bshop'
         pio = get_raw_data(self.data.data_sarc, old_name)
-
-        actors = dir_to_list(f'{self.pack_name}\\content\\Actor\\Pack')
-        #iter = int(pio.objects['Ancient'].params['ColumnNum'].v) + 2
-        iter = int(pio.objects['Ancient'].params['ColumnNum'].v) 
-        size = len(actors)
-        #for elem in pio.objects['Ancient'].params:
-        #    if not 'ColumnNum' in elem:
-        #        del pio.objects['Ancient'].params[elem]
-        pio.objects['Ancient'].params['ColumnNum'] = size + iter
+        table = self.get_pio_object(pio)
+        #actors = dir_to_list(f'{self.pack_name}\\content\\Actor\\Pack')
+        #iter = int(pio.objects[table].params['ColumnNum'].v) + 2
+        iter = int(pio.objects[table].params['ColumnNum'].v) + 1
+        size = 0
 
 
-        for actor in actors:
+        for w in self.data_json['Weapons']:
             iter += 1
-            name = actor.split('.')[0]
             n = int_to_3digits(iter)
-            pio.objects['Ancient'].params[f'ItemSort{n}'] = iter
-            pio.objects['Ancient'].params[f'ItemName{n}'] = oead.FixedSafeString64(name)
-            pio.objects['Ancient'].params[f'ItemNum{n}'] = 0
-            pio.objects['Ancient'].params[f'ItemAdjustPrice{n}'] = 0
-            pio.objects['Ancient'].params[f'ItemLookGetFlg{n}'] = False
-            pio.objects['Ancient'].params[f'ItemAmount{n}'] = 0
+            pio.objects[table].params[f'ItemSort{n}'] = iter
+            pio.objects[table].params[f'ItemName{n}'] = oead.FixedSafeString64(w)
+            pio.objects[table].params[f'ItemNum{n}'] = 0
+            pio.objects[table].params[f'ItemAdjustPrice{n}'] = 0
+            pio.objects[table].params[f'ItemLookGetFlg{n}'] = False
+            pio.objects[table].params[f'ItemAmount{n}'] = 0
+            size +=1
 
+        for a in self.data_json['Armors']:
+            iter += 1
+            n = int_to_3digits(iter)
+            pio.objects[table].params[f'ItemSort{n}'] = iter
+            pio.objects[table].params[f'ItemName{n}'] = oead.FixedSafeString64(a)
+            pio.objects[table].params[f'ItemNum{n}'] = 0
+            pio.objects[table].params[f'ItemAdjustPrice{n}'] = 0
+            pio.objects[table].params[f'ItemLookGetFlg{n}'] = False
+            pio.objects[table].params[f'ItemAmount{n}'] = 0
+            size += 1
+
+        pio.objects[table].params['ColumnNum'] = size + iter
         update_sarc(pio, self.data, old_name, new_name)
 
     def create_oven(self):
-        self.do_actorlink()
+        
         self.do_shopdata()
         #self.do_actorinfo()
 
-        actorpack = f'{self.pack_name}\\content\\Actor\\Pack\\{self.name}.sbactorpack'
+        actorpack = f'{self.pack_name}\\content\\Actor\\Pack\\{self.shop}.sbactorpack'
         with open(actorpack, 'wb') as f:
             f.write(oead.yaz0.compress(self.data.data_writer.write()[1]))
 

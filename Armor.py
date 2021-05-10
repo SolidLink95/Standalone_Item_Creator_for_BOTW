@@ -66,7 +66,6 @@ class Armor:
         pio.objects['LinkTarget'].params['GParamUser'] = self.name
         pio.objects['LinkTarget'].params['ModelUser'] = self.name
         pio.objects['LinkTarget'].params['RecipeUser'] = self.name
-        print(self.korok_mask)
         if self.korok_mask and 'Head' in self.name:
             #if self.base != 'Armor_176_Head':
             print(f'Adding korok anims to {self.name}...')

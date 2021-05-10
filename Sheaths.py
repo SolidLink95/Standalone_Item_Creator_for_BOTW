@@ -71,14 +71,15 @@ class Sheath:
                     f.write(to_write)
 
     def create_sheath(self):
+        actorpack = f'{self.pack_name}\\content\\Actor\\Pack\\{self.name}.sbactorpack'
+        if os.path.exists(actorpack): return
         self.do_actorlink()
         self.do_model()
         self.do_bfres()
 
-        actorpack = f'{self.pack_name}\\content\\Actor\\Pack\\{self.name}.sbactorpack'
-        if not os.path.exists(actorpack):
-            with open(actorpack, 'wb') as f:
-                f.write(oead.yaz0.compress(self.data.data_writer.write()[1]))
+
+        with open(actorpack, 'wb') as f:
+            f.write(oead.yaz0.compress(self.data.data_writer.write()[1]))
 
 def update_sarc(pio, data, old_name, new_name):
     data.data_writer.files[new_name] = oead.aamp.ParameterIO.to_binary(pio)
