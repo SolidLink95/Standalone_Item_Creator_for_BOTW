@@ -9084,6 +9084,44 @@
         "ArmorLower",
         "ArmorUpper"
     ],
+    "shops": {
+        "Ancient Oven Cherry": "TwnObj_AncientOven_A_01",
+        "Beedle (Dueling Peaks)": "Npc_TripMaster_00",
+        "Beedle (East Akkala)": "Npc_TripMaster_03",
+        "Beedle (Foothill Stable)": "Npc_TripMaster_01",
+        "Beedle (Gerudo Canyon)": "Npc_TripMaster_02",
+        "Beedle (Highland Stable)": "Npc_TripMaster_14",
+        "Beedle (Kara Kara)": "Npc_TripMaster_15",
+        "Beedle (Lakeside Stable)": "Npc_TripMaster_09",
+        "Beedle (Outskirt Stable)": "Npc_TripMaster_10",
+        "Beedle (Rito Stable)": "Npc_TripMaster_07",
+        "Beedle (Riverside Stable)": "Npc_TripMaster_08",
+        "Beedle (Serenne Stable)": "Npc_TripMaster_05",
+        "Beedle (Snowfield Stable)": "Npc_TripMaster_13",
+        "Beedle (South Akkala)": "Npc_TripMaster_06",
+        "Beedle (Tabantha Bridge)": "Npc_TripMaster_04",
+        "Beedle (Wetland Stable)": "Npc_TripMaster_12",
+        "Beedle (Woodland Stable)": "Npc_TripMaster_11"
+    },
+    "shops_rev": {
+        "Npc_TripMaster_00": "Beedle (Dueling Peaks)",
+        "Npc_TripMaster_01": "Beedle (Foothill Stable)",
+        "Npc_TripMaster_02": "Beedle (Gerudo Canyon)",
+        "Npc_TripMaster_03": "Beedle (East Akkala)",
+        "Npc_TripMaster_04": "Beedle (Tabantha Bridge)",
+        "Npc_TripMaster_05": "Beedle (Serenne Stable)",
+        "Npc_TripMaster_06": "Beedle (South Akkala)",
+        "Npc_TripMaster_07": "Beedle (Rito Stable)",
+        "Npc_TripMaster_08": "Beedle (Riverside Stable)",
+        "Npc_TripMaster_09": "Beedle (Lakeside Stable)",
+        "Npc_TripMaster_10": "Beedle (Outskirt Stable)",
+        "Npc_TripMaster_11": "Beedle (Woodland Stable)",
+        "Npc_TripMaster_12": "Beedle (Wetland Stable)",
+        "Npc_TripMaster_13": "Beedle (Snowfield Stable)",
+        "Npc_TripMaster_14": "Beedle (Highland Stable)",
+        "Npc_TripMaster_15": "Beedle (Kara Kara)",
+        "TwnObj_AncientOven_A_01": "Ancient Oven Cherry"
+    },
     "weapons": {
         "Ancient Battle Axe": "Weapon_Lsword_013",
         "Ancient Battle Axe+": "Weapon_Lsword_014",
@@ -9276,24 +9314,5 @@
         "Wooden Shield": "Weapon_Shield_001",
         "Zora Spear": "Weapon_Spear_027",
         "Zora Sword": "Weapon_Sword_027"
-    },
-	"shops": {
-		"Ancient Oven Cherry": "TwnObj_AncientOven_A_01",
-		"Beedle (Rito Stable)": "Npc_TripMaster_07",
-		"Beedle (Kara Kara)": "Npc_TripMaster_15",
-		"Beedle (Tabantha Bridge)": "Npc_TripMaster_04",
-		"Beedle (Gerudo Canyon)": "Npc_TripMaster_02",
-		"Beedle (Snowfield Stable)": "Npc_TripMaster_13",
-		"Beedle (Dueling Peaks)": "Npc_TripMaster_00",
-		"Beedle (Foothill Stable)": "Npc_TripMaster_01",
-		"Beedle (East Akkala)": "Npc_TripMaster_03",
-		"Beedle (South Akkala)": "Npc_TripMaster_06",
-		"Beedle (Serenne Stable)": "Npc_TripMaster_05",
-		"Beedle (Riverside Stable)": "Npc_TripMaster_08",
-		"Beedle (Lakeside Stable)": "Npc_TripMaster_09",
-		"Beedle (Outskirt Stable)": "Npc_TripMaster_10",
-		"Beedle (Woodland Stable)": "Npc_TripMaster_11",
-		"Beedle (Wetland Stable)": "Npc_TripMaster_12",
-		"Beedle (Highland Stable)": "Npc_TripMaster_14"
-	}
+    }
 }

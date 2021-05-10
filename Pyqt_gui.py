@@ -9,12 +9,13 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QHBoxLayout
 
 
 class Ui_SIC(object):
     def setupUi(self, SIC):
         SIC.setObjectName("SIC")
-        SIC.resize(916, 770)
+        SIC.resize(912, 802)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("res/icon.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         SIC.setWindowIcon(icon)
@@ -55,6 +56,8 @@ class Ui_SIC(object):
 "    background-color: rgb(149, 165, 166);\n"
 "    color: rgb(220,220,220);\n"
 "}")
+
+
         self.centralwidget = QtWidgets.QWidget(SIC)
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(self.centralwidget)
@@ -187,7 +190,7 @@ class Ui_SIC(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.formLayoutWidget_3 = QtWidgets.QWidget(self.frame)
-        self.formLayoutWidget_3.setGeometry(QtCore.QRect(290, 10, 231, 31))
+        self.formLayoutWidget_3.setGeometry(QtCore.QRect(317, 10, 251, 61))
         self.formLayoutWidget_3.setObjectName("formLayoutWidget_3")
         self.formLayout_4 = QtWidgets.QFormLayout(self.formLayoutWidget_3)
         self.formLayout_4.setContentsMargins(0, 0, 0, 0)
@@ -209,6 +212,15 @@ class Ui_SIC(object):
         self.switch_radiobutton.setObjectName("switch_radiobutton")
         self.horizontalLayout_2.addWidget(self.switch_radiobutton)
         self.formLayout_4.setLayout(0, QtWidgets.QFormLayout.FieldRole, self.horizontalLayout_2)
+        self.label_85 = QtWidgets.QLabel(self.formLayoutWidget_3)
+        self.label_85.setMinimumSize(QtCore.QSize(100, 0))
+        self.label_85.setObjectName("label_85")
+        self.formLayout_4.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_85)
+        self.shop = QtWidgets.QComboBox(self.formLayoutWidget_3)
+        self.shop.setMinimumSize(QtCore.QSize(180, 25))
+        self.shop.setMaximumSize(QtCore.QSize(185, 0))
+        self.shop.setObjectName("shop")
+        self.formLayout_4.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.shop)
         self.Right_column = QtWidgets.QFrame(self.frame)
         self.Right_column.setGeometry(QtCore.QRect(660, 60, 258, 551))
         self.Right_column.setObjectName("Right_column")
@@ -783,7 +795,7 @@ class Ui_SIC(object):
         self.patreon.setObjectName("patreon")
         SIC.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(SIC)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 916, 20))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 912, 20))
         self.menubar.setObjectName("menubar")
         self.menuQuit = QtWidgets.QMenu(self.menubar)
         self.menuQuit.setObjectName("menuQuit")
@@ -851,6 +863,7 @@ class Ui_SIC(object):
         self.label_14.setText(_translate("SIC", "Mode       "))
         self.wiiu_radiobutton.setText(_translate("SIC", "Wii-U"))
         self.switch_radiobutton.setText(_translate("SIC", "Switch"))
+        self.label_85.setText(_translate("SIC", "Shop"))
         self.Clear_list.setText(_translate("SIC", "Clear list"))
         self.edit.setText(_translate("SIC", "Edit"))
         self.label_24.setText(_translate("SIC", "Mod content"))

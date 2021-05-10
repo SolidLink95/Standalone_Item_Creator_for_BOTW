@@ -6,7 +6,7 @@ from copy import deepcopy
 import PySimpleGUI as sg
 from PyQt5 import QtCore
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QApplication, QMainWindow, QCompleter, QWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QCompleter, QWidget, QSizePolicy, QHBoxLayout
 from Option_w import options_window
 from files_manage import create_folder, get_main_json, file_to_json, get_mods_path, get_res, json_to_file, file_to_str, \
     get_langs, get_endianness
@@ -29,6 +29,8 @@ class Window(QMainWindow, Ui_SIC):
         self.data = clear_json()
         self.added_list = []
         self.config = 'config.ini'
+        self.shops = get_res('shops')
+        self.shops_rev = get_res('shops_rev')
         self.actors = get_res('Actors')
         self.weapons = get_res('weapons')
         self.armors = get_res('armors')
@@ -48,7 +50,13 @@ class Window(QMainWindow, Ui_SIC):
         self.setup_ui_local()
 
 
+
+
     def setup_ui_local(self):
+        # variables
+        for elem in self.shops:
+            self.shop_default = elem
+            break
         #Buttons
         self.Create_mod.clicked.connect(self.create_mod)
         self.Add_weapon.clicked.connect(self.add_weapon)
@@ -57,6 +65,7 @@ class Window(QMainWindow, Ui_SIC):
         self.Remove_from_mod.clicked.connect(self.remove_from_mod)
         self.Options.clicked.connect(self.options)
         self.patreon.clicked.connect(lambda : os.system(f'start https://www.patreon.com/user?u=32002965'))
+        self.patreon.hide()
         self.edit.clicked.connect(self.edit_click)
 
         #combo boxes
@@ -75,6 +84,7 @@ class Window(QMainWindow, Ui_SIC):
         self.item2.addItems(self.items)
         self.item3.addItems(self.items)
         self.sheath.addItems(self.sheaths)
+        self.shop.addItems(self.shops)
         #self.effect.addItems(self.effects)
         for eff in self.effects:
             self.effect.addItem(QIcon(f'res\\{eff}.png'), eff)
@@ -118,6 +128,13 @@ class Window(QMainWindow, Ui_SIC):
         #rand
         self.check_mode()
 
+        #resizing setFixedSize
+        self.layout = QHBoxLayout()
+        self.layout.addWidget(self.frame)
+
+        self.setLayout(self.layout)
+
+
         #radio button
     def readme(self):
         self.readme_w.load_txt()
@@ -143,12 +160,14 @@ class Window(QMainWindow, Ui_SIC):
                 if self.armors[elem] == self.data['Armors'][x]['base']:
                     self.base.setCurrentText(elem)
                     break
-                arm = deepcopy(self.data['Armors'][x])
+                arm = self.data['Armors'][x]
                 self.name.setText(arm['name'])
                 self.defence.setText(arm['defence'])
                 if 'bfres_template' in arm: self.bfres_template.setText(arm['bfres_template'])
                 if 'bfres' in arm: self.bfres.setText(arm['bfres'])
                 if 'mainmodel' in arm: self.mainmodel.setText(arm['mainmodel'])
+                if 'shop' in arm: self.shop.setCurrentText(self.shops_rev[arm["shop"]])
+                else: self.shop.setCurrentText(self.shop_default)
                 self.elink.setText(arm['elink'])
                 self.slink.setText(arm['slink'])
                 self.profile.setCurrentText(arm['profile'])
@@ -172,9 +191,11 @@ class Window(QMainWindow, Ui_SIC):
                 if self.weapons[elem] == self.data['Weapons'][x]['base']:
                     self.base_2.setCurrentText(elem)
                     break
-                wep = deepcopy(self.data['Weapons'][x])
+                wep = self.data['Weapons'][x]
                 self.name_2.setText(wep['name'])
                 self.attack.setText(wep['attack'])
+                if 'shop' in wep: self.shop.setCurrentText(self.shops_rev[wep["shop"]])
+                else: self.shop.setCurrentText(self.shop_default)
                 self.dur.setText(wep['dur'])
                 self.islifeinfinite.setChecked(bool(wep['islifeinfinite']))
                 self.sheath.setCurrentText(wep['sheath'])
@@ -260,6 +281,7 @@ class Window(QMainWindow, Ui_SIC):
         if self.name_2.text() in self.data['Weapons']:
             del self.data['Weapons'][self.name_2.text()]
         self.data['Weapons'][self.name_2.text()] = {
+            "shop":             self.shops[self.shop.currentText()],
             "base":             self.weapons[base],
             "name":             self.name_2.text(),
             "attack":           self.attack.text(),
@@ -308,6 +330,7 @@ class Window(QMainWindow, Ui_SIC):
             del self.data['Armors'][self.name.text()]
 
         self.data['Armors'][self.name.text()] = {
+            "shop": self.shops[self.shop.currentText()],
             "base": self.armors[base],
             "name": self.name.text(),
             "bfres_template": self.bfres_template.text(),
@@ -377,6 +400,8 @@ def main():
     app = QApplication(sys.argv)
     win = Window()
     win.setFixedSize(win.size())
+    #win.setFixedSize(win.layout.sizeHint())
+
     win.show()
     create_folder('jsons')
     create_folder('res')

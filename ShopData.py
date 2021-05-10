@@ -2,13 +2,13 @@ import os
 import sys
 from shutil import copyfile
 import oead
-from files_manage import get_def_path, dir_to_list, get_endianness
+from files_manage import get_def_path, dir_to_list, get_endianness, get_res
 from sarc_class import Sarc_file
 from Actorinfo import create_hash, get_arr_index
 
 class ShopData:
-    def __init__(self, pack_name, shop, data_json):
-        self.data_json = data_json
+    def __init__(self, pack_name, shop, items):
+        self.items = items
         self.shop = shop
         self.pack_name = pack_name
         self.data = Sarc_file(self.init_oven())
@@ -49,9 +49,11 @@ class ShopData:
         #iter = int(pio.objects[table].params['ColumnNum'].v) + 2
         iter = int(pio.objects[table].params['ColumnNum'].v)
         size = 0
+        #items = []
+        #for w in self.data_json['Weapons']: items.append(w)
+        #for a in self.data_json['Armors']: items.append(a)
 
-
-        for w in self.data_json['Weapons']:
+        for w in self.items:
             iter += 1
             n = int_to_3digits(iter)
             pio.objects[table].params[f'ItemSort{n}'] = iter
@@ -62,21 +64,10 @@ class ShopData:
             pio.objects[table].params[f'ItemAmount{n}'] = 0
             size +=1
 
-        for a in self.data_json['Armors']:
-            iter += 1
-            n = int_to_3digits(iter)
-            pio.objects[table].params[f'ItemSort{n}'] = iter
-            pio.objects[table].params[f'ItemName{n}'] = oead.FixedSafeString64(a)
-            pio.objects[table].params[f'ItemNum{n}'] = 0
-            pio.objects[table].params[f'ItemAdjustPrice{n}'] = 0
-            pio.objects[table].params[f'ItemLookGetFlg{n}'] = False
-            pio.objects[table].params[f'ItemAmount{n}'] = 0
-            size += 1
-
         pio.objects[table].params['ColumnNum'] = size + iter
         update_sarc(pio, self.data, old_name, new_name)
 
-    def create_oven(self):
+    def create_shop(self):
         
         self.do_shopdata()
         #self.do_actorinfo()
@@ -95,12 +86,6 @@ def int_to_3digits(n):
     return res
 
 
-
-
-
-
-
-
 def get_raw_data(data_sarc, file):
     data = data_sarc.get_file(file).data.tobytes()
     pio = oead.aamp.ParameterIO.from_binary(data)
@@ -109,3 +94,32 @@ def get_raw_data(data_sarc, file):
 def update_sarc(pio, data, old_name, new_name):
     del data.data_writer.files[old_name]
     data.data_writer.files[new_name] = oead.aamp.ParameterIO.to_binary(pio)
+
+def create_shops(pack_name, data):
+    shops = get_res('shops')
+    def_shop=''
+    for x in shops:
+        def_shop = shops[x]
+        break
+
+    res = { }
+    for elem in data['Weapons']:
+        if 'shop' in data['Weapons'][elem]: shop = data['Weapons'][elem]['shop']
+        else:                               shop = def_shop
+        if not shop in res: res[shop] = []
+        res[shop].append(elem)
+
+
+    for elem in data['Armors']:
+        if 'shop' in data['Armors'][elem]: shop = data['Armors'][elem]['shop']
+        else:                               shop = def_shop
+        if not shop in res: res[shop] = []
+        res[shop].append(elem)
+    print(def_shop)
+    for shop in res:
+        print(res[shop], len(res[shop]))
+        shopdata = ShopData(pack_name,shop, list(res[shop]))
+        shopdata.create_shop()
+
+
+
