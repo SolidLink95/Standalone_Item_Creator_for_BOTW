@@ -5,8 +5,9 @@ import sys
 from copy import deepcopy
 import PySimpleGUI as sg
 from PyQt5 import QtCore
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QApplication, QMainWindow, QCompleter, QWidget, QSizePolicy, QHBoxLayout
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QIcon, QPalette, QColor
+from PyQt5.QtWidgets import QApplication, QMainWindow, QCompleter, QWidget, QSizePolicy, QHBoxLayout, QGraphicsScene
 from Option_w import options_window
 from ShopData import get_raw_data
 from files_manage import create_folder, get_main_json, file_to_json, get_mods_path, get_res, json_to_file, file_to_str, \
@@ -135,10 +136,12 @@ class Window(QMainWindow, Ui_SIC):
         self.layout = QHBoxLayout()
         self.layout.addWidget(self.frame)
         self.centralwidget.setLayout(self.layout)
+        pal = self.palette()
+        pal.setColor(QPalette.Window, QColor(47, 49, 54))
+        self.setPalette(pal)
         #self.setLayout(self.layout)
 
 
-        #radio button
     def readme(self):
         self.readme_w.load_txt()
         self.readme_w.show()

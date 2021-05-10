@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1101</width>
-    <height>851</height>
+    <width>926</width>
+    <height>739</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -61,9 +61,9 @@ QMenu::item:selected {
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
-      <width>1111</width>
-      <height>831</height>
+      <y>-10</y>
+      <width>934</width>
+      <height>731</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -202,307 +202,9 @@ QMenuBar::item:pressed
      <enum>QFrame::Raised</enum>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
-     <item row="1" column="2" rowspan="2">
-      <widget class="QFrame" name="Right_column">
-       <layout class="QGridLayout" name="gridLayout">
-        <item row="3" column="0" alignment="Qt::AlignHCenter">
-         <widget class="QPushButton" name="Clear_list">
-          <property name="minimumSize">
-           <size>
-            <width>200</width>
-            <height>25</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Clear list</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0" alignment="Qt::AlignHCenter">
-         <widget class="QPushButton" name="edit">
-          <property name="minimumSize">
-           <size>
-            <width>200</width>
-            <height>25</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Edit</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_24">
-          <property name="text">
-           <string>Mod content</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="0" alignment="Qt::AlignHCenter">
-         <widget class="QPushButton" name="Options">
-          <property name="minimumSize">
-           <size>
-            <width>200</width>
-            <height>25</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Options</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QListWidget" name="Mod_content">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(46, 68, 91);
-	color: rgb(220, 220, 220);</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0" alignment="Qt::AlignHCenter">
-         <widget class="QPushButton" name="Remove_from_mod">
-          <property name="minimumSize">
-           <size>
-            <width>200</width>
-            <height>25</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Remove from mod</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <layout class="QFormLayout" name="formLayout_12">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_83">
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Game language</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QComboBox" name="Lang">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>25</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_84">
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Mod name </string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="pack_name">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>25</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="0" column="1">
-      <layout class="QFormLayout" name="formLayout_4">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_14">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Mode       </string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QRadioButton" name="wiiu_radiobutton">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Wii-U</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="switch_radiobutton">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Switch</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="1">
-        <widget class="QComboBox" name="shop">
-         <property name="minimumSize">
-          <size>
-           <width>180</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>185</width>
-           <height>0</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_85">
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Shop</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="0" column="2">
-      <widget class="QToolButton" name="patreon">
-       <property name="minimumSize">
-        <size>
-         <width>80</width>
-         <height>40</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-image : url(res/patreon.png);
-background-color: rgb(47, 49, 54);
-border: none;</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../res/ppatreon.png</normaloff>../res/ppatreon.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>100</width>
-         <height>100</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0" rowspan="2" colspan="2">
+     <item row="0" column="0" colspan="2">
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="2" column="0">
-        <widget class="QPushButton" name="Create_mod">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Create mod</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QProgressBar" name="progressBar">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>35</height>
-          </size>
-         </property>
-         <property name="value">
-          <number>0</number>
-         </property>
-         <property name="textVisible">
-          <bool>true</bool>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="format">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
+       <item row="1" column="0" rowspan="2">
         <widget class="QTabWidget" name="TabWidget">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -513,8 +215,11 @@ border: none;</string>
          <property name="minimumSize">
           <size>
            <width>688</width>
-           <height>623</height>
+           <height>580</height>
           </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
          </property>
          <property name="styleSheet">
           <string notr="true">QTabWidget {
@@ -526,32 +231,20 @@ border: none;</string>
 }</string>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
            <string>Add armor</string>
           </attribute>
-          <widget class="QFrame" name="frame_2">
+          <widget class="QFrame" name="frame_4">
            <property name="geometry">
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>691</width>
-             <height>611</height>
+             <width>696</width>
+             <height>451</height>
             </rect>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>691</width>
-             <height>611</height>
-            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">QFrame{
@@ -567,19 +260,23 @@ border: none;</string>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <layout class="QGridLayout" name="gridLayout_4">
-            <item row="0" column="0" rowspan="3">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
              <layout class="QFormLayout" name="formLayout">
               <item row="0" column="0">
-               <widget class="QLabel" name="label_3">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>0</height>
-                 </size>
-                </property>
+               <widget class="QLabel" name="label_28">
                 <property name="text">
                  <string>Armor template</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="base">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
                 </property>
                </widget>
               </item>
@@ -699,6 +396,16 @@ border: none;</string>
                 </property>
                </widget>
               </item>
+              <item row="6" column="1">
+               <widget class="QComboBox" name="series">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
               <item row="7" column="0">
                <widget class="QLabel" name="label_10">
                 <property name="text">
@@ -789,41 +496,9 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="1">
-               <widget class="QComboBox" name="base">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>25</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>185</width>
-                  <height>0</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="1">
-               <widget class="QComboBox" name="series">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>25</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>185</width>
-                  <height>0</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
              </layout>
             </item>
-            <item row="0" column="1">
+            <item>
              <layout class="QFormLayout" name="formLayout_2">
               <item row="0" column="0">
                <widget class="QLabel" name="label_15">
@@ -958,58 +633,74 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
               </item>
               <item row="5" column="1">
                <widget class="QCheckBox" name="korok_mask">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
                 <property name="text">
                  <string>Custom head armor animations</string>
                 </property>
                </widget>
               </item>
-             </layout>
-            </item>
-            <item row="1" column="1">
-             <layout class="QFormLayout" name="formLayout_3">
-              <item row="1" column="0">
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_26">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Crafting</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QLabel" name="label_19">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0">
                <widget class="QLabel" name="label_17">
                 <property name="text">
                  <string>First item name</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="0">
+              <item row="7" column="1">
+               <widget class="QComboBox" name="item1">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
                <widget class="QLabel" name="label_18">
                 <property name="text">
                  <string>First item amount</string>
                 </property>
                </widget>
               </item>
-              <item row="3" column="0">
-               <widget class="QLabel" name="label_20">
-                <property name="text">
-                 <string>Second item name</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="0">
-               <widget class="QLabel" name="label_21">
-                <property name="text">
-                 <string>Second item amount</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="0">
-               <widget class="QLabel" name="label_22">
-                <property name="text">
-                 <string>Third item amount</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="0">
-               <widget class="QLabel" name="label_23">
-                <property name="text">
-                 <string>Third item name</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
+              <item row="8" column="1">
                <widget class="QLineEdit" name="item1_n">
                 <property name="minimumSize">
                  <size>
@@ -1025,7 +716,31 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="1">
+              <item row="9" column="0">
+               <widget class="QLabel" name="label_20">
+                <property name="text">
+                 <string>Second item name</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="1">
+               <widget class="QComboBox" name="item2">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="0">
+               <widget class="QLabel" name="label_21">
+                <property name="text">
+                 <string>Second item amount</string>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="1">
                <widget class="QLineEdit" name="item2_n">
                 <property name="minimumSize">
                  <size>
@@ -1041,43 +756,14 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="6" column="1">
-               <widget class="QLineEdit" name="item3_n">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>25</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>25</height>
-                 </size>
+              <item row="11" column="0">
+               <widget class="QLabel" name="label_23">
+                <property name="text">
+                 <string>Third item name</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="1">
-               <widget class="QComboBox" name="item1">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>25</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="1">
-               <widget class="QComboBox" name="item2">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>25</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="1">
+              <item row="11" column="1">
                <widget class="QComboBox" name="item3">
                 <property name="minimumSize">
                  <size>
@@ -1087,40 +773,26 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_19">
+              <item row="12" column="1">
+               <widget class="QPushButton" name="Add_armor">
                 <property name="minimumSize">
                  <size>
-                  <width>0</width>
-                  <height>30</height>
+                  <width>200</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
                  </size>
                 </property>
                 <property name="text">
-                 <string>Crafting requirements</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QLabel" name="label_28">
-                <property name="text">
-                 <string/>
+                 <string>Add armor</string>
                 </property>
                </widget>
               </item>
              </layout>
-            </item>
-            <item row="2" column="1">
-             <widget class="QPushButton" name="Add_armor">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Add armor</string>
-              </property>
-             </widget>
             </item>
            </layout>
           </widget>
@@ -1129,18 +801,18 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
           <attribute name="title">
            <string>Add weapon</string>
           </attribute>
-          <widget class="QFrame" name="frame_3">
+          <widget class="QFrame" name="frame_5">
            <property name="geometry">
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>689</width>
-             <height>611</height>
+             <width>696</width>
+             <height>571</height>
             </rect>
            </property>
            <property name="styleSheet">
             <string notr="true">QFrame{
-	background-color:rgb(81, 85, 93);
+	background-color: rgb(81, 85, 93);
 	color: white;
 	
 	font: 9pt &quot;Segoe MDL2 Assets&quot;;
@@ -1152,9 +824,9 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <layout class="QGridLayout" name="gridLayout_5">
-            <item row="0" column="0" rowspan="4">
-             <layout class="QFormLayout" name="formLayout_8">
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <layout class="QFormLayout" name="formLayout_10">
               <item row="0" column="0">
                <widget class="QLabel" name="label_49">
                 <property name="minimumSize">
@@ -1165,6 +837,16 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                 <property name="text">
                  <string>Weapon template</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="base_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
                 </property>
                </widget>
               </item>
@@ -1327,6 +1009,16 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
+              <item row="8" column="1">
+               <widget class="QComboBox" name="sheath">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
               <item row="9" column="0">
                <widget class="QLabel" name="label_56">
                 <property name="text">
@@ -1417,61 +1109,48 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="1">
-               <widget class="QComboBox" name="base_2">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>25</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>185</width>
-                  <height>0</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="1">
-               <widget class="QComboBox" name="sheath">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>25</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>185</width>
-                  <height>0</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
              </layout>
             </item>
-            <item row="0" column="1">
-             <widget class="QLabel" name="label_70">
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Magic</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <layout class="QFormLayout" name="formLayout_9">
+            <item>
+             <layout class="QFormLayout" name="formLayout_8">
               <item row="0" column="0">
+               <widget class="QLabel" name="label_70">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Magic</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_86">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
                <widget class="QLabel" name="label_61">
                 <property name="minimumSize">
                  <size>
                   <width>75</width>
-                  <height>0</height>
+                  <height>25</height>
                  </size>
                 </property>
                 <property name="text">
@@ -1479,7 +1158,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="1">
+              <item row="1" column="1">
                <widget class="QLineEdit" name="magic">
                 <property name="minimumSize">
                  <size>
@@ -1495,14 +1174,20 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="label_62">
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_64">
+                <property name="minimumSize">
+                 <size>
+                  <width>75</width>
+                  <height>25</height>
+                 </size>
+                </property>
                 <property name="text">
                  <string/>
                 </property>
                </widget>
               </item>
-              <item row="1" column="1">
+              <item row="2" column="1">
                <widget class="QCheckBox" name="ismagicinf">
                 <property name="minimumSize">
                  <size>
@@ -1515,14 +1200,20 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="0">
+              <item row="3" column="0">
                <widget class="QLabel" name="label_69">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
                 <property name="text">
                  <string>Gravity</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="1">
+              <item row="3" column="1">
                <widget class="QLineEdit" name="magicgravity">
                 <property name="minimumSize">
                  <size>
@@ -1538,14 +1229,20 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="3" column="0">
+              <item row="4" column="0">
                <widget class="QLabel" name="label_71">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
                 <property name="text">
                  <string>Speed</string>
                 </property>
                </widget>
               </item>
-              <item row="3" column="1">
+              <item row="4" column="1">
                <widget class="QLineEdit" name="magicspeed">
                 <property name="minimumSize">
                  <size>
@@ -1561,14 +1258,20 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="0">
+              <item row="5" column="0">
                <widget class="QLabel" name="label_72">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
                 <property name="text">
                  <string>Radius</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="1">
+              <item row="5" column="1">
                <widget class="QLineEdit" name="magicradius">
                 <property name="minimumSize">
                  <size>
@@ -1584,14 +1287,20 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="5" column="0">
+              <item row="6" column="0">
                <widget class="QLabel" name="label_73">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
                 <property name="text">
                  <string>Range</string>
                 </property>
                </widget>
               </item>
-              <item row="5" column="1">
+              <item row="6" column="1">
                <widget class="QLineEdit" name="magicrange">
                 <property name="minimumSize">
                  <size>
@@ -1607,14 +1316,20 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="6" column="0">
+              <item row="7" column="0">
                <widget class="QLabel" name="label_74">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
                 <property name="text">
                  <string>Power</string>
                 </property>
                </widget>
               </item>
-              <item row="6" column="1">
+              <item row="7" column="1">
                <widget class="QLineEdit" name="magicpower">
                 <property name="minimumSize">
                  <size>
@@ -1630,67 +1345,82 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="7" column="0">
-               <widget class="QLabel" name="label_26">
+              <item row="8" column="0">
+               <widget class="QLabel" name="label_87">
                 <property name="text">
                  <string/>
                 </property>
                </widget>
               </item>
-              <item row="7" column="1">
+              <item row="8" column="1">
                <widget class="QCheckBox" name="anims">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
                 <property name="text">
                  <string>Custom animations [experimental]</string>
                 </property>
                </widget>
               </item>
-             </layout>
-            </item>
-            <item row="2" column="1">
-             <layout class="QFormLayout" name="formLayout_11">
-              <item row="1" column="0">
+              <item row="9" column="0">
+               <widget class="QLabel" name="label_65">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Crafting</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="1">
+               <widget class="QLabel" name="label_62">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="0">
                <widget class="QLabel" name="label_55">
                 <property name="text">
-                 <string>First item name</string>
+                 <string>First item</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="0">
-               <widget class="QLabel" name="label_76">
-                <property name="text">
-                 <string>First item amount</string>
+              <item row="10" column="1">
+               <widget class="QComboBox" name="item1_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
                 </property>
                </widget>
               </item>
-              <item row="3" column="0">
-               <widget class="QLabel" name="label_77">
-                <property name="text">
-                 <string>Second item name</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="0">
-               <widget class="QLabel" name="label_78">
-                <property name="text">
-                 <string>Second item amount</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="0">
-               <widget class="QLabel" name="label_79">
-                <property name="text">
-                 <string>Third item amount</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="0">
-               <widget class="QLabel" name="label_80">
-                <property name="text">
-                 <string>Third item name</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
+              <item row="11" column="1">
                <widget class="QLineEdit" name="item1_n_2">
                 <property name="minimumSize">
                  <size>
@@ -1706,7 +1436,31 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="1">
+              <item row="11" column="0">
+               <widget class="QLabel" name="label_76">
+                <property name="text">
+                 <string>amount</string>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="1">
+               <widget class="QComboBox" name="item2_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="0">
+               <widget class="QLabel" name="label_77">
+                <property name="text">
+                 <string>Second item</string>
+                </property>
+               </widget>
+              </item>
+              <item row="13" column="1">
                <widget class="QLineEdit" name="item2_n_2">
                 <property name="minimumSize">
                  <size>
@@ -1722,7 +1476,31 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="6" column="1">
+              <item row="13" column="0">
+               <widget class="QLabel" name="label_78">
+                <property name="text">
+                 <string>amount</string>
+                </property>
+               </widget>
+              </item>
+              <item row="14" column="1">
+               <widget class="QComboBox" name="item3_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="14" column="0">
+               <widget class="QLabel" name="label_80">
+                <property name="text">
+                 <string>Third item</string>
+                </property>
+               </widget>
+              </item>
+              <item row="15" column="1">
                <widget class="QLineEdit" name="item3_n_2">
                 <property name="minimumSize">
                  <size>
@@ -1738,73 +1516,356 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="1">
-               <widget class="QComboBox" name="item1_2">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>25</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="1">
-               <widget class="QComboBox" name="item2_2">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>25</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="1">
-               <widget class="QComboBox" name="item3_2">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>25</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_60">
+              <item row="15" column="0">
+               <widget class="QLabel" name="label_79">
                 <property name="text">
-                 <string>Crafting requirements</string>
+                 <string>amount</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="1">
-               <widget class="QLabel" name="label_63">
+              <item row="16" column="1">
+               <widget class="QPushButton" name="Add_weapon">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
                 <property name="text">
-                 <string/>
+                 <string>Add weapon</string>
                 </property>
                </widget>
               </item>
              </layout>
-            </item>
-            <item row="3" column="1">
-             <widget class="QPushButton" name="Add_weapon">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Add weapon</string>
-              </property>
-             </widget>
             </item>
            </layout>
           </widget>
          </widget>
         </widget>
        </item>
+       <item row="3" column="0" colspan="2">
+        <widget class="QPushButton" name="Create_mod">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Create mod</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" colspan="2">
+        <widget class="QProgressBar" name="progressBar">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+         <property name="textVisible">
+          <bool>true</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="format">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <layout class="QFormLayout" name="formLayout_9">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_83">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Game language</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="Lang">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_84">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Mod name </string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="pack_name">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>25</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QFormLayout" name="formLayout_4">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Mode       </string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QRadioButton" name="wiiu_radiobutton">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Wii-U</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="switch_radiobutton">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Switch</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_85">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Shop</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="shop">
+             <property name="minimumSize">
+              <size>
+               <width>180</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>185</width>
+               <height>0</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
       </layout>
      </item>
+     <item row="0" column="2">
+      <widget class="QFrame" name="Right_column">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="2" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QPushButton" name="edit">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Edit</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QListWidget" name="Mod_content">
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(46, 68, 91);
+	color: rgb(220, 220, 220);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QPushButton" name="Clear_list">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Clear list</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QPushButton" name="Options">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Options</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_24">
+          <property name="text">
+           <string>Mod content</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" alignment="Qt::AlignHCenter">
+         <widget class="QPushButton" name="Remove_from_mod">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Remove from mod</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
     </layout>
+   </widget>
+   <widget class="QToolButton" name="patreon">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>790</y>
+      <width>103</width>
+      <height>103</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>80</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image : url(res/patreon.png);
+background-color: rgb(47, 49, 54);
+border: none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../res/ppatreon.png</normaloff>../res/ppatreon.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -1812,7 +1873,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1101</width>
+     <width>926</width>
      <height>20</height>
     </rect>
    </property>
