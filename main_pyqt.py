@@ -134,8 +134,8 @@ class Window(QMainWindow, Ui_SIC):
         #resizing setFixedSize
         self.layout = QHBoxLayout()
         self.layout.addWidget(self.frame)
-
-        self.setLayout(self.layout)
+        self.centralwidget.setLayout(self.layout)
+        #self.setLayout(self.layout)
 
 
         #radio button
@@ -402,7 +402,7 @@ class Window(QMainWindow, Ui_SIC):
 def main():
     app = QApplication(sys.argv)
     win = Window()
-    win.setFixedSize(win.size())
+    #win.setFixedSize(win.size())
     #win.setFixedSize(win.layout.sizeHint())
 
     win.show()
