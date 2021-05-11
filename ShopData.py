@@ -56,9 +56,9 @@ class ShopData:
         for w in self.items:
             iter += 1
             n = int_to_3digits(iter)
-            pio.objects[table].params[f'ItemSort{n}'] = iter
+            pio.objects[table].params[f'ItemSort{n}'] = iter - 1
             pio.objects[table].params[f'ItemName{n}'] = oead.FixedSafeString64(w)
-            pio.objects[table].params[f'ItemNum{n}'] = 0
+            pio.objects[table].params[f'ItemNum{n}'] = 1
             pio.objects[table].params[f'ItemAdjustPrice{n}'] = 0
             pio.objects[table].params[f'ItemLookGetFlg{n}'] = False
             pio.objects[table].params[f'ItemAmount{n}'] = 0
