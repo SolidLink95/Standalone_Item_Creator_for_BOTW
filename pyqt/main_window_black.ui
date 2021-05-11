@@ -243,7 +243,7 @@ QMenuBar::item:pressed
              <x>0</x>
              <y>0</y>
              <width>696</width>
-             <height>451</height>
+             <height>481</height>
             </rect>
            </property>
            <property name="styleSheet">
@@ -679,7 +679,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
               <item row="7" column="0">
                <widget class="QLabel" name="label_17">
                 <property name="text">
-                 <string>First item name</string>
+                 <string>First item</string>
                 </property>
                </widget>
               </item>
@@ -696,7 +696,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
               <item row="8" column="0">
                <widget class="QLabel" name="label_18">
                 <property name="text">
-                 <string>First item amount</string>
+                 <string>amount</string>
                 </property>
                </widget>
               </item>
@@ -719,7 +719,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
               <item row="9" column="0">
                <widget class="QLabel" name="label_20">
                 <property name="text">
-                 <string>Second item name</string>
+                 <string>Second item</string>
                 </property>
                </widget>
               </item>
@@ -736,7 +736,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
               <item row="10" column="0">
                <widget class="QLabel" name="label_21">
                 <property name="text">
-                 <string>Second item amount</string>
+                 <string>amount</string>
                 </property>
                </widget>
               </item>
@@ -759,7 +759,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
               <item row="11" column="0">
                <widget class="QLabel" name="label_23">
                 <property name="text">
-                 <string>Third item name</string>
+                 <string>Third item</string>
                 </property>
                </widget>
               </item>
@@ -773,7 +773,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                </widget>
               </item>
-              <item row="12" column="1">
+              <item row="13" column="1">
                <widget class="QPushButton" name="Add_armor">
                 <property name="minimumSize">
                  <size>
@@ -789,6 +789,29 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                 </property>
                 <property name="text">
                  <string>Add armor</string>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="1">
+               <widget class="QLineEdit" name="item3_n">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>25</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="0">
+               <widget class="QLabel" name="label_22">
+                <property name="text">
+                 <string>amount</string>
                 </property>
                </widget>
               </item>

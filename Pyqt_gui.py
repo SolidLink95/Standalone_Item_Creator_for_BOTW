@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'pyqt\main_window_black.ui'
+# Form implementation generated from reading ui file 'main_window_black.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -209,7 +209,7 @@ class Ui_SIC(object):
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
         self.frame_4 = QtWidgets.QFrame(self.tab)
-        self.frame_4.setGeometry(QtCore.QRect(0, 0, 696, 451))
+        self.frame_4.setGeometry(QtCore.QRect(0, 0, 696, 481))
         self.frame_4.setStyleSheet("QFrame{\n"
 "    background-color: rgb(81, 85, 93);\n"
 "    color: white;\n"
@@ -413,7 +413,15 @@ class Ui_SIC(object):
         self.Add_armor.setMinimumSize(QtCore.QSize(200, 50))
         self.Add_armor.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.Add_armor.setObjectName("Add_armor")
-        self.formLayout_2.setWidget(12, QtWidgets.QFormLayout.FieldRole, self.Add_armor)
+        self.formLayout_2.setWidget(13, QtWidgets.QFormLayout.FieldRole, self.Add_armor)
+        self.item3_n = QtWidgets.QLineEdit(self.frame_4)
+        self.item3_n.setMinimumSize(QtCore.QSize(0, 25))
+        self.item3_n.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.item3_n.setObjectName("item3_n")
+        self.formLayout_2.setWidget(12, QtWidgets.QFormLayout.FieldRole, self.item3_n)
+        self.label_22 = QtWidgets.QLabel(self.frame_4)
+        self.label_22.setObjectName("label_22")
+        self.formLayout_2.setWidget(12, QtWidgets.QFormLayout.LabelRole, self.label_22)
         self.horizontalLayout.addLayout(self.formLayout_2)
         self.TabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
@@ -880,12 +888,13 @@ class Ui_SIC(object):
         self.label_2.setText(_translate("SIC", "Model name"))
         self.korok_mask.setText(_translate("SIC", "Custom head armor animations"))
         self.label_26.setText(_translate("SIC", "Crafting"))
-        self.label_17.setText(_translate("SIC", "First item name"))
-        self.label_18.setText(_translate("SIC", "First item amount"))
-        self.label_20.setText(_translate("SIC", "Second item name"))
-        self.label_21.setText(_translate("SIC", "Second item amount"))
-        self.label_23.setText(_translate("SIC", "Third item name"))
+        self.label_17.setText(_translate("SIC", "First item"))
+        self.label_18.setText(_translate("SIC", "amount"))
+        self.label_20.setText(_translate("SIC", "Second item"))
+        self.label_21.setText(_translate("SIC", "amount"))
+        self.label_23.setText(_translate("SIC", "Third item"))
         self.Add_armor.setText(_translate("SIC", "Add armor"))
+        self.label_22.setText(_translate("SIC", "amount"))
         self.TabWidget.setTabText(self.TabWidget.indexOf(self.tab), _translate("SIC", "Add armor"))
         self.label_49.setText(_translate("SIC", "Weapon template"))
         self.label_50.setText(_translate("SIC", "Weapon ID"))
