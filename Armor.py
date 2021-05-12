@@ -3,7 +3,7 @@ import sys
 import oead, copy
 
 from bfres_dup import Bfres_Dup, duplicate_bfres
-from files_manage import get_def_path
+from files_manage import get_def_path, get_res
 from sarc_class import Sarc_file
 from shutil import copyfile
 
@@ -260,3 +260,8 @@ def get_raw_data(data_sarc, file):
     pio = oead.aamp.ParameterIO.from_binary(data)
     return pio
 
+def make_armors_upgradeable(data):
+    ups = get_res('upgradeable')
+    for elem in data['Armors']:
+        if not elem in ups:
+            pass
