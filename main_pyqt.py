@@ -139,6 +139,9 @@ class Window(QMainWindow, Ui_SIC):
         pal = self.palette()
         pal.setColor(QPalette.Window, QColor(47, 49, 54))
         self.setPalette(pal)
+        #self.frame. = self.frame.styleSheet.replace('font: 10pt', 'font: 6pt')
+        #style = str(self.frame.styleSheet).replace('font\: 10pt', 'font\: 6pt')
+        #self.label_28.setStyleSheet('font: 8pt "Segoe MDL2 Assets";')
         #self.setLayout(self.layout)
 
 
