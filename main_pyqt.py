@@ -9,6 +9,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon, QPalette, QColor
 from PyQt5.QtWidgets import QApplication, QMainWindow, QCompleter, QWidget, QSizePolicy, QHBoxLayout, QGraphicsScene
 from Option_w import options_window
+from Prompt_w import prompt_window
 from ShopData import get_raw_data
 from files_manage import create_folder, get_main_json, file_to_json, get_mods_path, get_res, json_to_file, file_to_str, \
     get_langs, get_endianness, get_def_path
@@ -23,14 +24,13 @@ from sarc_class import Sarc_file
 config_file = 'config.ini'
 valid_rgb = 'rgb(21, 155, 130)'
 invalid_rgb = 'rgb(239, 74, 70)'
-
+BG_COLOR = [47, 49, 54]
 
 class Window(QMainWindow, Ui_SIC):
 
     def __init__(self, parent=None):
         super().__init__(parent)
         self.data = clear_json()
-        self.added_list = []
         self.config = 'config.ini'
         self.shops = get_res('shops')
         self.shops_rev = get_res('shops_rev')
@@ -49,10 +49,9 @@ class Window(QMainWindow, Ui_SIC):
         self.langs = get_langs()
         self.options_w = options_window(valid_rgb=valid_rgb,invalid_rgb=invalid_rgb, config_file=config_file)
         self.readme_w = readme_window()
+        self.prompt_w = prompt_window(valid_rgb, invalid_rgb, config_file, Style_Sheet=self.styleSheet())
         self.setupUi(self)
         self.setup_ui_local()
-
-
 
 
     def setup_ui_local(self):
@@ -69,6 +68,7 @@ class Window(QMainWindow, Ui_SIC):
         self.Options.clicked.connect(self.options)
         self.patreon.clicked.connect(lambda : os.system(f'start https://www.patreon.com/user?u=32002965'))
         self.patreon.hide()
+        self.Upgrade_armors.hide()
         self.edit.clicked.connect(self.edit_click)
 
         #combo boxes
@@ -137,7 +137,7 @@ class Window(QMainWindow, Ui_SIC):
         self.layout.addWidget(self.frame)
         self.centralwidget.setLayout(self.layout)
         pal = self.palette()
-        pal.setColor(QPalette.Window, QColor(47, 49, 54))
+        pal.setColor(QPalette.Window, QColor(BG_COLOR[0],BG_COLOR[1],BG_COLOR[2]))
         self.setPalette(pal)
         #self.frame. = self.frame.styleSheet.replace('font: 10pt', 'font: 6pt')
         #style = str(self.frame.styleSheet).replace('font\: 10pt', 'font\: 6pt')
@@ -342,6 +342,7 @@ class Window(QMainWindow, Ui_SIC):
             "shop": self.shops[self.shop.currentText()],
             "base": self.armors[base],
             "name": self.name.text(),
+            "armorNextRankName": '',
             "bfres_template": self.bfres_template.text(),
             "bfres": self.bfres.text(),
             "mainmodel": self.mainmodel.text(),
@@ -371,9 +372,15 @@ class Window(QMainWindow, Ui_SIC):
 
     def clear_list(self):
         #print('clear_list function')
+        if self.data == clear_json(): return
         self.data = clear_json()
         self.Mod_content.clear()
-        self.added_list.clear()
+        self.prompt_w.setWindowTitle('Message')
+        self.prompt_w.buttons()
+        self.prompt_w.message.setPlainText('Mod content cleared successfully')
+        self.prompt_w.frame.setStyleSheet(self.frame.styleSheet())
+        self.prompt_w.setPalette(self.palette())
+        self.prompt_w.show()
 
     def remove_from_mod(self):
         #print('remove_from_mod function')
@@ -389,6 +396,7 @@ class Window(QMainWindow, Ui_SIC):
 
     def options(self):
         self.options_w.frame.setStyleSheet(self.frame.styleSheet())
+        self.options_w.setPalette(self.palette())
         self.options_w.show()
         config = configparser.ConfigParser()
         config.read(config_file)

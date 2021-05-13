@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>482</width>
-    <height>213</height>
+    <width>646</width>
+    <height>334</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Message</string>
@@ -23,31 +29,45 @@
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="1" column="0">
-       <widget class="QPushButton" name="OkButton">
-        <property name="text">
-         <string>OK</string>
-        </property>
-       </widget>
+      <item row="0" column="0">
+       <widget class="QTextBrowser" name="message"/>
       </item>
       <item row="2" column="0">
        <widget class="QPushButton" name="YesButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
         <property name="text">
          <string>Yes</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
-       <widget class="QPushButton" name="NoButton">
+      <item row="1" column="0">
+       <widget class="QPushButton" name="OkButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
         <property name="text">
-         <string>No</string>
+         <string>OK</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="0">
-       <widget class="QPlainTextEdit" name="message">
-        <property name="enabled">
-         <bool>false</bool>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="NoButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>No</string>
         </property>
        </widget>
       </item>
