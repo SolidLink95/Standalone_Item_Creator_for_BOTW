@@ -9101,7 +9101,8 @@
         "Beedle (South Akkala)": "Npc_TripMaster_06",
         "Beedle (Tabantha Bridge)": "Npc_TripMaster_04",
         "Beedle (Wetland Stable)": "Npc_TripMaster_12",
-        "Beedle (Woodland Stable)": "Npc_TripMaster_11"
+        "Beedle (Woodland Stable)": "Npc_TripMaster_11",
+        "None": "None"
     },
     "shops_rev": {
         "Npc_TripMaster_00": "Beedle (Dueling Peaks)",
@@ -9120,7 +9121,8 @@
         "Npc_TripMaster_13": "Beedle (Snowfield Stable)",
         "Npc_TripMaster_14": "Beedle (Highland Stable)",
         "Npc_TripMaster_15": "Beedle (Kara Kara)",
-        "TwnObj_AncientOven_A_01": "Ancient Oven Cherry"
+        "TwnObj_AncientOven_A_01": "Ancient Oven Cherry",
+        "None": "None"
     },
     "weapons": {
         "Ancient Battle Axe": "Weapon_Lsword_013",

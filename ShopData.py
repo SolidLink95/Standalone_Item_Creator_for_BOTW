@@ -118,8 +118,9 @@ def create_shops(pack_name, data):
         if not shop in res: res[shop] = []
         res[shop].append(elem)
     for shop in res:
-        shopdata = ShopData(pack_name,shop, list(res[shop]))
-        shopdata.create_shop()
+        if shop != 'None':
+            shopdata = ShopData(pack_name,shop, list(res[shop]))
+            shopdata.create_shop()
 
 
 

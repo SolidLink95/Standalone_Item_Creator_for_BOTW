@@ -58,6 +58,7 @@ class Armor:
         old_name = f'Actor/ActorLink/{self.base}.bxml'
         new_name = f'Actor/ActorLink/{self.name}.bxml'
         pio = get_raw_data(self.data.data_sarc, old_name)
+        PhysicsUser = None
 
         pio.objects['LinkTarget'].params['ActorNameJpn'] = 'asdf'
         if self.elink: pio.objects['LinkTarget'].params['ElinkUser'] = self.elink
@@ -74,9 +75,8 @@ class Armor:
             pio.objects['LinkTarget'].params['ASUser'] = self.name
 
         OldPhysicsUser = str(pio.objects['LinkTarget'].params['PhysicsUser'])
-        PhysicsUser = self.do_physics(OldPhysicsUser)
-        if PhysicsUser:
-            pio.objects['LinkTarget'].params['PhysicsUser'] = PhysicsUser
+        if self.physics != self.base: PhysicsUser = self.do_physics(OldPhysicsUser)
+        if PhysicsUser: pio.objects['LinkTarget'].params['PhysicsUser'] = PhysicsUser
 
         update_sarc(pio, self.data, old_name, new_name)
 

@@ -343,6 +343,7 @@ class Window(QMainWindow, Ui_SIC):
             "base": self.armors[base],
             "name": self.name.text(),
             "armorNextRankName": '',
+            "armorStarNum": '',
             "bfres_template": self.bfres_template.text(),
             "bfres": self.bfres.text(),
             "mainmodel": self.mainmodel.text(),
@@ -383,7 +384,6 @@ class Window(QMainWindow, Ui_SIC):
         self.prompt_w.show()
 
     def remove_from_mod(self):
-        #print('remove_from_mod function')
         try:
             x = self.Mod_content.currentItem()
         except:
@@ -418,17 +418,12 @@ def main():
     win = Window()
     #win.setFixedSize(win.size())
     #win.setFixedSize(win.layout.sizeHint())
-
     win.show()
     create_folder('jsons')
     create_folder('res')
     create_folder('cache')
-
-
     #json_to_file('res\\res.json', res)
     app.exec()
-    #sys.exit(app.exec())
-
 
 
 def init():
