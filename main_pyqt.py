@@ -8,6 +8,8 @@ from PyQt5 import QtCore
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon, QPalette, QColor
 from PyQt5.QtWidgets import QApplication, QMainWindow, QCompleter, QWidget, QSizePolicy, QHBoxLayout, QGraphicsScene
+
+from InputValidation import validateData
 from Option_w import options_window
 from Prompt_w import prompt_window
 from ShopData import get_raw_data
@@ -34,7 +36,7 @@ class Window(QMainWindow, Ui_SIC):
         self.config = 'config.ini'
         self.shops = get_res('shops')
         self.shops_rev = get_res('shops_rev')
-        self.actors = get_res('Actors')
+        #self.actors = get_res('Actors')
         self.weapons = get_res('weapons')
         self.armors = get_res('armors')
         self.items = get_res('items')
@@ -55,6 +57,8 @@ class Window(QMainWindow, Ui_SIC):
 
 
     def setup_ui_local(self):
+        #windows
+        self.prompt_w.frame.setStyleSheet(self.frame.styleSheet())
         # variables
         for elem in self.shops:
             self.shop_default = elem
@@ -274,7 +278,9 @@ class Window(QMainWindow, Ui_SIC):
         if not self.Lang.currentText(): return
         if not os.path.exists(self.config): return
         self.check_mode()
-        Load_Input(self.data, self.pack_name.text(), self.Lang.currentText(), self.progressBar).create_pack()
+        self.data, flag = validateData(self.data, self.prompt_w, self.armors)
+        if flag:
+            Load_Input(self.data, self.pack_name.text(), self.Lang.currentText(), self.progressBar).create_pack()
 
 
     def add_weapon(self):
@@ -359,6 +365,7 @@ class Window(QMainWindow, Ui_SIC):
             "name_desc": self.name_desc.text(),
             "desc": self.desc.toPlainText(),
             "korok_mask": bool(self.korok_mask.isChecked()),
+            "upgradeable": False,#bool(self.korok_mask.isChecked()),
             "Crafting": {
                 "item1": self.items[self.item1.currentText()],
                 "item1_n": self.item1_n.text(),
@@ -379,7 +386,7 @@ class Window(QMainWindow, Ui_SIC):
         self.prompt_w.setWindowTitle('Message')
         self.prompt_w.buttons()
         self.prompt_w.message.setPlainText('Mod content cleared successfully')
-        self.prompt_w.frame.setStyleSheet(self.frame.styleSheet())
+
         self.prompt_w.setPalette(self.palette())
         self.prompt_w.show()
 
