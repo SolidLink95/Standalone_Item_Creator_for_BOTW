@@ -54,15 +54,16 @@ class ShopData:
         #for a in self.data_json['Armors']: items.append(a)
 
         for w in self.items:
-            iter += 1
-            n = int_to_3digits(iter)
-            pio.objects[table].params[f'ItemSort{n}'] = iter - 1
+            size +=1
+            n = int_to_3digits(iter+size)
+            pio.objects[table].params[f'ItemSort{n}'] = iter + size - 1
             pio.objects[table].params[f'ItemName{n}'] = oead.FixedSafeString64(w)
-            pio.objects[table].params[f'ItemNum{n}'] = 1
+            if 'Npc_DressFairy' in self.shop: pio.objects[table].params[f'ItemNum{n}'] = 0
+            else: pio.objects[table].params[f'ItemNum{n}'] = 1
             pio.objects[table].params[f'ItemAdjustPrice{n}'] = 0
             pio.objects[table].params[f'ItemLookGetFlg{n}'] = False
             pio.objects[table].params[f'ItemAmount{n}'] = 0
-            size +=1
+
 
         pio.objects[table].params['ColumnNum'] = size + iter
         update_sarc(pio, self.data, old_name, new_name)

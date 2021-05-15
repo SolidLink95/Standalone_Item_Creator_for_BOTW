@@ -33,37 +33,6 @@ def validateData(data, prompt_w, armors, mod_content):
     to_add_armors = {}
     for armor in data['Armors']:
         if data['Armors'][armor]['upgradeable']:
-            data['Armors'][armor]['armorStarNum'] = 1
-            upgrades = get_upgrades_ids(data['Armors'][armor]['base'])
-            print(upgrades)
-            data['Armors'][armor]['armorNextRankName'] = upgrades[0]
-            for i in range(len(upgrades)):
-                split_name = upgrades[i].split('_')
-                new_arm = deepcopy(data['Armors'][armor])
-                new_arm['armorStarNum'] = i + 2
-                if i == (len(upgrades)-1): new_arm['armorNextRankName'] = ''
-                else: new_arm['armorNextRankName'] = upgrades[i+1]
-                new_arm['bfres'] = split_name[0] + '_' + split_name[1]
-                new_arm['mainmodel'] = upgrades[i]
-                new_arm['name'] = upgrades[i]
-                new_arm['bfres_template'] = data['Armors'][armor]['base']
-                stars = '★'*(i+2)
-                base_name = armors_rev[data['Armors'][armor]['base']] + ' ' + stars
-                new_base = armors[base_name]
-                new_arm['base'] = new_base
-                data['Armors'][upgrades[i]] = new_arm
-    json_to_file('jsons\\TEST.json', data)
-    return data, flag
-
-
-def validate_test(data):
-    upgradeables = get_res('upgradeable')
-    armors=get_res('armors')
-    armors_rev = rev_json(armors)
-    flag=True
-    to_add_armors = {}
-    for armor in data['Armors']:
-        if data['Armors'][armor]['upgradeable']:
             root_name = data['Armors'][armor]['name']
             data['Armors'][armor]['armorStarNum'] = 1
             upgrades = get_upgrades_ids(root_name)
@@ -84,9 +53,53 @@ def validate_test(data):
                 new_base = armors[base_name]
                 new_arm['upgradeable'] = False
                 new_arm['base'] = new_base
+                new_arm['itemUseIconActorName'] = root_name
                 if i == 0: new_arm['Crafting']['item1'] = root_name
                 else: new_arm['Crafting']['item1'] = upgrades[i-1]
                 new_arm['Crafting']['item1_n'] = '1'
+                to_add_armors[upgrades[i]] = new_arm
+    for armor in to_add_armors:
+        data['Armors'][armor] = to_add_armors[armor]
+    json_to_file('jsons\\TEST.json', data)
+    return data, flag
+
+
+def validate_test(data):
+    armors=get_res('armors')
+    armors_rev = rev_json(armors)
+    flag=True
+    defence_step = 5
+    to_add_armors = {}
+    for armor in data['Armors']:
+        if data['Armors'][armor]['upgradeable']:
+            root_name = armor
+            data['Armors'][armor]['armorStarNum'] = 1
+            new_defence = int(data['Armors'][armor]['defence']) + defence_step
+            upgrades = get_upgrades_ids(root_name)
+            print(upgrades)
+            data['Armors'][armor]['armorNextRankName'] = upgrades[0]
+            for i in range(len(upgrades)):
+                split_name = root_name.split('_')
+                new_arm = deepcopy(data['Armors'][armor])
+                new_arm['armorStarNum'] = i + 2
+                if i == (len(upgrades)-1): new_arm['armorNextRankName'] = ''
+                else: new_arm['armorNextRankName'] = upgrades[i+1]
+                new_arm['bfres'] = split_name[0] + '_' + split_name[1]
+                new_arm['mainmodel'] = root_name
+                new_arm['defence'] = str(new_defence)
+                new_arm['itemUseIconActorName'] = root_name
+                new_arm['name'] = upgrades[i]
+                new_arm['bfres_template'] = 'None' #data['Armors'][armor]['base']
+                stars = '★'*(i+1)
+                base_name = armors_rev[data['Armors'][armor]['base']] + ' ' + stars
+                new_base = armors[base_name]
+                new_arm['upgradeable'] = False
+                new_arm['base'] = new_base
+                new_arm['shop'] = f'Npc_DressFairy_0{str(i)}'
+                if i == 0: new_arm['Crafting']['item1'] = root_name
+                else: new_arm['Crafting']['item1'] = upgrades[i-1]
+                new_arm['Crafting']['item1_n'] = '1'
+                new_defence += defence_step
                 to_add_armors[upgrades[i]] = new_arm
     for armor in to_add_armors:
         data['Armors'][armor] = to_add_armors[armor]

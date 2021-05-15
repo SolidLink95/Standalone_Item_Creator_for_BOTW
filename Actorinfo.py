@@ -73,7 +73,10 @@ def armor_iter(armor, actorinfo, actors):
     
     
     if armor.slink: new_entry["slink"] = armor.slink
-    
+    if armor.armorStarNum: new_entry["armorStarNum"] = oead.S32(armor.armorStarNum)
+    if armor.armorNextRankName: new_entry["armorNextRankName"] = armor.armorNextRankName
+    if armor.itemUseIconActorName: new_entry["itemUseIconActorName"] = armor.itemUseIconActorName
+
     if armor.defence: new_entry["armorDefenceAddLevel"] = oead.S32(int(armor.defence))
     if armor.effect_lv: new_entry["armorEffectEffectLevel"] = oead.S32(int(armor.effect_lv))
     if armor.effect: new_entry["armorEffectEffectType"] = armor.effect
@@ -91,7 +94,7 @@ def armor_iter(armor, actorinfo, actors):
     #if "bfres" in new_entry: new_entry["bfres"] = armor.bfres_folder
     #if "mainModel" in new_entry: new_entry["mainModel"] = armor.name
     new_entry["sortKey"] = S32(int(new_entry["sortKey"]) + 1)
-    new_entry["armorNextRankName"] = ''
+    #new_entry["armorNextRankName"] = ''
 
     if armor.item1 and armor.item1_n:
         new_entry["normal0ItemName01"] = armor.item1

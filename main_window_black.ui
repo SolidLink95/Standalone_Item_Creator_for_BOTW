@@ -623,14 +623,14 @@ upgradeable</string>
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="0">
+                <item row="3" column="0">
                  <widget class="QLabel" name="label_5">
                   <property name="text">
                    <string>Defence</string>
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="1">
+                <item row="3" column="1">
                  <widget class="QLineEdit" name="defence">
                   <property name="minimumSize">
                    <size>
@@ -646,14 +646,14 @@ upgradeable</string>
                   </property>
                  </widget>
                 </item>
-                <item row="3" column="0">
+                <item row="4" column="0">
                  <widget class="QLabel" name="label_6">
                   <property name="text">
                    <string>Elink</string>
                   </property>
                  </widget>
                 </item>
-                <item row="3" column="1">
+                <item row="4" column="1">
                  <widget class="QLineEdit" name="elink">
                   <property name="minimumSize">
                    <size>
@@ -669,14 +669,14 @@ upgradeable</string>
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="0">
+                <item row="5" column="0">
                  <widget class="QLabel" name="label_7">
                   <property name="text">
                    <string>Slink</string>
                   </property>
                  </widget>
                 </item>
-                <item row="4" column="1">
+                <item row="5" column="1">
                  <widget class="QLineEdit" name="slink">
                   <property name="minimumSize">
                    <size>
@@ -692,14 +692,14 @@ upgradeable</string>
                   </property>
                  </widget>
                 </item>
-                <item row="5" column="0">
+                <item row="6" column="0">
                  <widget class="QLabel" name="label_8">
                   <property name="text">
                    <string>Profile</string>
                   </property>
                  </widget>
                 </item>
-                <item row="5" column="1">
+                <item row="6" column="1">
                  <widget class="QComboBox" name="profile">
                   <property name="minimumSize">
                    <size>
@@ -709,14 +709,14 @@ upgradeable</string>
                   </property>
                  </widget>
                 </item>
-                <item row="6" column="0">
+                <item row="7" column="0">
                  <widget class="QLabel" name="label_9">
                   <property name="text">
                    <string>Series</string>
                   </property>
                  </widget>
                 </item>
-                <item row="6" column="1">
+                <item row="7" column="1">
                  <widget class="QComboBox" name="series">
                   <property name="minimumSize">
                    <size>
@@ -726,21 +726,21 @@ upgradeable</string>
                   </property>
                  </widget>
                 </item>
-                <item row="7" column="0">
+                <item row="8" column="0">
                  <widget class="QLabel" name="label_10">
                   <property name="text">
                    <string>Price</string>
                   </property>
                  </widget>
                 </item>
-                <item row="8" column="0">
+                <item row="9" column="0">
                  <widget class="QLabel" name="label_11">
                   <property name="text">
                    <string>Name</string>
                   </property>
                  </widget>
                 </item>
-                <item row="8" column="1">
+                <item row="9" column="1">
                  <widget class="QLineEdit" name="name_desc">
                   <property name="minimumSize">
                    <size>
@@ -756,14 +756,14 @@ upgradeable</string>
                   </property>
                  </widget>
                 </item>
-                <item row="9" column="0">
+                <item row="10" column="0">
                  <widget class="QLabel" name="label_12">
                   <property name="text">
                    <string>Physics</string>
                   </property>
                  </widget>
                 </item>
-                <item row="9" column="1">
+                <item row="10" column="1">
                  <widget class="QLineEdit" name="physics">
                   <property name="minimumSize">
                    <size>
@@ -779,7 +779,7 @@ upgradeable</string>
                   </property>
                  </widget>
                 </item>
-                <item row="7" column="1">
+                <item row="8" column="1">
                  <widget class="QLineEdit" name="price">
                   <property name="minimumSize">
                    <size>
@@ -792,6 +792,19 @@ upgradeable</string>
                     <width>16777215</width>
                     <height>25</height>
                    </size>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QCheckBox" name="upgradeable">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Upgradeable</string>
                   </property>
                  </widget>
                 </item>
@@ -1932,7 +1945,7 @@ border: none;</string>
      <x>0</x>
      <y>0</y>
      <width>946</width>
-     <height>20</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuQuit">

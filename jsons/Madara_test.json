@@ -9,6 +9,7 @@
                 "item3": "Item_Enemy_26",
                 "item3_n": "1"
             },
+            "itemUseIconActorName": "",
             "armorNextRankName": "",
             "armorStarNum": "",
             "base": "Armor_011_Head",
@@ -29,7 +30,7 @@
             "series": "",
             "shop": "TwnObj_AncientOven_A_01",
             "slink": "",
-            "upgradeable": false
+            "upgradeable": true
         },
         "Armor_832_Lower": {
             "Crafting": {
@@ -40,6 +41,7 @@
                 "item3": "Item_Enemy_26",
                 "item3_n": "1"
             },
+            "itemUseIconActorName": "",
             "armorNextRankName": "",
             "armorStarNum": "",
             "base": "Armor_011_Lower",
@@ -60,7 +62,7 @@
             "series": "",
             "shop": "TwnObj_AncientOven_A_01",
             "slink": "",
-            "upgradeable": false
+            "upgradeable": true
         },
         "Armor_832_Upper": {
             "Crafting": {
@@ -71,6 +73,7 @@
                 "item3": "Item_Enemy_26",
                 "item3_n": "1"
             },
+            "itemUseIconActorName": "",
             "armorNextRankName": "",
             "armorStarNum": "",
             "base": "Armor_011_Upper",
@@ -91,7 +94,7 @@
             "series": "",
             "shop": "TwnObj_AncientOven_A_01",
             "slink": "",
-            "upgradeable": false
+            "upgradeable": true
         }
     },
     "Weapons": {

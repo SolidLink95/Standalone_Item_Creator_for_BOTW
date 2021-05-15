@@ -9,7 +9,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon, QPalette, QColor
 from PyQt5.QtWidgets import QApplication, QMainWindow, QCompleter, QWidget, QSizePolicy, QHBoxLayout, QGraphicsScene
 
-from InputValidation import validateData
+from InputValidation import validateData, validate_test, rev_json, get_upgrades_ids
 from Option_w import options_window
 from Prompt_w import prompt_window
 from ShopData import get_raw_data
@@ -64,6 +64,7 @@ class Window(QMainWindow, Ui_SIC):
             self.shop_default = elem
             break
         #Buttons
+        self.Upgrade_armors.clicked.connect(self.validate_test)
         self.Create_mod.clicked.connect(self.create_mod)
         self.Add_weapon.clicked.connect(self.add_weapon)
         self.Add_armor.clicked.connect(self.add_armor)
@@ -72,7 +73,7 @@ class Window(QMainWindow, Ui_SIC):
         self.Options.clicked.connect(self.options)
         self.patreon.clicked.connect(lambda : os.system(f'start https://www.patreon.com/user?u=32002965'))
         self.patreon.hide()
-        self.Upgrade_armors.hide()
+        #self.Upgrade_armors.hide()
         self.edit.clicked.connect(self.edit_click)
 
         #combo boxes
@@ -173,68 +174,123 @@ class Window(QMainWindow, Ui_SIC):
                 if self.armors[elem] == self.data['Armors'][x]['base']:
                     self.base.setCurrentText(elem)
                     break
-                arm = self.data['Armors'][x]
-                self.name.setText(arm['name'])
-                self.defence.setText(arm['defence'])
-                if 'bfres_template' in arm: self.bfres_template.setText(arm['bfres_template'])
-                if 'bfres' in arm: self.bfres.setText(arm['bfres'])
-                if 'mainmodel' in arm: self.mainmodel.setText(arm['mainmodel'])
+            arm = self.data['Armors'][x]
+            self.name.setText(arm['name'])
+            self.defence.setText(arm['defence'])
+            if 'bfres_template' in arm: self.bfres_template.setText(arm['bfres_template'])
+            if 'bfres' in arm: self.bfres.setText(arm['bfres'])
+            if 'mainmodel' in arm: self.mainmodel.setText(arm['mainmodel'])
+            try:
                 if 'shop' in arm: self.shop.setCurrentText(self.shops_rev[arm["shop"]])
                 else: self.shop.setCurrentText(self.shop_default)
-                self.elink.setText(arm['elink'])
-                self.slink.setText(arm['slink'])
-                self.profile.setCurrentText(arm['profile'])
-                self.effect.setCurrentText(arm['effect'])
-                self.series.setCurrentText(arm['series'])
-                self.effect_lv.setText(arm['effect_lv'])
-                self.price.setText(arm['price'])
-                self.physics.setText(arm['physics'])
-                self.name_desc.setText(arm['name_desc'])
-                self.desc.setPlainText(arm['desc'])
-                self.korok_mask.setChecked(bool(arm['korok_mask']))
-                self.item1.setCurrentText(self.items_rev[arm['Crafting']['item1']])
-                self.item2.setCurrentText(self.items_rev[arm['Crafting']['item2']])
-                self.item3.setCurrentText(self.items_rev[arm['Crafting']['item3']])
-                self.item1_n.setText(arm['Crafting']['item1_n'])
-                self.item2_n.setText(arm['Crafting']['item2_n'])
-                self.item3_n.setText(arm['Crafting']['item3_n'])
+            except:
+                pass
+            if 'upgradeable' in arm: self.upgradeable.setChecked(bool(arm['upgradeable']))
+            self.elink.setText(arm['elink'])
+            self.slink.setText(arm['slink'])
+            self.profile.setCurrentText(arm['profile'])
+            self.effect.setCurrentText(arm['effect'])
+            self.series.setCurrentText(arm['series'])
+            self.effect_lv.setText(arm['effect_lv'])
+            self.price.setText(arm['price'])
+            self.physics.setText(arm['physics'])
+            self.name_desc.setText(arm['name_desc'])
+            self.desc.setPlainText(arm['desc'])
+            self.korok_mask.setChecked(bool(arm['korok_mask']))
+            self.item1.setCurrentText(self.items_rev[arm['Crafting']['item1']])
+            self.item2.setCurrentText(self.items_rev[arm['Crafting']['item2']])
+            self.item3.setCurrentText(self.items_rev[arm['Crafting']['item3']])
+            self.item1_n.setText(arm['Crafting']['item1_n'])
+            self.item2_n.setText(arm['Crafting']['item2_n'])
+            self.item3_n.setText(arm['Crafting']['item3_n'])
         elif x in self.data['Weapons']:
             self.TabWidget.setCurrentIndex(1)
             for elem in self.weapons:
                 if self.weapons[elem] == self.data['Weapons'][x]['base']:
                     self.base_2.setCurrentText(elem)
                     break
-                wep = self.data['Weapons'][x]
-                self.name_2.setText(wep['name'])
-                self.attack.setText(wep['attack'])
-                if 'shop' in wep: self.shop.setCurrentText(self.shops_rev[wep["shop"]])
-                else: self.shop.setCurrentText(self.shop_default)
-                self.dur.setText(wep['dur'])
-                self.islifeinfinite.setChecked(bool(wep['islifeinfinite']))
-                self.sheath.setCurrentText(wep['sheath'])
-                self.elink_2.setText(wep['elink'])
-                self.slink_2.setText(wep['slink'])
-                self.profile_2.setCurrentText(wep['profile'])
-                self.magic.setText(wep['magic'])
-                self.magicspeed.setText(wep['magicspeed'])
-                self.magicradius.setText(wep['magicradius'])
-                self.magicrange.setText(wep['magicrange'])
-                self.magicpower.setText(wep['magicpower'])
-                self.magicgravity.setText(wep['magicgravity'])
-                self.ismagicinf.setChecked(bool(wep['ismagicinf']))
-                self.physics_2.setText(wep['physics'])
-                self.price_2.setText(wep['price'])
-                self.name_desc_2.setText(wep['name_desc'])
-                self.desc_2.setPlainText(wep['desc'])
-                self.anims.setChecked(bool(wep['anims']))
-                self.item1_2.setCurrentText(self.items_rev[wep['Crafting']['item1']])
-                self.item2_2.setCurrentText(self.items_rev[wep['Crafting']['item2']])
-                self.item3_2.setCurrentText(self.items_rev[wep['Crafting']['item3']])
-                self.item1_n_2.setText(wep['Crafting']['item1_n'])
-                self.item2_n_2.setText(wep['Crafting']['item2_n'])
-                self.item3_n_2.setText(wep['Crafting']['item3_n'])
+            wep = self.data['Weapons'][x]
+            self.name_2.setText(wep['name'])
+            self.attack.setText(wep['attack'])
+            if 'shop' in wep: self.shop.setCurrentText(self.shops_rev[wep["shop"]])
+            else: self.shop.setCurrentText(self.shop_default)
+            self.dur.setText(wep['dur'])
+            self.islifeinfinite.setChecked(bool(wep['islifeinfinite']))
+            self.sheath.setCurrentText(wep['sheath'])
+            self.elink_2.setText(wep['elink'])
+            self.slink_2.setText(wep['slink'])
+            self.profile_2.setCurrentText(wep['profile'])
+            self.magic.setText(wep['magic'])
+            self.magicspeed.setText(wep['magicspeed'])
+            self.magicradius.setText(wep['magicradius'])
+            self.magicrange.setText(wep['magicrange'])
+            self.magicpower.setText(wep['magicpower'])
+            self.magicgravity.setText(wep['magicgravity'])
+            self.ismagicinf.setChecked(bool(wep['ismagicinf']))
+            self.physics_2.setText(wep['physics'])
+            self.price_2.setText(wep['price'])
+            self.name_desc_2.setText(wep['name_desc'])
+            self.desc_2.setPlainText(wep['desc'])
+            self.anims.setChecked(bool(wep['anims']))
+            self.item1_2.setCurrentText(self.items_rev[wep['Crafting']['item1']])
+            self.item2_2.setCurrentText(self.items_rev[wep['Crafting']['item2']])
+            self.item3_2.setCurrentText(self.items_rev[wep['Crafting']['item3']])
+            self.item1_n_2.setText(wep['Crafting']['item1_n'])
+            self.item2_n_2.setText(wep['Crafting']['item2_n'])
+            self.item3_n_2.setText(wep['Crafting']['item3_n'])
 
-
+    def validate_test(self):
+        self.armors_rev = rev_json(self.armors)
+        defence_step = 5
+        to_add_armors = {}
+        for armor in self.data['Armors']:
+            if self.data['Armors'][armor]['upgradeable']:
+                root_name = armor
+                self.data['Armors'][armor]['armorStarNum'] = 1
+                new_defence = int(self.data['Armors'][armor]['defence']) + defence_step
+                upgrades = get_upgrades_ids(root_name)
+                print(upgrades)
+                self.data['Armors'][armor]['armorNextRankName'] = upgrades[0]
+                self.items[self.data['Armors'][armor]['name_desc']] = armor
+                self.armors[self.data['Armors'][armor]['name_desc']] = armor
+                self.armors_rev[armor] = self.data['Armors'][armor]['name_desc']
+                self.items_rev[armor] = self.data['Armors'][armor]['name_desc']
+                self.item1.addItem(self.data['Armors'][armor]['name_desc'])
+                for i in range(len(upgrades)):
+                    split_name = root_name.split('_')
+                    new_arm = deepcopy(self.data['Armors'][armor])
+                    new_arm['armorStarNum'] = i + 2
+                    if i == (len(upgrades) - 1):
+                        new_arm['armorNextRankName'] = ''
+                    else:
+                        new_arm['armorNextRankName'] = upgrades[i + 1]
+                    new_arm['bfres'] = split_name[0] + '_' + split_name[1]
+                    new_arm['mainmodel'] = root_name
+                    new_arm['defence'] = str(new_defence)
+                    new_arm['itemUseIconActorName'] = root_name
+                    new_arm['name'] = upgrades[i]
+                    new_arm['bfres_template'] = 'None'  # data['Armors'][armor]['base']
+                    stars = '★' * (i + 1)
+                    base_name = self.armors_rev[self.data['Armors'][armor]['base']] + ' ' + stars
+                    new_base = self.armors[base_name]
+                    new_arm['upgradeable'] = False
+                    new_arm['base'] = new_base
+                    new_arm['shop'] = f'Npc_DressFairy_0{str(i)}'
+                    if i == 0:
+                        new_arm['Crafting']['item1'] = root_name
+                    else:
+                        new_arm['Crafting']['item1'] = upgrades[i - 1]
+                    new_arm['Crafting']['item1_n'] = '1'
+                    new_defence += defence_step
+                    to_add_armors[upgrades[i]] = new_arm
+                    new_name = new_arm['name_desc'] + ' ' + stars
+                    self.items_rev[upgrades[i]] = new_name
+                    self.items[new_name] = upgrades[i]
+                    self.item1.addItem(new_name)
+        for armor in to_add_armors:
+            self.Mod_content.addItem(armor)
+            self.data['Armors'][armor] = to_add_armors[armor]
+        json_to_file('jsons\\TEST.json', self.data)
 
     def save_as(self):
         file = self.sel_file.saveFileDialog()
@@ -278,9 +334,11 @@ class Window(QMainWindow, Ui_SIC):
         if not self.Lang.currentText(): return
         if not os.path.exists(self.config): return
         self.check_mode()
-        self.data, flag = validateData(self.data, self.prompt_w, self.armors)
-        if flag:
-            Load_Input(self.data, self.pack_name.text(), self.Lang.currentText(), self.progressBar).create_pack()
+        try:
+            self.validate_test()
+        except:
+            return
+        Load_Input(self.data, self.pack_name.text(), self.Lang.currentText(), self.progressBar).create_pack()
 
 
     def add_weapon(self):
@@ -332,7 +390,6 @@ class Window(QMainWindow, Ui_SIC):
             self.Mod_content.addItem(str(self.name_2.text()))
 
     def add_armor(self):
-        #print('add_armor function')
         #Validation
         base = self.base.currentText()
         if not base in self.armors:
@@ -342,14 +399,19 @@ class Window(QMainWindow, Ui_SIC):
         for elem in [self.item1.currentText(), self.item2.currentText(), self.item3.currentText()]:
             if not elem in self.items: return
         if self.name.text() in self.data['Armors']:
+            if 'Npc_DressFairy' in self.data['Armors'][self.name.text()]:
+                shop_local = str(self.data['Armors'][self.name.text()])
             del self.data['Armors'][self.name.text()]
+        else:
+            shop_local = self.shops[self.shop.currentText()]
 
         self.data['Armors'][self.name.text()] = {
-            "shop": self.shops[self.shop.currentText()],
+            "shop": shop_local,
             "base": self.armors[base],
             "name": self.name.text(),
             "armorNextRankName": '',
             "armorStarNum": '',
+            "itemUseIconActorName": '',
             "bfres_template": self.bfres_template.text(),
             "bfres": self.bfres.text(),
             "mainmodel": self.mainmodel.text(),
@@ -365,7 +427,7 @@ class Window(QMainWindow, Ui_SIC):
             "name_desc": self.name_desc.text(),
             "desc": self.desc.toPlainText(),
             "korok_mask": bool(self.korok_mask.isChecked()),
-            "upgradeable": False,#bool(self.korok_mask.isChecked()),
+            "upgradeable": bool(self.upgradeable.isChecked()),
             "Crafting": {
                 "item1": self.items[self.item1.currentText()],
                 "item1_n": self.item1_n.text(),
@@ -465,18 +527,13 @@ def test():
     except:
         pass
     create_folder('MODS')
+    data = file_to_json('jsons\\Madara_test.json')
+    data, flag = validate_test(data)
+    print(data)
     #Load_Input(file_to_json('jsons\\Madara.json'), 'chuchu', 'Bootup_EUen', None).create_pack()
-    shops_rev = get_res('shops_rev')
-    res = file_to_json('res\\res.json')
-    shops = file_to_json('res\\shops.json')
-    botw_names = file_to_json('res\\botw_names.json')
-    tmp = []
-    for elem in shops:
-        name = botw_names[elem]
-        res['shops'][name] = elem
-        res['shops_rev'][elem] = name
+    Load_Input(data, 'TEST', 'Bootup_EUen', None).create_pack()
 
-    json_to_file('res\\res1.json', res)
+
 
 if __name__ == '__main__':
     #init()

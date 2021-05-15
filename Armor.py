@@ -13,6 +13,9 @@ class Armor:
         self.mainmodel = ''
         self.bfres_template = ''
 
+        self.armorNextRankName = data['Armors'][armor]['armorNextRankName']
+        self.armorStarNum = data['Armors'][armor]['armorStarNum']
+        self.itemUseIconActorName = data['Armors'][armor]['itemUseIconActorName']
         self.base = str(data['Armors'][armor]['base'])
         self.name = str(data['Armors'][armor]['name'])
         self.defence = str(data['Armors'][armor]['defence'])
@@ -118,14 +121,17 @@ class Armor:
 
         if self.price: pio.objects['Item'].params["BuyingPrice"] = int(self.price)
         if self.defence: pio.objects['Armor'].params["DefenceAddLevel"] = int(self.defence)
+        if self.armorStarNum: pio.objects['Armor'].params["StarNum"] = int(self.armorStarNum)
         if self.series: pio.objects['SeriesArmor'].params["SeriesType"] = oead.FixedSafeString32(self.price)
+        if self.itemUseIconActorName: pio.objects['Item'].params["UseIconActorName"] = oead.FixedSafeString64(self.itemUseIconActorName)
 
         if self.effect:
             if self.effect == 'None':pio.objects['ArmorEffect'].params["EffectType"] = oead.FixedSafeString32('')
             else: pio.objects['ArmorEffect'].params["EffectType"] = oead.FixedSafeString32(self.effect)
 
         if self.effect_lv: pio.objects['ArmorEffect'].params["EffectLevel"] = eff_lv
-        pio.objects['Armor'].params["NextRankName"] = oead.FixedSafeString64('')
+        if self.armorNextRankName:
+            pio.objects['Armor'].params["NextRankName"] = oead.FixedSafeString64(self.armorNextRankName)
 
         update_sarc(pio, self.data, old_name, new_name)
 
@@ -231,8 +237,9 @@ class Armor:
         else: base = self.base
         if self.bfres: name = self.bfres
         else: name = self.name
-
-        Bfres_Dup(base, name, self.profile, self.pack_name).duplicate()
+        if self.armorStarNum == '' or self.armorStarNum == 1:
+            if base != 'None':
+                Bfres_Dup(base, name, self.profile, self.pack_name).duplicate()
         actorpack = f'{self.pack_name}\\content\\Actor\\Pack\\{self.name}.sbactorpack'
         if not os.path.exists(actorpack):
             with open(actorpack, 'wb') as f:
