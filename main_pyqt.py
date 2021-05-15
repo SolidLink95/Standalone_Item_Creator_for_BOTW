@@ -291,6 +291,7 @@ class Window(QMainWindow, Ui_SIC):
             self.Mod_content.addItem(armor)
             self.data['Armors'][armor] = to_add_armors[armor]
         json_to_file('jsons\\TEST.json', self.data)
+        self.Upgrade_armors.setEnabled(False)
 
     def save_as(self):
         file = self.sel_file.saveFileDialog()
@@ -312,6 +313,7 @@ class Window(QMainWindow, Ui_SIC):
         for elem in self.data['Armors']:
             self.Mod_content.addItem(elem)
         self.pack_name.setText(os.path.basename(file[:-5]))
+        self.Upgrade_armors.setEnabled(True)
         #print(f'opening {file}')
     
     def check_mode(self):
@@ -448,9 +450,10 @@ class Window(QMainWindow, Ui_SIC):
         self.prompt_w.setWindowTitle('Message')
         self.prompt_w.buttons()
         self.prompt_w.message.setPlainText('Mod content cleared successfully')
-
+        self.Upgrade_armors.setEnabled(True)
         self.prompt_w.setPalette(self.palette())
         self.prompt_w.show()
+
 
     def remove_from_mod(self):
         try:
