@@ -9,6 +9,7 @@ from PyQt5.QtCore import Qt, QSize
 from PyQt5.QtGui import QIcon, QPalette, QColor, QPixmap
 from PyQt5.QtWidgets import QApplication, QMainWindow, QCompleter, QWidget, QSizePolicy, QHBoxLayout, QGraphicsScene
 
+from DownloadIcons import DownloadIconsThread, do_weapons, do_food, do_armors
 from InputValidation import validateData, validate_test, rev_json, get_upgrades_ids, add_armor_json, add_weapon_json, \
     edit_armor, edit_weapon
 from Option_w import options_window
@@ -77,7 +78,6 @@ class Window(QMainWindow, Ui_SIC):
         self.Options.clicked.connect(self.options)
         self.patreon.clicked.connect(lambda : os.system(f'start https://www.patreon.com/user?u=32002965'))
         self.patreon.hide()
-        #self.Upgrade_armors.hide()
         self.edit.clicked.connect(self.edit_click)
 
         #combo boxes
@@ -91,8 +91,14 @@ class Window(QMainWindow, Ui_SIC):
         self.profile_2.addItems(self.wep_profiles)
         self.profile.addItems(self.armor_profiles)
         self.Lang.addItems(self.langs)
-        self.base_2.addItems(self.weapons)
-        self.base.addItems(self.armors)
+        #self.base_2.addItems(self.weapons)
+        for w in self.weapons:
+            icon_tmp = QIcon(f'res\\icons\\{self.weapons[w]}.png')
+            self.base_2.addItem(icon_tmp,w)
+        #self.base.addItems(self.armors)
+        for a in self.armors:
+            icon_tmp = QIcon(f'res\\icons\\{self.armors[a]}.png')
+            self.base.addItem(icon_tmp,a)
         self.series.addItems(self.series_types)
         for item in self.items:
             icon_tmp = QIcon(f'res\\icons\\{self.items[item]}.png')
@@ -103,6 +109,9 @@ class Window(QMainWindow, Ui_SIC):
             self.item2_2.addItem(icon_tmp, item)
             self.item3_2.addItem(icon_tmp, item)
         if os.path.exists('res\\icons'):
+            self.base_2.setIconSize(self.combobox_icon_size)
+            self.effect.setIconSize(self.combobox_icon_size)
+            self.base.setIconSize(self.combobox_icon_size)
             self.item1.setIconSize(self.combobox_icon_size)
             self.item2.setIconSize(self.combobox_icon_size)
             self.item3.setIconSize(self.combobox_icon_size)
@@ -167,9 +176,11 @@ class Window(QMainWindow, Ui_SIC):
 
     def add_armors_to_items(self):
         if 'Add' in self. Add_armors_to_items.text():
-            self.item1.addItems(self.armors)
-            self.item2.addItems(self.armors)
-            self.item3.addItems(self.armors)
+            for a in self.armors:
+                icon_tmp = QIcon(f'res\\icons\\{self.armors[a]}.png')
+                self.item1.addItem(icon_tmp,a)
+                self.item2.addItem(icon_tmp,a)
+                self.item3.addItem(icon_tmp,a)
             self.Add_armors_to_items.setText('Remove armors to\nitems list')
         elif 'Remove' in self. Add_armors_to_items.text():
             self.item1.clear()
@@ -278,10 +289,7 @@ class Window(QMainWindow, Ui_SIC):
         if not self.name.text(): return
         for elem in [self.item1.currentText(), self.item2.currentText(), self.item3.currentText()]:
             if not elem in self.items: return
-        shop_local = ''
-        armorNextRankName = ''
-        armorStarNum = ''
-        itemUseIconActorName = ''
+        shop_local = '';armorNextRankName = '';armorStarNum = '';itemUseIconActorName = ''
         if self.name.text() in self.data['Armors']:
             if 'armorNextRankName' in self.data['Armors'][self.name.text()]: armorNextRankName = deepcopy(self.data['Armors'][self.name.text()]['armorNextRankName'])
             if 'armorStarNum' in self.data['Armors'][self.name.text()]: armorStarNum = deepcopy(self.data['Armors'][self.name.text()]['armorStarNum'])
@@ -345,6 +353,9 @@ class Window(QMainWindow, Ui_SIC):
 def main():
     app = QApplication(sys.argv)
     win = Window()
+    do_food(win)
+    do_weapons(win)
+    do_armors(win)
     #win.setFixedSize(win.size())
     #win.setFixedSize(win.layout.sizeHint())
     win.show()
