@@ -9,13 +9,11 @@ from shutil import copyfile
 
 class Armor:
     def __init__(self, data, armor, pack_name):
-        self.bfres = ''
-        self.mainmodel = ''
-        self.bfres_template = ''
+        self.bfres = ''; self.mainmodel = '' ; self.bfres_template = '';self.armorNextRankName = '';self.armorStarNum = '';self.itemUseIconActorName = '';
 
-        self.armorNextRankName = data['Armors'][armor]['armorNextRankName']
-        self.armorStarNum = data['Armors'][armor]['armorStarNum']
-        self.itemUseIconActorName = data['Armors'][armor]['itemUseIconActorName']
+        if 'armorNextRankName' in data['Armors'][armor]: self.armorNextRankName = data['Armors'][armor]['armorNextRankName']
+        if 'armorStarNum' in data['Armors'][armor]:self.armorStarNum = data['Armors'][armor]['armorStarNum']
+        if 'itemUseIconActorName' in data['Armors'][armor]:self.itemUseIconActorName = data['Armors'][armor]['itemUseIconActorName']
         self.base = str(data['Armors'][armor]['base'])
         self.name = str(data['Armors'][armor]['name'])
         self.defence = str(data['Armors'][armor]['defence'])

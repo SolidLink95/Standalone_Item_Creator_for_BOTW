@@ -4,12 +4,13 @@ import os
 import sys
 from copy import deepcopy
 import PySimpleGUI as sg
-from PyQt5 import QtCore
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QIcon, QPalette, QColor
+from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtCore import Qt, QSize
+from PyQt5.QtGui import QIcon, QPalette, QColor, QPixmap
 from PyQt5.QtWidgets import QApplication, QMainWindow, QCompleter, QWidget, QSizePolicy, QHBoxLayout, QGraphicsScene
 
-from InputValidation import validateData, validate_test, rev_json, get_upgrades_ids
+from InputValidation import validateData, validate_test, rev_json, get_upgrades_ids, add_armor_json, add_weapon_json, \
+    edit_armor, edit_weapon
 from Option_w import options_window
 from Prompt_w import prompt_window
 from ShopData import get_raw_data
@@ -32,6 +33,7 @@ class Window(QMainWindow, Ui_SIC):
 
     def __init__(self, parent=None):
         super().__init__(parent)
+        self.combobox_icon_size = QSize(35,35)
         self.data = clear_json()
         self.config = 'config.ini'
         self.shops = get_res('shops')
@@ -63,8 +65,10 @@ class Window(QMainWindow, Ui_SIC):
         for elem in self.shops:
             self.shop_default = elem
             break
+        #self.item1.setView(QtWidgets.QListView())
         #Buttons
-        self.Upgrade_armors.clicked.connect(self.validate_test)
+        self.Upgrade_armors.clicked.connect(lambda : validate_test(self))
+        self.Add_armors_to_items.clicked.connect(self.add_armors_to_items)
         self.Create_mod.clicked.connect(self.create_mod)
         self.Add_weapon.clicked.connect(self.add_weapon)
         self.Add_armor.clicked.connect(self.add_armor)
@@ -77,6 +81,11 @@ class Window(QMainWindow, Ui_SIC):
         self.edit.clicked.connect(self.edit_click)
 
         #combo boxes
+        self.items_weapons = get_res('items')
+        for a in self.armors:
+            del self.items_weapons[a]
+        if 'Add' in self.Add_armors_to_items.text():
+            self.items = self.items_weapons
         medium_h = 25
         big_h = 30
         self.profile_2.addItems(self.wep_profiles)
@@ -85,14 +94,25 @@ class Window(QMainWindow, Ui_SIC):
         self.base_2.addItems(self.weapons)
         self.base.addItems(self.armors)
         self.series.addItems(self.series_types)
-        self.item1_2.addItems(self.items)
-        self.item2_2.addItems(self.items)
-        self.item3_2.addItems(self.items)
-        self.item1.addItems(self.items)
-        self.item2.addItems(self.items)
-        self.item3.addItems(self.items)
+        for item in self.items:
+            icon_tmp = QIcon(f'res\\icons\\{self.items[item]}.png')
+            self.item1.addItem(icon_tmp,item)
+            self.item2.addItem(icon_tmp, item)
+            self.item3.addItem(icon_tmp, item)
+            self.item1_2.addItem(icon_tmp, item)
+            self.item2_2.addItem(icon_tmp, item)
+            self.item3_2.addItem(icon_tmp, item)
+        if os.path.exists('res\\icons'):
+            self.item1.setIconSize(self.combobox_icon_size)
+            self.item2.setIconSize(self.combobox_icon_size)
+            self.item3.setIconSize(self.combobox_icon_size)
+            self.item1_2.setIconSize(self.combobox_icon_size)
+            self.item2_2.setIconSize(self.combobox_icon_size)
+            self.item3_2.setIconSize(self.combobox_icon_size)
+
         self.sheath.addItems(self.sheaths)
         self.shop.addItems(self.shops)
+
         #self.effect.addItems(self.effects)
         for eff in self.effects:
             self.effect.addItem(QIcon(f'res\\{eff}.png'), eff)
@@ -144,11 +164,26 @@ class Window(QMainWindow, Ui_SIC):
         pal = self.palette()
         pal.setColor(QPalette.Window, QColor(BG_COLOR[0],BG_COLOR[1],BG_COLOR[2]))
         self.setPalette(pal)
-        #self.frame. = self.frame.styleSheet.replace('font: 10pt', 'font: 6pt')
-        #style = str(self.frame.styleSheet).replace('font\: 10pt', 'font\: 6pt')
-        #self.label_28.setStyleSheet('font: 8pt "Segoe MDL2 Assets";')
-        #self.setLayout(self.layout)
 
+    def add_armors_to_items(self):
+        if 'Add' in self. Add_armors_to_items.text():
+            self.item1.addItems(self.armors)
+            self.item2.addItems(self.armors)
+            self.item3.addItems(self.armors)
+            self.Add_armors_to_items.setText('Remove armors to\nitems list')
+        elif 'Remove' in self. Add_armors_to_items.text():
+            self.item1.clear()
+            self.item2.clear()
+            self.item3.clear()
+            for item in self.items_weapons:
+                icon_tmp = QIcon(f'res\\icons\\{self.items_weapons[item]}.png')
+                self.item1.addItem(icon_tmp, item)
+                self.item2.addItem(icon_tmp, item)
+                self.item3.addItem(icon_tmp, item)
+                self.item1_2.addItem(icon_tmp, item)
+                self.item2_2.addItem(icon_tmp, item)
+                self.item3_2.addItem(icon_tmp, item)
+            self.Add_armors_to_items.setText('Add armors to\nitems list')
 
     def readme(self):
         self.readme_w.load_txt()
@@ -169,129 +204,9 @@ class Window(QMainWindow, Ui_SIC):
             return
         if not x: return
         if x in self.data['Armors']:
-            self.TabWidget.setCurrentIndex(0)
-            for elem in self.armors:
-                if self.armors[elem] == self.data['Armors'][x]['base']:
-                    self.base.setCurrentText(elem)
-                    break
-            arm = self.data['Armors'][x]
-            self.name.setText(arm['name'])
-            self.defence.setText(arm['defence'])
-            if 'bfres_template' in arm: self.bfres_template.setText(arm['bfres_template'])
-            if 'bfres' in arm: self.bfres.setText(arm['bfres'])
-            if 'mainmodel' in arm: self.mainmodel.setText(arm['mainmodel'])
-            try:
-                if 'shop' in arm: self.shop.setCurrentText(self.shops_rev[arm["shop"]])
-                else: self.shop.setCurrentText(self.shop_default)
-            except:
-                pass
-            if 'upgradeable' in arm: self.upgradeable.setChecked(bool(arm['upgradeable']))
-            self.elink.setText(arm['elink'])
-            self.slink.setText(arm['slink'])
-            self.profile.setCurrentText(arm['profile'])
-            self.effect.setCurrentText(arm['effect'])
-            self.series.setCurrentText(arm['series'])
-            self.effect_lv.setText(arm['effect_lv'])
-            self.price.setText(arm['price'])
-            self.physics.setText(arm['physics'])
-            self.name_desc.setText(arm['name_desc'])
-            self.desc.setPlainText(arm['desc'])
-            self.korok_mask.setChecked(bool(arm['korok_mask']))
-            self.item1.setCurrentText(self.items_rev[arm['Crafting']['item1']])
-            self.item2.setCurrentText(self.items_rev[arm['Crafting']['item2']])
-            self.item3.setCurrentText(self.items_rev[arm['Crafting']['item3']])
-            self.item1_n.setText(arm['Crafting']['item1_n'])
-            self.item2_n.setText(arm['Crafting']['item2_n'])
-            self.item3_n.setText(arm['Crafting']['item3_n'])
+            edit_armor(self,x)
         elif x in self.data['Weapons']:
-            self.TabWidget.setCurrentIndex(1)
-            for elem in self.weapons:
-                if self.weapons[elem] == self.data['Weapons'][x]['base']:
-                    self.base_2.setCurrentText(elem)
-                    break
-            wep = self.data['Weapons'][x]
-            self.name_2.setText(wep['name'])
-            self.attack.setText(wep['attack'])
-            if 'shop' in wep: self.shop.setCurrentText(self.shops_rev[wep["shop"]])
-            else: self.shop.setCurrentText(self.shop_default)
-            self.dur.setText(wep['dur'])
-            self.islifeinfinite.setChecked(bool(wep['islifeinfinite']))
-            self.sheath.setCurrentText(wep['sheath'])
-            self.elink_2.setText(wep['elink'])
-            self.slink_2.setText(wep['slink'])
-            self.profile_2.setCurrentText(wep['profile'])
-            self.magic.setText(wep['magic'])
-            self.magicspeed.setText(wep['magicspeed'])
-            self.magicradius.setText(wep['magicradius'])
-            self.magicrange.setText(wep['magicrange'])
-            self.magicpower.setText(wep['magicpower'])
-            self.magicgravity.setText(wep['magicgravity'])
-            self.ismagicinf.setChecked(bool(wep['ismagicinf']))
-            self.physics_2.setText(wep['physics'])
-            self.price_2.setText(wep['price'])
-            self.name_desc_2.setText(wep['name_desc'])
-            self.desc_2.setPlainText(wep['desc'])
-            self.anims.setChecked(bool(wep['anims']))
-            self.item1_2.setCurrentText(self.items_rev[wep['Crafting']['item1']])
-            self.item2_2.setCurrentText(self.items_rev[wep['Crafting']['item2']])
-            self.item3_2.setCurrentText(self.items_rev[wep['Crafting']['item3']])
-            self.item1_n_2.setText(wep['Crafting']['item1_n'])
-            self.item2_n_2.setText(wep['Crafting']['item2_n'])
-            self.item3_n_2.setText(wep['Crafting']['item3_n'])
-
-    def validate_test(self):
-        self.armors_rev = rev_json(self.armors)
-        defence_step = 5
-        to_add_armors = {}
-        for armor in self.data['Armors']:
-            if self.data['Armors'][armor]['upgradeable']:
-                root_name = armor
-                self.data['Armors'][armor]['armorStarNum'] = 1
-                new_defence = int(self.data['Armors'][armor]['defence']) + defence_step
-                upgrades = get_upgrades_ids(root_name)
-                print(upgrades)
-                self.data['Armors'][armor]['armorNextRankName'] = upgrades[0]
-                self.items[self.data['Armors'][armor]['name_desc']] = armor
-                self.armors[self.data['Armors'][armor]['name_desc']] = armor
-                self.armors_rev[armor] = self.data['Armors'][armor]['name_desc']
-                self.items_rev[armor] = self.data['Armors'][armor]['name_desc']
-                self.item1.addItem(self.data['Armors'][armor]['name_desc'])
-                for i in range(len(upgrades)):
-                    split_name = root_name.split('_')
-                    new_arm = deepcopy(self.data['Armors'][armor])
-                    new_arm['armorStarNum'] = i + 2
-                    if i == (len(upgrades) - 1):
-                        new_arm['armorNextRankName'] = ''
-                    else:
-                        new_arm['armorNextRankName'] = upgrades[i + 1]
-                    new_arm['bfres'] = split_name[0] + '_' + split_name[1]
-                    new_arm['mainmodel'] = root_name
-                    new_arm['defence'] = str(new_defence)
-                    new_arm['itemUseIconActorName'] = root_name
-                    new_arm['name'] = upgrades[i]
-                    new_arm['bfres_template'] = 'None'  # data['Armors'][armor]['base']
-                    stars = '★' * (i + 1)
-                    base_name = self.armors_rev[self.data['Armors'][armor]['base']] + ' ' + stars
-                    new_base = self.armors[base_name]
-                    new_arm['upgradeable'] = False
-                    new_arm['base'] = new_base
-                    new_arm['shop'] = f'Npc_DressFairy_0{str(i)}'
-                    if i == 0:
-                        new_arm['Crafting']['item1'] = root_name
-                    else:
-                        new_arm['Crafting']['item1'] = upgrades[i - 1]
-                    new_arm['Crafting']['item1_n'] = '1'
-                    new_defence += defence_step
-                    to_add_armors[upgrades[i]] = new_arm
-                    new_name = new_arm['name_desc'] + ' ' + stars
-                    self.items_rev[upgrades[i]] = new_name
-                    self.items[new_name] = upgrades[i]
-                    self.item1.addItem(new_name)
-        for armor in to_add_armors:
-            self.Mod_content.addItem(armor)
-            self.data['Armors'][armor] = to_add_armors[armor]
-        json_to_file('jsons\\TEST.json', self.data)
-        self.Upgrade_armors.setEnabled(False)
+            edit_weapon(self,x)
 
     def save_as(self):
         file = self.sel_file.saveFileDialog()
@@ -336,16 +251,11 @@ class Window(QMainWindow, Ui_SIC):
         if not self.Lang.currentText(): return
         if not os.path.exists(self.config): return
         self.check_mode()
-        try:
-            self.validate_test()
-        except:
-            return
         Load_Input(self.data, self.pack_name.text(), self.Lang.currentText(), self.progressBar).create_pack()
 
 
     def add_weapon(self):
         #print('add_weapon function')
-        #input validation
         base = self.base_2.currentText()
         if not base in self.weapons:
             print(f'Weapon {base} does not exist')
@@ -355,39 +265,7 @@ class Window(QMainWindow, Ui_SIC):
             if not elem in self.items: return
         if self.name_2.text() in self.data['Weapons']:
             del self.data['Weapons'][self.name_2.text()]
-        self.data['Weapons'][self.name_2.text()] = {
-            "shop":             self.shops[self.shop.currentText()],
-            "base":             self.weapons[base],
-            "name":             self.name_2.text(),
-            "attack":           self.attack.text(),
-            "dur":              self.dur.text(),
-            "islifeinfinite":   self.islifeinfinite.isChecked(),
-            "sheath":           self.sheath.currentText(),
-            "elink":            self.elink_2.text(),
-            "slink":            self.slink_2.text(),
-            "profile":          self.profile_2.currentText(),
-            "magic":            self.magic.text(),
-            "magicspeed":       self.magicspeed.text(),
-            "magicradius":      self.magicradius.text(),
-            "magicrange":       self.magicrange.text(),
-            "magicpower":       self.magicpower.text(),
-            "magicgravity":     self.magicgravity.text(),
-            "ismagicinf":       self.ismagicinf.isChecked(),
-            "subtype":          '',
-            "physics":          self.physics_2.text(),
-            "price":            self.price_2.text(),
-            "name_desc":        self.name_desc_2.text(),
-            "desc":             self.desc_2.toPlainText(),
-            "anims":            bool(self.anims.isChecked()),
-            "Crafting": {
-                "item1": self.items[self.item1_2.currentText()],
-                "item1_n": self.item1_n_2.text(),
-                "item2": self.items[self.item2_2.currentText()],
-                "item2_n": self.item2_n_2.text(),
-                "item3": self.items[self.item3_2.currentText()],
-                "item3_n": self.item3_n_2.text()
-            }
-        }
+        self.data = add_weapon_json(self, base)
         if not self.Mod_content.findItems(self.name_2.text(), QtCore.Qt.MatchExactly):
             self.Mod_content.addItem(str(self.name_2.text()))
 
@@ -400,45 +278,24 @@ class Window(QMainWindow, Ui_SIC):
         if not self.name.text(): return
         for elem in [self.item1.currentText(), self.item2.currentText(), self.item3.currentText()]:
             if not elem in self.items: return
+        shop_local = ''
+        armorNextRankName = ''
+        armorStarNum = ''
+        itemUseIconActorName = ''
         if self.name.text() in self.data['Armors']:
-            if 'Npc_DressFairy' in self.data['Armors'][self.name.text()]:
-                shop_local = str(self.data['Armors'][self.name.text()])
+            if 'armorNextRankName' in self.data['Armors'][self.name.text()]: armorNextRankName = deepcopy(self.data['Armors'][self.name.text()]['armorNextRankName'])
+            if 'armorStarNum' in self.data['Armors'][self.name.text()]: armorStarNum = deepcopy(self.data['Armors'][self.name.text()]['armorStarNum'])
+            if 'itemUseIconActorName' in self.data['Armors'][self.name.text()]: itemUseIconActorName = deepcopy(self.data['Armors'][self.name.text()]['itemUseIconActorName'])
+            if 'shop' in self.data['Armors'][self.name.text()]:
+                if 'Npc_DressFairy' in self.data['Armors'][self.name.text()]['shop']:
+                    shop_local = deepcopy(self.data['Armors'][self.name.text()]['shop'])
+            else:
+                shop_local = self.shops[self.shop.currentText()]
             del self.data['Armors'][self.name.text()]
         else:
             shop_local = self.shops[self.shop.currentText()]
 
-        self.data['Armors'][self.name.text()] = {
-            "shop": shop_local,
-            "base": self.armors[base],
-            "name": self.name.text(),
-            "armorNextRankName": '',
-            "armorStarNum": '',
-            "itemUseIconActorName": '',
-            "bfres_template": self.bfres_template.text(),
-            "bfres": self.bfres.text(),
-            "mainmodel": self.mainmodel.text(),
-            "defence": self.defence.text(),
-            "elink": self.elink.text(),
-            "slink": self.slink.text(),
-            "profile": self.profile.currentText(),
-            "effect": self.effect.currentText(),
-            "effect_lv": self.effect_lv.text(),
-            "series": self.series.currentText(),
-            "physics": self.physics.text(),
-            "price": self.price.text(),
-            "name_desc": self.name_desc.text(),
-            "desc": self.desc.toPlainText(),
-            "korok_mask": bool(self.korok_mask.isChecked()),
-            "upgradeable": bool(self.upgradeable.isChecked()),
-            "Crafting": {
-                "item1": self.items[self.item1.currentText()],
-                "item1_n": self.item1_n.text(),
-                "item2": self.items[self.item2.currentText()],
-                "item2_n": self.item2_n.text(),
-                "item3": self.items[self.item3.currentText()],
-                "item3_n": self.item3_n.text()
-            }
-        }
+        self.data = add_armor_json(self, shop_local, base, armorNextRankName, armorStarNum, itemUseIconActorName)
         if not self.Mod_content.findItems(self.name.text(), QtCore.Qt.MatchExactly):
             self.Mod_content.addItem(str(self.name.text()))
 

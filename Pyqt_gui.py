@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_SIC(object):
     def setupUi(self, SIC):
         SIC.setObjectName("SIC")
-        SIC.resize(963, 777)
+        SIC.resize(966, 900)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("res/icon.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         SIC.setWindowIcon(icon)
@@ -58,7 +58,7 @@ class Ui_SIC(object):
         self.centralwidget = QtWidgets.QWidget(SIC)
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(0, -10, 971, 771))
+        self.frame.setGeometry(QtCore.QRect(0, -10, 971, 891))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(99)
         sizePolicy.setVerticalStretch(99)
@@ -102,6 +102,10 @@ class Ui_SIC(object):
 "    border-color: rgb(60, 85, 109);\n"
 "    gridline-color:  rgb(60, 85, 109);\n"
 "font: 10pt \"Segoe MDL2 Assets\";\n"
+"}\n"
+"QListView::item {\n"
+"    height: 30px;\n"
+"    width: 30px;\n"
 "}\n"
 "QLineEdit {\n"
 "    background-color: rgb(149, 165, 166);\n"
@@ -308,7 +312,7 @@ class Ui_SIC(object):
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
         self.frame_4 = QtWidgets.QFrame(self.tab)
-        self.frame_4.setGeometry(QtCore.QRect(0, 0, 711, 601))
+        self.frame_4.setGeometry(QtCore.QRect(0, 0, 721, 701))
         self.frame_4.setStyleSheet("QFrame{\n"
 "    background-color: rgb(81, 85, 93);\n"
 "    color: white;\n"
@@ -535,14 +539,19 @@ class Ui_SIC(object):
         self.Add_armor.setMinimumSize(QtCore.QSize(200, 50))
         self.Add_armor.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.Add_armor.setObjectName("Add_armor")
-        self.formLayout_2.setWidget(13, QtWidgets.QFormLayout.FieldRole, self.Add_armor)
+        self.formLayout_2.setWidget(14, QtWidgets.QFormLayout.FieldRole, self.Add_armor)
+        self.Add_armors_to_items = QtWidgets.QPushButton(self.frame_4)
+        self.Add_armors_to_items.setMinimumSize(QtCore.QSize(200, 50))
+        self.Add_armors_to_items.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.Add_armors_to_items.setObjectName("Add_armors_to_items")
+        self.formLayout_2.setWidget(13, QtWidgets.QFormLayout.FieldRole, self.Add_armors_to_items)
         self.horizontalLayout_5.addLayout(self.formLayout_2)
         self.horizontalLayout.addLayout(self.horizontalLayout_5)
         self.TabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
         self.frame_5 = QtWidgets.QFrame(self.tab_2)
-        self.frame_5.setGeometry(QtCore.QRect(0, 0, 711, 641))
+        self.frame_5.setGeometry(QtCore.QRect(0, 0, 721, 701))
         self.frame_5.setStyleSheet("QFrame{\n"
 "    background-color: rgb(81, 85, 93);\n"
 "    color: white;\n"
@@ -832,7 +841,7 @@ class Ui_SIC(object):
         self.patreon.setObjectName("patreon")
         SIC.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(SIC)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 963, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 966, 25))
         self.menubar.setObjectName("menubar")
         self.menuQuit = QtWidgets.QMenu(self.menubar)
         self.menuQuit.setObjectName("menuQuit")
@@ -935,6 +944,8 @@ class Ui_SIC(object):
         self.label_23.setText(_translate("SIC", "Third item"))
         self.label_22.setText(_translate("SIC", "amount"))
         self.Add_armor.setText(_translate("SIC", "Add armor"))
+        self.Add_armors_to_items.setText(_translate("SIC", "Add armors to\n"
+"items list"))
         self.TabWidget.setTabText(self.TabWidget.indexOf(self.tab), _translate("SIC", "Add armor"))
         self.label_60.setText(_translate("SIC", "Magic"))
         self.label_63.setText(_translate("SIC", "Type"))
