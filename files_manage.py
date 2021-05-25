@@ -130,5 +130,8 @@ def remove_dups(mylist):
     return mylist
 
 def get_res(att):
-    res = file_to_json('res\\res.json')
+    if att == 'Actors':
+        res = file_to_json('res\\Actors.json')
+    else:
+        res = file_to_json('res\\res.json')
     return res[att]
