@@ -31,6 +31,7 @@ class Window(QMainWindow, Ui_SIC):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.combobox_icon_size = QSize(35,35)
+        self.combobox_icon_size_big = QSize(70,70)
         self.data = clear_json()
         self.config = 'config.ini'
         self.shops = get_res('shops')
@@ -43,7 +44,7 @@ class Window(QMainWindow, Ui_SIC):
         self.magic_types = get_res('magic')
         self.effects = get_res('Effects')
         self.effects_adv_rev = get_res('Effects_adv_rev')
-        self.series_types = get_res('Series')
+        self.series_types = get_res('Series_adv')
         self.sheaths = get_res('Sheaths')
         self.armor_profiles = ['', 'ArmorHead', 'ArmorLower', 'ArmorUpper']
         self.wep_profiles = ['', 'WeaponSmallSword', 'WeaponLargeSword', 'WeaponBow', 'WeaponSpear', 'WeaponShield']
@@ -95,7 +96,11 @@ class Window(QMainWindow, Ui_SIC):
         for a in self.armors:
             icon_tmp = QIcon(f'res\\icons\\{self.armors[a]}.png')
             self.base.addItem(icon_tmp,a)
-        self.series.addItems(self.series_types)
+        for a in self.series_types:
+            icon_tmp = QIcon(f'res\\icons\\{self.series_types[a]}.png')
+            self.series.addItem(icon_tmp,a)
+
+        #self.series.addItems(self.series_types)
         for item in self.items:
             icon_tmp = QIcon(f'res\\icons\\{self.items[item]}.png')
             self.item1.addItem(icon_tmp,item)
@@ -105,9 +110,10 @@ class Window(QMainWindow, Ui_SIC):
             self.item2_2.addItem(icon_tmp, item)
             self.item3_2.addItem(icon_tmp, item)
         if os.path.exists('res\\icons'):
+            self.series.setIconSize(self.combobox_icon_size_big)
             self.base_2.setIconSize(self.combobox_icon_size)
             self.effect.setIconSize(self.combobox_icon_size)
-            self.base.setIconSize(self.combobox_icon_size)
+            self.base.setIconSize(self.combobox_icon_size_big)
             self.item1.setIconSize(self.combobox_icon_size)
             self.item2.setIconSize(self.combobox_icon_size)
             self.item3.setIconSize(self.combobox_icon_size)

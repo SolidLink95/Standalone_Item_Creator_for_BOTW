@@ -1,0 +1,7 @@
+Pyqt5==5.12
+Pillow
+oead
+Pymsyt
+bs4
+pyqt5-tools
+requests

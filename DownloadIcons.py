@@ -85,7 +85,7 @@ def download_images(images, folder_name, exceptions=[], replacing=[], names={}):
             except:
                 pass
 
-def resizeImage(image, size=40):
+def resizeImage(image, size=70):
     if not os.path.exists(image): return
     im = Image.open(image)
     width, height = im.size
