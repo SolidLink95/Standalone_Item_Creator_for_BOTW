@@ -404,6 +404,5 @@ def test():
 
 if __name__ == '__main__':
     #init()
-    a = 1/0
     main()
     #test()
