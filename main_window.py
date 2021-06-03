@@ -96,6 +96,7 @@ class Window(QMainWindow, Ui_SIC):
         for a in self.armors:
             icon_tmp = QIcon(f'res\\icons\\{self.armors[a]}.png')
             self.base.addItem(icon_tmp,a)
+        self.series.addItem("")
         for a in self.series_types:
             icon_tmp = QIcon(f'res\\icons\\{self.series_types[a]}.png')
             self.series.addItem(icon_tmp,a)
@@ -304,6 +305,7 @@ class Window(QMainWindow, Ui_SIC):
             del self.data['Armors'][self.name.text()]
         else:
             shop_local = self.shops[self.shop.currentText()]
+        if not shop_local: shop_local = self.shops[self.shop.currentText()]
 
         self.data = add_armor_json(self, shop_local, base, armorNextRankName, armorStarNum, itemUseIconActorName)
         if not self.Mod_content.findItems(self.name.text(), QtCore.Qt.MatchExactly):
