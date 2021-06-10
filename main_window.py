@@ -112,7 +112,7 @@ class Window(QMainWindow, Ui_SIC):
             self.item3_2.addItem(icon_tmp, item)
         if os.path.exists('res\\icons'):
             self.series.setIconSize(self.combobox_icon_size_big)
-            self.base_2.setIconSize(self.combobox_icon_size)
+            self.base_2.setIconSize(self.combobox_icon_size_big)
             self.effect.setIconSize(self.combobox_icon_size)
             self.base.setIconSize(self.combobox_icon_size_big)
             self.item1.setIconSize(self.combobox_icon_size)
