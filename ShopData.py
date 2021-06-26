@@ -69,14 +69,42 @@ class ShopData:
         update_sarc(pio, self.data, old_name, new_name)
 
     def create_shop(self):
-        
-        self.do_shopdata()
+        if self.shop == 'Npc_AncientAssistant003':
+            self.do_shop_grante()
+        else:
+            self.do_shopdata()
         #self.do_actorinfo()
 
         actorpack = f'{self.pack_name}\\content\\Actor\\Pack\\{self.shop}.sbactorpack'
         with open(actorpack, 'wb') as f:
             f.write(oead.yaz0.compress(self.data.data_writer.write()[1]))
 
+    def get_all_tables(self, pio):
+        tab = []
+        for i, elem in enumerate(pio.objects['Header'].params):
+            if i > 0: tab.append(str(pio.objects['Header'].params[elem]))
+        return tab
+
+    def do_shop_grante(self):
+        old_name = new_name = f'Actor/ShopData/{self.bshop}.bshop'
+        pio = get_raw_data(self.data.data_sarc, old_name)
+        tabs = self.get_all_tables(pio)
+        for table in tabs:
+            iter = int(pio.objects[table].params['ColumnNum'].v)
+            size = 0
+
+            for w in self.items:
+                size += 1
+                n = int_to_3digits(iter + size)
+                pio.objects[table].params[f'ItemSort{n}'] = iter + size - 1
+                pio.objects[table].params[f'ItemName{n}'] = oead.FixedSafeString64(w)
+                pio.objects[table].params[f'ItemNum{n}'] = 1
+                pio.objects[table].params[f'ItemAdjustPrice{n}'] = 0
+                pio.objects[table].params[f'ItemLookGetFlg{n}'] = False
+                pio.objects[table].params[f'ItemAmount{n}'] = 0
+
+            pio.objects[table].params['ColumnNum'] = size + iter
+            update_sarc(pio, self.data, old_name, new_name)
 
 
 

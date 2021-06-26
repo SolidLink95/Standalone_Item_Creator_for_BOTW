@@ -24,7 +24,7 @@ class Sarc_file:
 
 def update_sarc(pio, data, old_name, new_name):
     data.data_writer.files[new_name] = oead.aamp.ParameterIO.to_binary(pio)
-    if old_name in data.data_writer.files:
+    if old_name in data.data_writer.files and old_name != new_name:
         del data.data_writer.files[old_name]
 
 def set_sarc_endian(sarcwriter):

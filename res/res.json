@@ -1970,6 +1970,7 @@
         "Beedle (Tabantha Bridge)": "Npc_TripMaster_04",
         "Beedle (Wetland Stable)": "Npc_TripMaster_12",
         "Beedle (Woodland Stable)": "Npc_TripMaster_11",
+        "Giro": "Npc_FaronWoods007",
         "Grante": "Npc_AncientAssistant003",
         "Bugut": "Npc_Road_019",
         "None": "None"
@@ -1993,6 +1994,7 @@
         "Npc_TripMaster_15": "Beedle (Kara Kara)",
         "TwnObj_AncientOven_A_01": "Ancient Oven Cherry",
         "Npc_AncientAssistant003": "Grante",
+        "Npc_FaronWoods007": "Giro",
         "Npc_Road_019": "Bugut",
         "None": "None"
     },
