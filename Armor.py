@@ -120,7 +120,7 @@ class Armor:
         if self.price: pio.objects['Item'].params["BuyingPrice"] = int(self.price)
         if self.defence: pio.objects['Armor'].params["DefenceAddLevel"] = int(self.defence)
         if self.armorStarNum: pio.objects['Armor'].params["StarNum"] = int(self.armorStarNum)
-        if self.series: pio.objects['SeriesArmor'].params["SeriesType"] = oead.FixedSafeString32(self.price)
+        if self.series: pio.objects['SeriesArmor'].params["SeriesType"] = oead.FixedSafeString32(self.series)
         if self.itemUseIconActorName: pio.objects['Item'].params["UseIconActorName"] = oead.FixedSafeString64(self.itemUseIconActorName)
 
         if self.effect:
