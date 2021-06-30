@@ -218,6 +218,7 @@ def validate_test(window):
         if window.data['Armors'][armor]['upgradeable']:
             root_name = armor
             window.data['Armors'][armor]['armorStarNum'] = 1
+            if not window.data['Armors'][armor]['defence']: window.data['Armors'][armor]['defence'] = '5'
             new_defence = int(window.data['Armors'][armor]['defence']) + defence_step
             upgrades = get_upgrades_ids(root_name)
             print(upgrades)
