@@ -2,7 +2,7 @@ import os
 import sys
 from shutil import copyfile
 import oead
-from files_manage import get_def_path, dir_to_list, get_endianness, get_res
+from files_manage import get_def_path, dir_to_list, get_endianness, get_res, get_file_path
 from sarc_class import Sarc_file
 from Actorinfo import create_hash, get_arr_index
 
@@ -16,7 +16,8 @@ class ShopData:
 
 
     def init_oven(self):
-        path = f'{get_def_path()}\\Actor\\Pack\\{self.shop}.sbactorpack'
+        #path = f'{get_def_path()}\\Actor\\Pack\\{self.shop}.sbactorpack'
+        path = get_file_path(f'Actor\\Pack\\{self.shop}.sbactorpack')
         if not os.path.exists(f'cache\\{self.shop}.sbactorpack'):
             copyfile(path, f'cache\\{self.shop}.sbactorpack')
         return f'cache\\{self.shop}.sbactorpack'

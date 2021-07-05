@@ -6,7 +6,7 @@ from pymsyt import Msbt
 import zlib
 from oead import byml, SarcWriter, Sarc,yaz0, aamp, S32
 import oead
-from files_manage import get_def_path, create_folder,  json_to_file, get_res, get_endianness
+from files_manage import get_def_path, create_folder, json_to_file, get_res, get_endianness, get_file_path
 from shutil import copyfile
 from sarc_class import Sarc_file, set_sarc_endian
 import pymsyt
@@ -22,12 +22,14 @@ class BootupPack:
         self.init()
 
     def init(self):
-        path = get_def_path() + '\\Pack'
+        #path = get_def_path() + '\\Pack'
         create_folder('cache')
         if not os.path.exists('cache\\Bootup.pack'):
-            copyfile(f'{path}\\Bootup.pack', 'cache\\Bootup.pack')
+            #copyfile(f'{path}\\Bootup.pack', 'cache\\Bootup.pack')
+            copyfile(get_file_path(f'Pack\\Bootup.pack'), 'cache\\Bootup.pack')
         if not os.path.exists(f'cache\\{self.lang}.pack'):
-            copyfile(f'{path}\\{self.lang}.pack', f'cache\\{self.lang}.pack')
+            #copyfile(f'{path}\\{self.lang}.pack', f'cache\\{self.lang}.pack')
+            copyfile(get_file_path(f'Pack\\{self.lang}.pack'), f'cache\\{self.lang}.pack')
 
 
     def insert_hashes(self):

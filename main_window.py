@@ -5,6 +5,7 @@ from PyQt5.QtCore import Qt, QSize
 from PyQt5.QtGui import QIcon, QPalette, QColor, QPixmap
 from PyQt5.QtWidgets import QApplication, QMainWindow, QCompleter, QWidget, QSizePolicy, QHBoxLayout, QGraphicsScene
 
+from ConfigClass import Config
 from DownloadIcons import DownloadIconsThread, do_weapons, do_food, do_armors
 from InputValidation import validateData, validate_test, rev_json, get_upgrades_ids, add_armor_json, add_weapon_json, \
     edit_armor, edit_weapon
@@ -52,11 +53,16 @@ class Window(QMainWindow, Ui_SIC):
         self.options_w = options_window(valid_rgb=valid_rgb,invalid_rgb=invalid_rgb, config_file=config_file)
         self.readme_w = readme_window()
         self.prompt_w = prompt_window(valid_rgb, invalid_rgb, config_file, Style_Sheet=self.styleSheet())
+        self.update_config = True
         self.setupUi(self)
         self.setup_ui_local()
 
 
     def setup_ui_local(self):
+        #config
+        self.conf = Config()
+        self.conf.get_paths()
+        if self.update_config: self.conf.save_to_config()
         #windows
         self.prompt_w.frame.setStyleSheet(self.frame.styleSheet())
         # variables

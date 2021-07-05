@@ -67,12 +67,25 @@ def get_def_path():
         config = configparser.ConfigParser()
         config.read('config.ini')
         if get_endianness():
+            the_path = str(config['DEFAULT']['wiiu_update'])
             return str(config['DEFAULT']['wiiu_path'])
         else:
             return str(config['DEFAULT']['switch_path'])
         return str(config['DEFAULT']['path'])
     except:
         return ''
+
+def get_file_path(file):
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+    if get_endianness():
+        the_path = str(config['DEFAULT']['wiiu_update'])
+        if os.path.exists(os.path.join(the_path,file)): the_path = os.path.join(str(config['DEFAULT']['wiiu_update']),file)
+        else: the_path = os.path.join(str(config['DEFAULT']['wiiu_path']),file)
+        print(the_path)
+        return the_path
+    else:
+        return os.path.join(str(config['DEFAULT']['switch_path']),file)
 
 def get_def_lang():
     try:

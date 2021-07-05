@@ -3,7 +3,7 @@ import sys
 import oead, copy
 
 from bfres_dup import Bfres_Dup, duplicate_bfres
-from files_manage import get_def_path, get_res
+from files_manage import get_def_path, get_res, get_file_path
 from sarc_class import Sarc_file
 from shutil import copyfile
 
@@ -47,7 +47,8 @@ class Armor:
             self.korok_mask = bool(data['Armors'][armor]['korok_mask'])
 
     def get_actorpack_data(self):
-        file = get_def_path() + '\\Actor\\Pack\\' + self.base + '.sbactorpack'
+        #file = get_def_path() + '\\Actor\\Pack\\' + self.base + '.sbactorpack'
+        file = get_file_path('Actor\\Pack\\' + self.base + '.sbactorpack')
         if os.path.exists(file):
             return Sarc_file(file)
         else:
@@ -83,7 +84,8 @@ class Armor:
 
     def do_physics(self, OldPhysicsUser):
         if not self.physics: return ''
-        file = f'{get_def_path()}\\Actor\\Pack\\{self.physics}.sbactorpack'
+        #file = f'{get_def_path()}\\Actor\\Pack\\{self.physics}.sbactorpack'
+        file = get_file_path(f'Actor\\Pack\\{self.physics}.sbactorpack')
         if os.path.exists(file):
             data = Sarc_file(file)
         else:
@@ -154,8 +156,9 @@ class Armor:
         recipe = f'{self.name}.brecipe'
         path = f'cache\\{template}.sbactorpack'
         if not os.path.exists(path):
-            copyfile(f'{get_def_path()}\\Actor\\Pack\\{template}.sbactorpack', path)
-        
+            #copyfile(f'{get_def_path()}\\Actor\\Pack\\{template}.sbactorpack', path)
+            copyfile(get_file_path(f'Actor\\Pack\\{template}.sbactorpack'), path)
+
         data = Sarc_file(path)
         pio = get_raw_data(data.data_sarc, f'Actor/Recipe/{template}.brecipe')
 
@@ -180,8 +183,9 @@ class Armor:
         template = 'Armor_176_Head'
         path = f'cache\\{template}.sbactorpack'
         if not os.path.exists(path):
-            copyfile(f'{get_def_path()}\\Actor\\Pack\\{template}.sbactorpack', path)
-            
+            #copyfile(f'{get_def_path()}\\Actor\\Pack\\{template}.sbactorpack', path)
+            copyfile(get_file_path(f'Actor\\Pack\\{template}.sbactorpack'), path)
+
         data = Sarc_file(path)
         if 'Actor/AS/Head_Common_ColorChange.bas' in self.data.data_writer.files:
             ColorChange = True
@@ -221,8 +225,9 @@ class Armor:
                 raw_text = raw_text.replace(template, self.name)
                 pio = oead.aamp.ParameterIO.from_text(raw_text)
                 self.data.data_writer.files[new_name] = oead.aamp.ParameterIO.to_binary(pio)
-        duplicate_bfres(f'{get_def_path()}\\Model\\{template}_Animation.sbfres', f'{self.pack_name}\\content\\Model\\{self.name}_Animation.sbfres', template, self.name)
-        
+        #duplicate_bfres(f'{get_def_path()}\\Model\\{template}_Animation.sbfres', f'{self.pack_name}\\content\\Model\\{self.name}_Animation.sbfres', template, self.name)
+        duplicate_bfres(get_file_path(f'Model\\{template}_Animation.sbfres'), f'{self.pack_name}\\content\\Model\\{self.name}_Animation.sbfres', template, self.name)
+
         
         
     

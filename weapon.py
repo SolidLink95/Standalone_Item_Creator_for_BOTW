@@ -9,7 +9,7 @@ from sarc_class import Sarc_file
 import oead
 from oead import FixedSafeString32, FixedSafeString64
 from bfres_dup import Bfres_Dup, duplicate_bfres
-from files_manage import get_def_path, create_folder
+from files_manage import get_def_path, create_folder, get_file_path
 from shutil import copyfile
 
 class Weapon:
@@ -51,7 +51,8 @@ class Weapon:
 
 
     def get_actorpack_data(self):
-        file = f'{get_def_path()}\\Actor\\Pack\\{self.base}.sbactorpack'
+        #file = f'{get_def_path()}\\Actor\\Pack\\{self.base}.sbactorpack'
+        file = get_file_path(f'Actor\\Pack\\{self.base}.sbactorpack')
         if os.path.exists(file):
             return Sarc_file(file)
         else:
@@ -85,7 +86,8 @@ class Weapon:
 
     def do_physics(self, OldPhysicsUser):
         if not self.physics: return ''
-        file = f'{get_def_path()}\\Actor\\Pack\\{self.physics}.sbactorpack'
+        #file = f'{get_def_path()}\\Actor\\Pack\\{self.physics}.sbactorpack'
+        file = get_file_path(f'Actor\\Pack\\{self.physics}.sbactorpack')
         if os.path.exists(file):
             data = Sarc_file(file)
         else:
@@ -177,7 +179,8 @@ class Weapon:
         template = 'Weapon_Shield_038'
         recipe = f'{self.name}.brecipe'
         if not os.path.exists(f'cache\\{template}.sbactorpack'):
-            copyfile(f'{get_def_path()}\\Actor\\Pack\\{template}.sbactorpack', f'cache\\{template}.sbactorpack')
+            #copyfile(f'{get_def_path()}\\Actor\\Pack\\{template}.sbactorpack', f'cache\\{template}.sbactorpack')
+            copyfile(get_file_path(f'Actor\\Pack\\{template}.sbactorpack'), f'cache\\{template}.sbactorpack')
         path = f'cache\\{template}.sbactorpack'
         data = Sarc_file(path)
         pio = get_raw_data(data.data_sarc, f'Actor/Recipe/{template}.brecipe')
@@ -215,13 +218,15 @@ class Weapon:
         
         path = f'cache\\{template}.sbactorpack'
         if not os.path.exists(path):
-            copyfile(f'{get_def_path()}\\Actor\\Pack\\{template}.sbactorpack', path)
-        
+            #copyfile(f'{get_def_path()}\\Actor\\Pack\\{template}.sbactorpack', path)
+            copyfile(get_file_path(f'Actor\\Pack\\{template}.sbactorpack'), path)
+
         data = Sarc_file(path)
         for file in self.data.data_writer.files:
             if '.baiprog' in file or '.baslist' in file or '.bas' in file:
                 del self.data.data_writer.files[file]
-        
+        new_AI = ''
+        new_name_baslist = ''
         for file in data.data_writer.files:
             if '.baiprog' in file:
                 new_AI = get_internal_name('.baiprog', data)
@@ -238,7 +243,8 @@ class Weapon:
                 new_name = file.replace(template, self.name)
                 pio = get_raw_data(data.data_sarc, file)
                 self.data.data_writer.files[new_name] = oead.aamp.ParameterIO.to_binary(pio)
-        duplicate_bfres(f'{get_def_path()}\\Model\\{template}_Animation.sbfres', f'{self.pack_name}\\content\\Model\\{self.name}_Animation.sbfres', template, self.name)
+        #duplicate_bfres(f'{get_def_path()}\\Model\\{template}_Animation.sbfres', f'{self.pack_name}\\content\\Model\\{self.name}_Animation.sbfres', template, self.name)
+        duplicate_bfres(get_file_path(f'Model\\{template}_Animation.sbfres'), f'{self.pack_name}\\content\\Model\\{self.name}_Animation.sbfres', template, self.name)
         return os.path.basename(new_AI).split('.')[0], os.path.basename(new_name_baslist).split('.')[0]
 
     def create_weapon(self):

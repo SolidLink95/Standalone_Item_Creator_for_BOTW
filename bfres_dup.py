@@ -3,7 +3,7 @@ from shutil import copyfile
 import sys
 import os
 import oead
-from files_manage import create_folder, get_def_path, file_to_json, calc_profile, get_res, get_endianness
+from files_manage import create_folder, get_def_path, file_to_json, calc_profile, get_res, get_endianness, get_file_path
 
 
 class Bfres_Dup:
@@ -20,24 +20,35 @@ class Bfres_Dup:
             base, name = check_base(base, name, self.profile)
         except:
             pass
-        path = f'{get_def_path()}\\Model\\'
+        #path = f'{get_def_path()}\\Model\\'
+        #if get_endianness():
+        #    base_bfres = [path + base + '.sbfres', path + base + '.Tex1.sbfres', path + base + '.Tex2.sbfres']
+        #else:
+        #    base_bfres = [path + base + '.sbfres', path + base + '.Tex.sbfres']
+
         if get_endianness():
-            base_bfres = [path + base + '.sbfres', path + base + '.Tex1.sbfres', path + base + '.Tex2.sbfres']
+            base_bfres = [get_file_path(f'Model\\{base}.sbfres'),
+                     get_file_path(f'Model\\{base}.Tex1.sbfres'),
+                     get_file_path(f'Model\\{base}.Tex2.sbfres')]
         else:
-            base_bfres = [path + base + '.sbfres', path + base + '.Tex.sbfres']
+            base_bfres = [get_file_path(f'Model\\{base}.sbfres'),
+                     get_file_path(f'Model\\{base}.Tex.sbfres')]
+
         for file in base_bfres:
             if os.path.exists(file):
                 output = self.pack_name + '\\content\\Model\\' + file.split('\\')[-1].replace(base, name)
                 duplicate_bfres(file, output, old_bfres_name=base, new_bfres_name=name)
 
 
-        icon = get_def_path() + '\\UI\\StockItem\\' + self.base + '.sbitemico'
+        #icon = get_def_path() + '\\UI\\StockItem\\' + self.base + '.sbitemico'
+        icon = get_file_path(f'UI\\StockItem\\{self.base}.sbitemico')
         if os.path.exists(icon):
             output = self.pack_name + '\\content\\UI\\StockItem\\' + icon.split('\\')[-1].replace(self.base, self.name)
             duplicate_bfres(icon, output, old_bfres_name=self.base, new_bfres_name=self.name)
         #try_copy(f'{get_def_path()}\\UI\\StockItem\\{self.base}.01.sbitemico', f'{self.pack_name}\\content\\UI\\StockItem\\{self.name}.01.sbitemico')
         
-        icon_01_base = f'{get_def_path()}\\UI\\StockItem\\{self.base}.01.sbitemico'
+        #icon_01_base = f'{get_def_path()}\\UI\\StockItem\\{self.base}.01.sbitemico'
+        icon_01_base = get_file_path(f'UI\\StockItem\\{self.base}.01.sbitemico')
         icon_01_out = f'{self.pack_name}\\content\\UI\\StockItem\\{self.name}.01.sbitemico'
         duplicate_bfres(icon_01_base, icon_01_out, old_bfres_name=self.base, new_bfres_name=self.name)
         

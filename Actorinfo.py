@@ -3,7 +3,7 @@ import ctypes
 import sys
 import zlib
 import oead
-from files_manage import create_folder, get_def_path, dir_to_list, get_res, get_endianness
+from files_manage import create_folder, get_def_path, dir_to_list, get_res, get_endianness, get_file_path
 from shutil import copyfile
 import os
 from oead import byml, SarcWriter, Sarc,yaz0, aamp, S32,U32
@@ -19,9 +19,11 @@ class Actorinfo:
         actors = get_res('Actors')
         A = 'ActorInfo.product.sbyml'
         source = f'cache\\{A}'
-        path = get_def_path() + '\\Actor'
+        #path = get_def_path() + '\\Actor'
+        path = get_file_path(f'Actor\\{A}')
         if not os.path.exists(source):
-            copyfile(f'{path}\\{A}', source)
+            #copyfile(f'{path}\\{A}', source)
+            copyfile(path, source)
         with open(source, "rb") as f:
             byml = oead.yaz0.decompress(f.read())
             actorinfo = oead.byml.from_binary(byml)

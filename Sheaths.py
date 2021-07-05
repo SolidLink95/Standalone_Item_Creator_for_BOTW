@@ -9,7 +9,7 @@ from sarc_class import Sarc_file
 import oead
 from oead import FixedSafeString32, FixedSafeString64
 from bfres_dup import Bfres_Dup
-from files_manage import get_def_path, create_folder, get_endianness
+from files_manage import get_def_path, create_folder, get_endianness, get_file_path
 from shutil import copyfile
 
 class Sheath:
@@ -21,7 +21,8 @@ class Sheath:
 
 
     def get_actorpack_data(self):
-        file = f'{get_def_path()}\\Actor\\Pack\\{self.base}.sbactorpack'
+        #file = f'{get_def_path()}\\Actor\\Pack\\{self.base}.sbactorpack'
+        file = get_file_path(f'Actor\\Pack\\{self.base}.sbactorpack')
         if os.path.exists(file):
             return Sarc_file(file)
         else:
@@ -53,11 +54,16 @@ class Sheath:
         update_sarc(pio, self.data, old_name, new_name)
 
     def do_bfres(self):
-        path = f'{get_def_path()}\\Model\\'
+        #path = f'{get_def_path()}\\Model\\'
         if get_endianness():
-            files = [f'{path}{self.base}.sbfres', f'{path}{self.base}.Tex1.sbfres', f'{path}{self.base}.Tex2.sbfres']
+            #files = [f'{path}{self.base}.sbfres', f'{path}{self.base}.Tex1.sbfres', f'{path}{self.base}.Tex2.sbfres']
+            files = [get_file_path(f'Model\\{self.base}.sbfres'),
+                     get_file_path(f'Model\\{self.base}.Tex1.sbfres'),
+                     get_file_path(f'Model\\{self.base}.Tex2.sbfres')]
         else:
-            files = [f'{path}{self.base}.sbfres', f'{path}{self.base}.Tex.sbfres']
+            #files = [f'{path}{self.base}.sbfres', f'{path}{self.base}.Tex.sbfres']
+            files = [get_file_path(f'Model\\{self.base}.sbfres'),
+                     get_file_path(f'Model\\{self.base}.Tex.sbfres')]
         for file in files:
             if not os.path.exists(file): return
         for file in files:
