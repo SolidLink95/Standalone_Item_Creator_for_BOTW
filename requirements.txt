@@ -1,4 +1,4 @@
-Pyqt5==5.12
+Pyqt5
 Pillow
 oead
 Pymsyt
