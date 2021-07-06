@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>946</width>
-    <height>777</height>
+    <height>782</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -204,41 +204,6 @@ QMenuBar::item:pressed
     <layout class="QGridLayout" name="gridLayout_3">
      <item row="0" column="0" colspan="2">
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="3" column="0" colspan="2">
-        <widget class="QPushButton" name="Create_mod">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Create mod</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="0" colspan="2">
-        <widget class="QProgressBar" name="progressBar">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>35</height>
-          </size>
-         </property>
-         <property name="value">
-          <number>0</number>
-         </property>
-         <property name="textVisible">
-          <bool>true</bool>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="format">
-          <string/>
-         </property>
-        </widget>
-       </item>
        <item row="0" column="0">
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
@@ -409,6 +374,41 @@ upgradeable</string>
           </widget>
          </item>
         </layout>
+       </item>
+       <item row="4" column="0" colspan="2">
+        <widget class="QProgressBar" name="progressBar">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+         <property name="textVisible">
+          <bool>true</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="format">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <widget class="QPushButton" name="Create_mod">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Create mod</string>
+         </property>
+        </widget>
        </item>
        <item row="1" column="1">
         <widget class="QFrame" name="Right_column">
@@ -1887,43 +1887,37 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
          </widget>
         </widget>
        </item>
+       <item row="0" column="1">
+        <widget class="QToolButton" name="patreon">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-image : url(res/patreon.png);
+background-color: rgb(47, 49, 54);
+border: none;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../res/ppatreon.png</normaloff>../res/ppatreon.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+        </widget>
+       </item>
       </layout>
      </item>
     </layout>
-   </widget>
-   <widget class="QToolButton" name="patreon">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>840</y>
-      <width>103</width>
-      <height>103</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>80</width>
-      <height>40</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-image : url(res/patreon.png);
-background-color: rgb(47, 49, 54);
-border: none;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../res/ppatreon.png</normaloff>../res/ppatreon.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>100</width>
-      <height>100</height>
-     </size>
-    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -1932,7 +1926,7 @@ border: none;</string>
      <x>0</x>
      <y>0</y>
      <width>946</width>
-     <height>20</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuQuit">

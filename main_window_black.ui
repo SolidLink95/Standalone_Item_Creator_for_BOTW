@@ -211,7 +211,7 @@ QMenuBar::item:pressed
        <item row="1" column="1">
         <widget class="QFrame" name="Right_column">
          <layout class="QGridLayout" name="gridLayout">
-          <item row="2" column="0" alignment="Qt::AlignHCenter">
+          <item row="3" column="0" alignment="Qt::AlignHCenter">
            <widget class="QPushButton" name="edit">
             <property name="minimumSize">
              <size>
@@ -230,7 +230,7 @@ QMenuBar::item:pressed
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
+          <item row="2" column="0">
            <widget class="QListWidget" name="Mod_content">
             <property name="maximumSize">
              <size>
@@ -244,7 +244,14 @@ QMenuBar::item:pressed
             </property>
            </widget>
           </item>
-          <item row="3" column="0" alignment="Qt::AlignHCenter">
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_24">
+            <property name="text">
+             <string>Mod content</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" alignment="Qt::AlignHCenter">
            <widget class="QPushButton" name="Clear_list">
             <property name="minimumSize">
              <size>
@@ -263,7 +270,7 @@ QMenuBar::item:pressed
             </property>
            </widget>
           </item>
-          <item row="5" column="0" alignment="Qt::AlignHCenter">
+          <item row="6" column="0" alignment="Qt::AlignHCenter">
            <widget class="QPushButton" name="Options">
             <property name="minimumSize">
              <size>
@@ -282,14 +289,7 @@ QMenuBar::item:pressed
             </property>
            </widget>
           </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_24">
-            <property name="text">
-             <string>Mod content</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0" alignment="Qt::AlignHCenter">
+          <item row="5" column="0" alignment="Qt::AlignHCenter">
            <widget class="QPushButton" name="Remove_from_mod">
             <property name="minimumSize">
              <size>
@@ -305,6 +305,40 @@ QMenuBar::item:pressed
             </property>
             <property name="text">
              <string>Remove from mod</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QToolButton" name="patreon">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-image : url(res/patreon.png);
+background-color: rgb(47, 49, 54);
+border: none;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../res/ppatreon.png</normaloff>../res/ppatreon.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>100</width>
+              <height>100</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -1927,40 +1961,6 @@ Armors</string>
       </layout>
      </item>
     </layout>
-   </widget>
-   <widget class="QToolButton" name="patreon">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>840</y>
-      <width>103</width>
-      <height>103</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>80</width>
-      <height>40</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-image : url(res/patreon.png);
-background-color: rgb(47, 49, 54);
-border: none;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../res/ppatreon.png</normaloff>../res/ppatreon.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>100</width>
-      <height>100</height>
-     </size>
-    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
