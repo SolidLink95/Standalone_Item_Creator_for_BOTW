@@ -228,8 +228,8 @@ class Ui_SIC(object):
         self.Remove_from_mod.setObjectName("Remove_from_mod")
         self.gridLayout.addWidget(self.Remove_from_mod, 5, 0, 1, 1, QtCore.Qt.AlignHCenter)
         self.patreon = QtWidgets.QToolButton(self.Right_column)
-        self.patreon.setMinimumSize(QtCore.QSize(80, 30))
-        self.patreon.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.patreon.setMinimumSize(QtCore.QSize(80, 80))
+        self.patreon.setMaximumSize(QtCore.QSize(16777215, 80))
         self.patreon.setStyleSheet("background-image : url(res/patreon.png);\n"
 "background-color: rgb(47, 49, 54);\n"
 "border: none;")
@@ -237,7 +237,7 @@ class Ui_SIC(object):
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("res/ppatreon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.patreon.setIcon(icon1)
-        self.patreon.setIconSize(QtCore.QSize(100, 100))
+        self.patreon.setIconSize(QtCore.QSize(180, 100))
         self.patreon.setObjectName("patreon")
         self.gridLayout.addWidget(self.patreon, 7, 0, 1, 1)
         self.gridLayout_2.addWidget(self.Right_column, 1, 1, 1, 1)
