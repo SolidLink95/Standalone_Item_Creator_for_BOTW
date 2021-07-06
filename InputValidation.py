@@ -1,7 +1,33 @@
+import configparser
 import os,sys
 from copy import deepcopy
 
 from files_manage import file_to_json, json_to_file, get_res
+
+def validateConfig(config_file):
+    config = configparser.ConfigParser()
+    config.read(config_file)
+    Flag = False
+    todo = ['lang','mode','switch_path','wiiu_path','wiiu_update']
+    if 'path' in config['DEFAULT']:
+        Flag = True
+        del config['DEFAULT']['path']
+
+    for set in todo:
+        if not set in config['DEFAULT']:
+            Flag = True
+            config['DEFAULT'][set] = ''
+    if not 'is_bcml_settings' in config['DEFAULT']:
+        Flag = True
+        config['DEFAULT']['is_bcml_settings'] = "True"
+
+    if not 'mods_path' in config['DEFAULT']:
+        Flag = True
+        config['DEFAULT']['mods_path'] = "MODS"
+
+    if Flag:
+        with open(config_file, 'w') as f:  # save
+            config.write(f)
 
 def validateData(data, prompt_w, armors, mod_content):
     print('starting validation')

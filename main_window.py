@@ -8,7 +8,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QCompleter, QWidget, QSiz
 from ConfigClass import Config
 from DownloadIcons import DownloadIconsThread, do_weapons, do_food, do_armors
 from InputValidation import validateData, validate_test, rev_json, get_upgrades_ids, add_armor_json, add_weapon_json, \
-    edit_armor, edit_weapon
+    edit_armor, edit_weapon, validateConfig
 from Option_w import options_window
 from Prompt_w import prompt_window
 from ShopData import get_raw_data
@@ -49,6 +49,7 @@ class Window(QMainWindow, Ui_SIC):
         self.sheaths = get_res('Sheaths')
         self.armor_profiles = ['', 'ArmorHead', 'ArmorLower', 'ArmorUpper']
         self.wep_profiles = ['', 'WeaponSmallSword', 'WeaponLargeSword', 'WeaponBow', 'WeaponSpear', 'WeaponShield']
+        validateConfig(self.config)
         self.langs = get_langs()
         self.options_w = options_window(valid_rgb=valid_rgb,invalid_rgb=invalid_rgb, config_file=config_file)
         self.readme_w = readme_window()
@@ -60,16 +61,23 @@ class Window(QMainWindow, Ui_SIC):
 
     def setup_ui_local(self):
         #config
-        self.conf = Config()
-        self.conf.get_paths()
-        if self.update_config: self.conf.save_to_config()
+        conf = Config()
+        config = configparser.ConfigParser()
+        config.read(conf.config_file)
+        try:
+            if config['DEFAULT']['is_bcml_settings'] == "True":
+                conf.get_paths()
+                conf.save_to_config()
+        except:
+            config['DEFAULT']['is_bcml_settings'] = "False"
+            with open(conf.config_file, 'w') as f:  # save
+                config.write(f)
         #windows
         self.prompt_w.frame.setStyleSheet(self.frame.styleSheet())
         # variables
         for elem in self.shops:
             self.shop_default = elem
             break
-        self.Options.hide()
         #self.item1.setView(QtWidgets.QListView())
         #Buttons
         self.Upgrade_armors.clicked.connect(lambda : validate_test(self))
@@ -81,7 +89,7 @@ class Window(QMainWindow, Ui_SIC):
         self.Remove_from_mod.clicked.connect(self.remove_from_mod)
         self.Options.clicked.connect(self.options)
         self.patreon.clicked.connect(lambda : os.system(f'start https://www.patreon.com/user?u=32002965'))
-        self.patreon.hide()
+        #self.patreon.hide()
         self.edit.clicked.connect(self.edit_click)
 
         #combo boxes
@@ -346,15 +354,7 @@ class Window(QMainWindow, Ui_SIC):
         self.options_w.frame.setStyleSheet(self.frame.styleSheet())
         self.options_w.setPalette(self.palette())
         self.options_w.show()
-        config = configparser.ConfigParser()
-        config.read(config_file)
-        self.options_w.switchpath.setText(config['DEFAULT']['switch_path'])
-        self.options_w.wiiupath.setText(config['DEFAULT']['wiiu_path'])
-        self.options_w.modspath.setText(config['DEFAULT']['mods_path'])
-        if os.path.exists(config['DEFAULT']['switch_path']): self.options_w.switchpath.setStyleSheet(f"background-color: {valid_rgb};")
-        else: self.options_w.switchpath.setStyleSheet(f"background-color: {invalid_rgb};")
-        if os.path.exists(config['DEFAULT']['wiiu_path']): self.options_w.wiiupath.setStyleSheet(f"background-color: {valid_rgb};")
-        else: self.options_w.wiiupath.setStyleSheet(f"background-color: {invalid_rgb};")
+        self.options_w.load_from_config()
 
 
 

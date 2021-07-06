@@ -26,6 +26,11 @@ class Config:
         config['DEFAULT']['wiiu_update'] = self.wiiu_update
         config['DEFAULT']['switch_path'] = self.switch
         config['DEFAULT']['lang'] = f'Bootup_{self.lang}'
-        with open(self.config_file, 'w') as f:  # save
-            config.write(f)
+        Flag = False
+        if not 'is_bcml_settings' in config['DEFAULT']: config['DEFAULT']['is_bcml_settings'] = "True"
+        else: Flag = bool(config['DEFAULT']['is_bcml_settings'])
+        if Flag:
+            with open(self.config_file, 'w') as f:  # save
+                config.write(f)
+                print('config imported from bcml')
 
