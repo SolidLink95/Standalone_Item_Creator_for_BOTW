@@ -69,6 +69,7 @@ class Window(QMainWindow, Ui_SIC):
         for elem in self.shops:
             self.shop_default = elem
             break
+        self.Options.hide()
         #self.item1.setView(QtWidgets.QListView())
         #Buttons
         self.Upgrade_armors.clicked.connect(lambda : validate_test(self))
