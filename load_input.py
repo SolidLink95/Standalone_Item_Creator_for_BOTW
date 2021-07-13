@@ -14,8 +14,12 @@ class Load_Input:
     def __init__(self, data, pack_name, lang, progressbar):
         self.progressbar = progressbar
         self.data = data
-        self.pack_name = f'{get_mods_path()}\\{pack_name}'
+        self.pack_name = self.make_pack_name(pack_name) #f'{get_mods_path()}\\{pack_name}'
         self.lang = lang
+
+    def make_pack_name(self, pack_name):
+        if pack_name[-1:] == ' ': return f'{get_mods_path()}\\{pack_name.replace(" ", "_")}'
+        else: return f'{get_mods_path()}\\{pack_name}'
 
     def create_pack(self):
         self.create_tree()
