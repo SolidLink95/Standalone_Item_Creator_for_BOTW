@@ -247,6 +247,7 @@ def validate_test(window):
             if not window.data['Armors'][armor]['defence']: window.data['Armors'][armor]['defence'] = '5'
             new_defence = int(window.data['Armors'][armor]['defence']) + defence_step
             upgrades = get_upgrades_ids(root_name)
+            if not upgrades: return
             print(upgrades)
             window.data['Armors'][armor]['armorNextRankName'] = upgrades[0]
             window.items[window.data['Armors'][armor]['name_desc']] = armor
@@ -288,7 +289,7 @@ def validate_test(window):
     for armor in to_add_armors:
         window.Mod_content.addItem(armor)
         window.data['Armors'][armor] = to_add_armors[armor]
-    json_to_file('jsons\\TEST.json', window.data)
+    #json_to_file('jsons\\TEST.json', window.data)
     window.Upgrade_armors.setEnabled(False)
 
 def rev_json(data):
@@ -298,21 +299,24 @@ def rev_json(data):
     return new_res
 
 def get_upgrades_ids(id):
-    slot = id.split('_')[1]
-    print(slot)
-    if slot[0] == '0':
-        index = 1
-        n = int(slot[:index])
-    elif slot[0] == '0' and slot[1] == '0':
-        index = 2
-        n = int(slot[:index])
-    else:
-        index = 0
-        n = int(slot)
-    result = []
-    for i in range(4):
-        n+=1
-        if index > 0: zeros = '0'*index
-        else: zeros = ''
-        result.append( id.split('_')[0] + '_' + zeros + str(n) + '_' + id.split('_')[-1])
+    try:
+        slot = id.split('_')[1]
+        print(slot)
+        if slot[0] == '0':
+            index = 1
+            n = int(slot[:index])
+        elif slot[0] == '0' and slot[1] == '0':
+            index = 2
+            n = int(slot[:index])
+        else:
+            index = 0
+            n = int(slot)
+        result = []
+        for i in range(4):
+            n+=1
+            if index > 0: zeros = '0'*index
+            else: zeros = ''
+            result.append( id.split('_')[0] + '_' + zeros + str(n) + '_' + id.split('_')[-1])
+    except:
+        result = []
     return result
