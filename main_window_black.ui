@@ -555,7 +555,7 @@ border: none;</string>
 }</string>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
@@ -1158,7 +1158,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                   </property>
                  </widget>
                 </item>
-                <item row="14" column="1">
+                <item row="15" column="1">
                  <widget class="QPushButton" name="Add_armor">
                   <property name="minimumSize">
                    <size>
@@ -1177,7 +1177,7 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                   </property>
                  </widget>
                 </item>
-                <item row="13" column="1">
+                <item row="14" column="1">
                  <widget class="QPushButton" name="Add_armors_to_items">
                   <property name="minimumSize">
                    <size>
@@ -1194,6 +1194,26 @@ font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
                   <property name="text">
                    <string>Add armors to
 items list</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="13" column="1">
+                 <widget class="QPushButton" name="Random_Crafting">
+                  <property name="minimumSize">
+                   <size>
+                    <width>200</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Random crafting
+requirements</string>
                   </property>
                  </widget>
                 </item>
@@ -1566,7 +1586,7 @@ items list</string>
                 </property>
                </widget>
               </item>
-              <item row="16" column="0">
+              <item row="17" column="0">
                <widget class="QLabel" name="label_101">
                 <property name="text">
                  <string/>
@@ -1603,7 +1623,7 @@ items list</string>
                 </property>
                </widget>
               </item>
-              <item row="16" column="1">
+              <item row="17" column="1">
                <widget class="QPushButton" name="Add_weapon">
                 <property name="minimumSize">
                  <size>
@@ -1619,6 +1639,26 @@ items list</string>
                 </property>
                 <property name="text">
                  <string>Add weapon</string>
+                </property>
+               </widget>
+              </item>
+              <item row="16" column="1">
+               <widget class="QPushButton" name="Random_Crafting_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>200</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Random crafting
+requirements</string>
                 </property>
                </widget>
               </item>

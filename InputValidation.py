@@ -1,5 +1,6 @@
 import configparser
 import os,sys
+import random
 from copy import deepcopy
 
 from files_manage import file_to_json, json_to_file, get_res
@@ -182,6 +183,13 @@ def edit_armor(window,x):
             window.shop.setCurrentText(window.shop_default)
     except:
         pass
+
+    if not arm['Crafting']['item1'] in window.items_rev:
+        new_name = arm['name_desc'] + ' ' + '★' * (int(arm['armorStarNum']) - 2)
+        window.item1.addItem(new_name)
+
+        window.items_rev[arm['Crafting']['item1']] = new_name
+
     if 'upgradeable' in arm: window.upgradeable.setChecked(bool(arm['upgradeable']))
     window.elink.setText(arm['elink'])
     window.slink.setText(arm['slink'])
@@ -200,6 +208,24 @@ def edit_armor(window,x):
     window.item1_n.setText(arm['Crafting']['item1_n'])
     window.item2_n.setText(arm['Crafting']['item2_n'])
     window.item3_n.setText(arm['Crafting']['item3_n'])
+
+def random_crafting_requirements(window):
+    if window.item1.currentText in window.items:
+        window.item1.setCurrentText(window.items_rev[random.choice(list(window.items.values()))])
+        window.item1_n.setText(str(random.randint(1, 11)))
+    window.item2.setCurrentText(window.items_rev[random.choice(list(window.items.values()))])
+    window.item3.setCurrentText(window.items_rev[random.choice(list(window.items.values()))])
+    window.item2_n.setText(str(random.randint(1,11)))
+    window.item3_n.setText(str(random.randint(1,11)))
+
+def random_crafting_requirements_2(window):
+
+    window.item1_2.setCurrentText(window.items_rev[random.choice(list(window.items.values()))])
+    window.item2_2.setCurrentText(window.items_rev[random.choice(list(window.items.values()))])
+    window.item3_2.setCurrentText(window.items_rev[random.choice(list(window.items.values()))])
+    window.item1_n_2.setText(str(random.randint(1,11)))
+    window.item2_n_2.setText(str(random.randint(1,11)))
+    window.item3_n_2.setText(str(random.randint(1,11)))
 
 def add_armor_json(window, shop_local, base, armorNextRankName, armorStarNum, itemUseIconActorName):
     window.data['Armors'][window.name.text()] = {

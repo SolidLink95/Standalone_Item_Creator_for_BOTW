@@ -8,7 +8,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QCompleter, QWidget, QSiz
 from ConfigClass import Config
 from DownloadIcons import DownloadIconsThread, do_weapons, do_food, do_armors
 from InputValidation import validateData, validate_test, rev_json, get_upgrades_ids, add_armor_json, add_weapon_json, \
-    edit_armor, edit_weapon, validateConfig
+    edit_armor, edit_weapon, validateConfig, random_crafting_requirements, random_crafting_requirements_2
 from Option_w import options_window
 from Prompt_w import prompt_window
 from ShopData import get_raw_data
@@ -35,18 +35,19 @@ class Window(QMainWindow, Ui_SIC):
         self.combobox_icon_size_big = QSize(70,70)
         self.data = clear_json()
         self.config = 'config.ini'
-        self.shops = get_res('shops')
-        self.shops_rev = get_res('shops_rev')
-        #self.actors = get_res('Actors')
-        self.weapons = get_res('weapons')
-        self.armors = get_res('armors')
-        self.items = get_res('items')
-        self.items_rev = get_res('items_rev')
-        self.magic_types = get_res('magic')
-        self.effects = get_res('Effects')
-        self.effects_adv_rev = get_res('Effects_adv_rev')
-        self.series_types = get_res('Series_adv')
-        self.sheaths = get_res('Sheaths')
+        self.data_json = file_to_json('res/res.json')
+        self.shops = self.data_json['shops']
+        self.shops_rev = self.data_json['shops_rev']
+        #self.actors = get_res('Actors']
+        self.weapons = self.data_json['weapons']
+        self.armors = self.data_json['armors']
+        self.items = self.data_json['items']
+        self.items_rev = self.data_json['items_rev']
+        self.magic_types = self.data_json['magic']
+        self.effects = self.data_json['Effects']
+        self.effects_adv_rev = self.data_json['Effects_adv_rev']
+        self.series_types = self.data_json['Series_adv']
+        self.sheaths = self.data_json['Sheaths']
         self.armor_profiles = ['', 'ArmorHead', 'ArmorLower', 'ArmorUpper']
         self.wep_profiles = ['', 'WeaponSmallSword', 'WeaponLargeSword', 'WeaponBow', 'WeaponSpear', 'WeaponShield']
         validateConfig(self.config)
@@ -89,11 +90,13 @@ class Window(QMainWindow, Ui_SIC):
         self.Remove_from_mod.clicked.connect(self.remove_from_mod)
         self.Options.clicked.connect(self.options)
         self.patreon.clicked.connect(lambda : os.system(f'start https://www.patreon.com/user?u=32002965'))
+        self.Random_Crafting.clicked.connect(lambda : random_crafting_requirements(self))
+        self.Random_Crafting_2.clicked.connect(lambda : random_crafting_requirements_2(self))
         #self.patreon.hide()
         self.edit.clicked.connect(self.edit_click)
 
         #combo boxes
-        self.items_weapons = get_res('items')
+        self.items_weapons = deepcopy(self.items)
         for a in self.armors:
             del self.items_weapons[a]
         if 'Add' in self.Add_armors_to_items.text():
@@ -219,7 +222,7 @@ class Window(QMainWindow, Ui_SIC):
         self.readme_w.show()
 
     def set_up_effects(self):
-        effects_adv = get_res('Effects_adv')
+        effects_adv = self.data_json['Effects_adv']
         self.effect.addItem('None')
         for elem in effects_adv:
             self.effect.addItem(QIcon(f'res\\{elem}.png'), effects_adv[elem])

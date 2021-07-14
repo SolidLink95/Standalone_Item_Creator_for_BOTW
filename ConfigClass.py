@@ -2,6 +2,7 @@ import configparser
 import os, sys
 from files_manage import file_to_json
 
+
 class Config:
     def __init__(self, config='config.ini'):
         self.config_file = config
@@ -33,4 +34,3 @@ class Config:
             with open(self.config_file, 'w') as f:  # save
                 config.write(f)
                 print('config imported from bcml')
-
