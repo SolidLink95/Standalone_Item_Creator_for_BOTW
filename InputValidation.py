@@ -210,7 +210,7 @@ def edit_armor(window,x):
     window.item3_n.setText(arm['Crafting']['item3_n'])
 
 def random_crafting_requirements(window):
-    if window.item1.currentText in window.items:
+    if window.item1.currentText() in window.items:
         window.item1.setCurrentText(window.items_rev[random.choice(list(window.items.values()))])
         window.item1_n.setText(str(random.randint(1, 11)))
     window.item2.setCurrentText(window.items_rev[random.choice(list(window.items.values()))])
