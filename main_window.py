@@ -120,14 +120,16 @@ class Window(QMainWindow, Ui_SIC):
             self.series.addItem(icon_tmp,a)
 
         #self.series.addItems(self.series_types)
-        for item in self.items:
-            icon_tmp = QIcon(f'res\\icons\\{self.items[item]}.png')
-            self.item1.addItem(icon_tmp,item)
-            self.item2.addItem(icon_tmp, item)
-            self.item3.addItem(icon_tmp, item)
-            self.item1_2.addItem(icon_tmp, item)
-            self.item2_2.addItem(icon_tmp, item)
-            self.item3_2.addItem(icon_tmp, item)
+        #for item in self.items:
+        for item in self.items_rev:
+            if 'Armor' in item: continue
+            icon_tmp = QIcon(f'res\\icons\\{item}.png')
+            self.item1.addItem(icon_tmp,self.items_rev[item])
+            self.item2.addItem(icon_tmp, self.items_rev[item])
+            self.item3.addItem(icon_tmp, self.items_rev[item])
+            self.item1_2.addItem(icon_tmp, self.items_rev[item])
+            self.item2_2.addItem(icon_tmp, self.items_rev[item])
+            self.item3_2.addItem(icon_tmp, self.items_rev[item])
         if os.path.exists('res\\icons'):
             self.series.setIconSize(self.combobox_icon_size_big)
             self.base_2.setIconSize(self.combobox_icon_size_big)
