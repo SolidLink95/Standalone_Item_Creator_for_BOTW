@@ -32,6 +32,7 @@ def validateConfig(config_file):
 
 def validateData(data, prompt_w, armors, mod_content):
     print('starting validation')
+    #itemki_local = list(window.items.values())
     upgradeables = get_res('upgradeable')
     armors_rev = rev_json(armors)
     flag = True
@@ -47,11 +48,9 @@ def validateData(data, prompt_w, armors, mod_content):
     prompt_w.setWindowTitle('Error')
     prompt_w.buttons()
     mess = 'There was an error in creating the mod. The following armors does not use upgradeable armor as template:\n\n'
-    for elem in errors:
-        mess += f'{elem}\n'
+    for elem in errors: mess += f'{elem}\n'
     mess += '\nPlease choose for them one of the following armors as templates:\n\n'
-    for elem in upgradeables:
-        mess += f'{armors[elem]}\n'
+    for elem in upgradeables: mess += f'{armors[elem]}\n'
     prompt_w.message.setPlainText(mess)
     if errors:
         prompt_w.show()
@@ -83,7 +82,8 @@ def validateData(data, prompt_w, armors, mod_content):
                 new_arm['itemUseIconActorName'] = root_name
                 if i == 0: new_arm['Crafting']['item1'] = root_name
                 else: new_arm['Crafting']['item1'] = upgrades[i-1]
-                new_arm['Crafting']['item1_n'] = '1'
+                #new_arm['Crafting']['item2'] =
+                #new_arm['Crafting']['item1_n'] = '1'
                 to_add_armors[upgrades[i]] = new_arm
     for armor in to_add_armors:
         data['Armors'][armor] = to_add_armors[armor]
@@ -210,19 +210,28 @@ def edit_armor(window,x):
     window.item3_n.setText(arm['Crafting']['item3_n'])
 
 def random_crafting_requirements(window):
+    itemki_local = list(window.items.values())
     if window.item1.currentText() in window.items and not '★' in window.item1.currentText():
-        window.item1.setCurrentText(window.items_rev[random.choice(list(window.items.values()))])
+        window.item1.setCurrentText(window.items_rev[random.choice(itemki_local)])
         window.item1_n.setText(str(random.randint(1, 11)))
-    window.item2.setCurrentText(window.items_rev[random.choice(list(window.items.values()))])
-    window.item3.setCurrentText(window.items_rev[random.choice(list(window.items.values()))])
+    item2 = random.choice(itemki_local)
+    itemki_local.remove(item2)
+    item3 = random.choice(itemki_local)
+    window.item2.setCurrentText(window.items_rev[item2])
+    window.item3.setCurrentText(window.items_rev[item3])
     window.item2_n.setText(str(random.randint(1,11)))
     window.item3_n.setText(str(random.randint(1,11)))
 
 def random_crafting_requirements_2(window):
-
-    window.item1_2.setCurrentText(window.items_rev[random.choice(list(window.items.values()))])
-    window.item2_2.setCurrentText(window.items_rev[random.choice(list(window.items.values()))])
-    window.item3_2.setCurrentText(window.items_rev[random.choice(list(window.items.values()))])
+    itemki_local = list(window.items.values())
+    item1 = window.items_rev[random.choice(itemki_local)]
+    itemki_local.remove(item1)
+    item2 = window.items_rev[random.choice(itemki_local)]
+    itemki_local.remove(item2)
+    item3 = window.items_rev[random.choice(itemki_local)]
+    window.item1_2.setCurrentText(window.items_rev[item1])
+    window.item2_2.setCurrentText(window.items_rev[item2])
+    window.item3_2.setCurrentText(window.items_rev[item3])
     window.item1_n_2.setText(str(random.randint(1,11)))
     window.item2_n_2.setText(str(random.randint(1,11)))
     window.item3_n_2.setText(str(random.randint(1,11)))
@@ -263,6 +272,7 @@ def add_armor_json(window, shop_local, base, armorNextRankName, armorStarNum, it
     return window.data
 
 def validate_test(window):
+    itemki_local = list(window.items.values())
     window.armors_rev = rev_json(window.armors)
     defence_step = 5
     to_add_armors = {}
@@ -305,7 +315,13 @@ def validate_test(window):
                     new_arm['Crafting']['item1'] = root_name
                 else:
                     new_arm['Crafting']['item1'] = upgrades[i - 1]
+                new_arm['Crafting']['item2'] = random.choice(itemki_local)
+                itemki_local.remove(new_arm['Crafting']['item2'])
+                new_arm['Crafting']['item3'] = random.choice(itemki_local)
+                itemki_local.remove(new_arm['Crafting']['item3'])
                 new_arm['Crafting']['item1_n'] = '1'
+                new_arm['Crafting']['item2_n'] = str(random.randint(1,11))
+                new_arm['Crafting']['item3_n'] = str(random.randint(1,11))
                 new_defence += defence_step
                 to_add_armors[upgrades[i]] = new_arm
                 new_name = new_arm['name_desc'] + ' ' + stars
@@ -326,6 +342,7 @@ def rev_json(data):
 
 def get_upgrades_ids(id):
     try:
+        letters = ''
         slot = id.split('_')[1]
         print(slot)
         if slot[0] == '0':
@@ -334,15 +351,30 @@ def get_upgrades_ids(id):
         elif slot[0] == '0' and slot[1] == '0':
             index = 2
             n = int(slot[:index])
+        elif slot[0].isalpha() and slot[1].isalpha() and slot[2].isalpha():
+            n=0
+            letters = slot[0] + slot[1]
+            index = 0
+        elif slot[0].isalpha() and slot[1].isalpha() and slot[2].isnumeric():
+            #digits = [i for i in range(10) if i != int(slot[2])]
+            n = int(slot[2])
+            letters = slot[0] + slot[1]
+            index = 0
         else:
             index = 0
             n = int(slot)
         result = []
+
+
         for i in range(4):
             n+=1
+            if n > 9 and len(letters) > 1: n = 0
             if index > 0: zeros = '0'*index
             else: zeros = ''
-            result.append( id.split('_')[0] + '_' + zeros + str(n) + '_' + id.split('_')[-1])
+            if letters:
+                result.append( id.split('_')[0] + '_' + letters + str(n) + '_' + id.split('_')[-1])
+            else:
+                result.append( id.split('_')[0] + '_' + zeros + str(n) + '_' + id.split('_')[-1])
     except:
         result = []
     return result
