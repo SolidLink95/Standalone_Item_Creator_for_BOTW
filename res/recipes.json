@@ -1,0 +1,2330 @@
+{
+    "Armor_002_Head": {
+        "normal0ItemName01": "Armor_001_Head",
+        "normal0ItemName02": "Item_Enemy_00",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5"
+    },
+    "Armor_002_Lower": {
+        "normal0ItemName01": "Armor_001_Lower",
+        "normal0ItemName02": "Item_Enemy_00",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5"
+    },
+    "Armor_002_Upper": {
+        "normal0ItemName01": "Armor_001_Upper",
+        "normal0ItemName02": "Item_Enemy_00",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5"
+    },
+    "Armor_003_Head": {
+        "normal0ItemName01": "Armor_002_Head",
+        "normal0ItemName02": "Item_Enemy_00",
+        "normal0ItemName03": "Item_Enemy_01",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_003_Lower": {
+        "normal0ItemName01": "Armor_002_Lower",
+        "normal0ItemName02": "Item_Enemy_00",
+        "normal0ItemName03": "Item_Enemy_01",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_003_Upper": {
+        "normal0ItemName01": "Armor_002_Upper",
+        "normal0ItemName02": "Item_Enemy_00",
+        "normal0ItemName03": "Item_Enemy_01",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_004_Head": {
+        "normal0ItemName01": "Armor_003_Head",
+        "normal0ItemName02": "Item_Enemy_01",
+        "normal0ItemName03": "Item_Enemy_02",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_004_Lower": {
+        "normal0ItemName01": "Armor_003_Lower",
+        "normal0ItemName02": "Item_Enemy_01",
+        "normal0ItemName03": "Item_Enemy_02",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_004_Upper": {
+        "normal0ItemName01": "Armor_003_Upper",
+        "normal0ItemName02": "Item_Enemy_01",
+        "normal0ItemName03": "Item_Enemy_02",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_007_Head": {
+        "normal0ItemName01": "Armor_006_Head",
+        "normal0ItemName02": "Item_Enemy_03",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_007_Lower": {
+        "normal0ItemName01": "Armor_006_Lower",
+        "normal0ItemName02": "Item_Enemy_03",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_007_Upper": {
+        "normal0ItemName01": "Armor_006_Upper",
+        "normal0ItemName02": "Item_Enemy_03",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_015_Head": {
+        "normal0ItemName01": "Armor_004_Head",
+        "normal0ItemName02": "Item_Enemy_02",
+        "normal0ItemName03": "Item_Ore_F",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "15"
+    },
+    "Armor_015_Lower": {
+        "normal0ItemName01": "Armor_004_Lower",
+        "normal0ItemName02": "Item_Enemy_02",
+        "normal0ItemName03": "Item_Ore_F",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "15"
+    },
+    "Armor_015_Upper": {
+        "normal0ItemName01": "Armor_004_Upper",
+        "normal0ItemName02": "Item_Enemy_02",
+        "normal0ItemName03": "Item_Ore_F",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "15"
+    },
+    "Armor_017_Head": {
+        "normal0ItemName01": "Item_Ore_G",
+        "normal0ItemNum01": "3"
+    },
+    "Armor_017_Lower": {
+        "normal0ItemName01": "Item_Ore_G",
+        "normal0ItemNum01": "3"
+    },
+    "Armor_017_Upper": {
+        "normal0ItemName01": "Item_Ore_G",
+        "normal0ItemNum01": "3"
+    },
+    "Armor_021_Head": {
+        "normal0ItemName01": "Item_Enemy_26",
+        "normal0ItemName02": "Item_Enemy_29",
+        "normal0ItemName03": "Item_Enemy_30",
+        "normal0ItemNum01": "20",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_021_Lower": {
+        "normal0ItemName01": "Item_Enemy_26",
+        "normal0ItemName02": "Item_Enemy_28",
+        "normal0ItemName03": "Item_Enemy_30",
+        "normal0ItemNum01": "20",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_021_Upper": {
+        "normal0ItemName01": "Item_Enemy_26",
+        "normal0ItemName02": "Item_Enemy_27",
+        "normal0ItemName03": "Item_Enemy_30",
+        "normal0ItemNum01": "20",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_024_Head": {
+        "normal0ItemName01": "Item_Ore_A",
+        "normal0ItemNum01": "3"
+    },
+    "Armor_025_Head": {
+        "normal0ItemName01": "Item_Ore_B",
+        "normal0ItemNum01": "3"
+    },
+    "Armor_026_Head": {
+        "normal0ItemName01": "Item_Ore_C",
+        "normal0ItemNum01": "3"
+    },
+    "Armor_027_Head": {
+        "normal0ItemName01": "Item_Ore_D",
+        "normal0ItemNum01": "5"
+    },
+    "Armor_028_Head": {
+        "normal0ItemName01": "Item_Ore_E",
+        "normal0ItemNum01": "8"
+    },
+    "Armor_029_Head": {
+        "normal0ItemName01": "Item_Ore_F",
+        "normal0ItemNum01": "10"
+    },
+    "Armor_035_Head": {
+        "normal0ItemName01": "Armor_005_Head",
+        "normal0ItemName02": "Item_Fruit_K",
+        "normal0ItemName03": "Item_Enemy_53",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_035_Lower": {
+        "normal0ItemName01": "Armor_005_Lower",
+        "normal0ItemName02": "Item_Fruit_K",
+        "normal0ItemName03": "Item_Enemy_38",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_035_Upper": {
+        "normal0ItemName01": "Armor_005_Upper",
+        "normal0ItemName02": "Item_Fruit_K",
+        "normal0ItemName03": "Item_Enemy_49",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_036_Head": {
+        "normal0ItemName01": "Armor_009_Head",
+        "normal0ItemName02": "Item_Enemy_15",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_036_Lower": {
+        "normal0ItemName01": "Armor_009_Lower",
+        "normal0ItemName02": "Item_Enemy_15",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_036_Upper": {
+        "normal0ItemName01": "Armor_009_Upper",
+        "normal0ItemName02": "Item_Enemy_15",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_037_Head": {
+        "normal0ItemName01": "Armor_011_Head",
+        "normal0ItemName02": "Animal_Insect_X",
+        "normal0ItemName03": "Item_Enemy_06",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_037_Lower": {
+        "normal0ItemName01": "Armor_011_Lower",
+        "normal0ItemName02": "Animal_Insect_X",
+        "normal0ItemName03": "Item_Enemy_06",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_037_Upper": {
+        "normal0ItemName01": "Armor_011_Upper",
+        "normal0ItemName02": "Animal_Insect_X",
+        "normal0ItemName03": "Item_Enemy_06",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_039_Head": {
+        "normal0ItemName01": "Armor_035_Head",
+        "normal0ItemName02": "BeeHome",
+        "normal0ItemName03": "Item_Enemy_54",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_039_Lower": {
+        "normal0ItemName01": "Armor_035_Lower",
+        "normal0ItemName02": "BeeHome",
+        "normal0ItemName03": "Item_Enemy_39",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_039_Upper": {
+        "normal0ItemName01": "Armor_035_Upper",
+        "normal0ItemName02": "BeeHome",
+        "normal0ItemName03": "Item_Enemy_50",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_040_Head": {
+        "normal0ItemName01": "Armor_008_Head",
+        "normal0ItemName02": "Item_Enemy_17",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_040_Lower": {
+        "normal0ItemName01": "Armor_008_Lower",
+        "normal0ItemName02": "Item_Enemy_17",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_040_Upper": {
+        "normal0ItemName01": "Armor_008_Upper",
+        "normal0ItemName02": "Item_Enemy_17",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_042_Head": {
+        "normal0ItemName01": "Armor_012_Head",
+        "normal0ItemName02": "Item_PlantGet_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_042_Lower": {
+        "normal0ItemName01": "Armor_012_Lower",
+        "normal0ItemName02": "Item_PlantGet_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_042_Upper": {
+        "normal0ItemName01": "Armor_012_Upper",
+        "normal0ItemName02": "Item_PlantGet_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_060_Head": {
+        "normal0ItemName01": "Armor_039_Head",
+        "normal0ItemName02": "Animal_Insect_AA",
+        "normal0ItemName03": "Item_Enemy_55",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_060_Lower": {
+        "normal0ItemName01": "Armor_039_Lower",
+        "normal0ItemName02": "Animal_Insect_AA",
+        "normal0ItemName03": "Item_Enemy_47",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_060_Upper": {
+        "normal0ItemName01": "Armor_039_Upper",
+        "normal0ItemName02": "Animal_Insect_AA",
+        "normal0ItemName03": "Item_Enemy_51",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_061_Head": {
+        "normal0ItemName01": "Armor_060_Head",
+        "normal0ItemName02": "Item_Enemy_56",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_061_Lower": {
+        "normal0ItemName01": "Armor_060_Lower",
+        "normal0ItemName02": "Item_Enemy_48",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_061_Upper": {
+        "normal0ItemName01": "Armor_060_Upper",
+        "normal0ItemName02": "Item_Enemy_52",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_062_Head": {
+        "normal0ItemName01": "Armor_007_Head",
+        "normal0ItemName02": "Item_Enemy_04",
+        "normal0ItemName03": "Item_FishGet_A",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_062_Lower": {
+        "normal0ItemName01": "Armor_007_Lower",
+        "normal0ItemName02": "Item_Enemy_04",
+        "normal0ItemName03": "Item_FishGet_A",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_062_Upper": {
+        "normal0ItemName01": "Armor_007_Upper",
+        "normal0ItemName02": "Item_Enemy_04",
+        "normal0ItemName03": "Item_FishGet_A",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_063_Head": {
+        "normal0ItemName01": "Armor_062_Head",
+        "normal0ItemName02": "Item_Enemy_05",
+        "normal0ItemName03": "Item_FishGet_B",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_063_Lower": {
+        "normal0ItemName01": "Armor_062_Lower",
+        "normal0ItemName02": "Item_Enemy_05",
+        "normal0ItemName03": "Item_FishGet_B",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_063_Upper": {
+        "normal0ItemName01": "Armor_062_Upper",
+        "normal0ItemName02": "Item_Enemy_05",
+        "normal0ItemName03": "Item_FishGet_B",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_064_Head": {
+        "normal0ItemName01": "Armor_063_Head",
+        "normal0ItemName02": "Item_Enemy_05",
+        "normal0ItemName03": "Item_Ore_E",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "15"
+    },
+    "Armor_064_Lower": {
+        "normal0ItemName01": "Armor_063_Lower",
+        "normal0ItemName02": "Item_Enemy_05",
+        "normal0ItemName03": "Item_Ore_E",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "15"
+    },
+    "Armor_064_Upper": {
+        "normal0ItemName01": "Armor_063_Upper",
+        "normal0ItemName02": "Item_Enemy_05",
+        "normal0ItemName03": "Item_Ore_E",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "15"
+    },
+    "Armor_065_Head": {
+        "normal0ItemName01": "Armor_040_Head",
+        "normal0ItemName02": "Item_Enemy_17",
+        "normal0ItemName03": "Item_Enemy_46",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_065_Lower": {
+        "normal0ItemName01": "Armor_040_Lower",
+        "normal0ItemName02": "Item_Enemy_17",
+        "normal0ItemName03": "Item_Enemy_46",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_065_Upper": {
+        "normal0ItemName01": "Armor_040_Upper",
+        "normal0ItemName02": "Item_Enemy_17",
+        "normal0ItemName03": "Item_Enemy_46",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_066_Head": {
+        "normal0ItemName01": "Armor_065_Head",
+        "normal0ItemName02": "Item_Enemy_46",
+        "normal0ItemName03": "Item_Enemy_42",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_066_Lower": {
+        "normal0ItemName01": "Armor_065_Lower",
+        "normal0ItemName02": "Item_Enemy_46",
+        "normal0ItemName03": "Item_Enemy_42",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_066_Upper": {
+        "normal0ItemName01": "Armor_065_Upper",
+        "normal0ItemName02": "Item_Enemy_46",
+        "normal0ItemName03": "Item_Enemy_42",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_067_Head": {
+        "normal0ItemName01": "Armor_066_Head",
+        "normal0ItemName02": "Item_Enemy_42",
+        "normal0ItemName03": "Item_Ore_C",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_067_Lower": {
+        "normal0ItemName01": "Armor_066_Lower",
+        "normal0ItemName02": "Item_Enemy_42",
+        "normal0ItemName03": "Item_Ore_C",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_067_Upper": {
+        "normal0ItemName01": "Armor_066_Upper",
+        "normal0ItemName02": "Item_Enemy_42",
+        "normal0ItemName03": "Item_Ore_C",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_071_Head": {
+        "normal0ItemName01": "Armor_036_Head",
+        "normal0ItemName02": "Item_Enemy_15",
+        "normal0ItemName03": "Item_PlantGet_F",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_071_Lower": {
+        "normal0ItemName01": "Armor_036_Lower",
+        "normal0ItemName02": "Item_Enemy_15",
+        "normal0ItemName03": "Item_PlantGet_F",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_071_Upper": {
+        "normal0ItemName01": "Armor_036_Upper",
+        "normal0ItemName02": "Item_Enemy_15",
+        "normal0ItemName03": "Item_PlantGet_F",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_072_Head": {
+        "normal0ItemName01": "Armor_071_Head",
+        "normal0ItemName02": "Item_Enemy_44",
+        "normal0ItemName03": "Item_Mushroom_C",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_072_Lower": {
+        "normal0ItemName01": "Armor_071_Lower",
+        "normal0ItemName02": "Item_Enemy_44",
+        "normal0ItemName03": "Item_Mushroom_C",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_072_Upper": {
+        "normal0ItemName01": "Armor_071_Upper",
+        "normal0ItemName02": "Item_Enemy_44",
+        "normal0ItemName03": "Item_Mushroom_C",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_073_Head": {
+        "normal0ItemName01": "Armor_072_Head",
+        "normal0ItemName02": "Item_Enemy_41",
+        "normal0ItemName03": "Item_Ore_B",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_073_Lower": {
+        "normal0ItemName01": "Armor_072_Lower",
+        "normal0ItemName02": "Item_Enemy_41",
+        "normal0ItemName03": "Item_Ore_B",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_073_Upper": {
+        "normal0ItemName01": "Armor_072_Upper",
+        "normal0ItemName02": "Item_Enemy_41",
+        "normal0ItemName03": "Item_Ore_B",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_074_Head": {
+        "normal0ItemName01": "Armor_037_Head",
+        "normal0ItemName02": "Animal_Insect_X",
+        "normal0ItemName03": "Item_Enemy_07",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "4"
+    },
+    "Armor_074_Lower": {
+        "normal0ItemName01": "Armor_037_Lower",
+        "normal0ItemName02": "Animal_Insect_X",
+        "normal0ItemName03": "Item_Enemy_07",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "4"
+    },
+    "Armor_074_Upper": {
+        "normal0ItemName01": "Armor_037_Upper",
+        "normal0ItemName02": "Animal_Insect_X",
+        "normal0ItemName03": "Item_Enemy_07",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "4"
+    },
+    "Armor_075_Head": {
+        "normal0ItemName01": "Armor_074_Head",
+        "normal0ItemName02": "Animal_Insect_AB",
+        "normal0ItemName03": "Item_Enemy_08",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_075_Lower": {
+        "normal0ItemName01": "Armor_074_Lower",
+        "normal0ItemName02": "Animal_Insect_AB",
+        "normal0ItemName03": "Item_Enemy_08",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_075_Upper": {
+        "normal0ItemName01": "Armor_074_Upper",
+        "normal0ItemName02": "Animal_Insect_AB",
+        "normal0ItemName03": "Item_Enemy_08",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_076_Head": {
+        "normal0ItemName01": "Armor_075_Head",
+        "normal0ItemName02": "Animal_Insect_AB",
+        "normal0ItemName03": "Item_Enemy_34",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_076_Lower": {
+        "normal0ItemName01": "Armor_075_Lower",
+        "normal0ItemName02": "Animal_Insect_AB",
+        "normal0ItemName03": "Item_Enemy_34",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_076_Upper": {
+        "normal0ItemName01": "Armor_075_Upper",
+        "normal0ItemName02": "Animal_Insect_AB",
+        "normal0ItemName03": "Item_Enemy_34",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_077_Head": {
+        "normal0ItemName01": "Armor_042_Head",
+        "normal0ItemName02": "Item_Plant_I",
+        "normal0ItemName03": "Animal_Insect_E",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_077_Lower": {
+        "normal0ItemName01": "Armor_042_Lower",
+        "normal0ItemName02": "Item_PlantGet_I",
+        "normal0ItemName03": "Animal_Insect_E",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_077_Upper": {
+        "normal0ItemName01": "Armor_042_Upper",
+        "normal0ItemName02": "Item_PlantGet_I",
+        "normal0ItemName03": "Animal_Insect_E",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_078_Head": {
+        "normal0ItemName01": "Armor_077_Head",
+        "normal0ItemName02": "Item_Mushroom_J",
+        "normal0ItemName03": "Animal_Fish_M",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_078_Lower": {
+        "normal0ItemName01": "Armor_077_Lower",
+        "normal0ItemName02": "Item_Mushroom_J",
+        "normal0ItemName03": "Animal_Fish_M",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_078_Upper": {
+        "normal0ItemName01": "Armor_077_Upper",
+        "normal0ItemName02": "Item_Mushroom_J",
+        "normal0ItemName03": "Animal_Fish_M",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_079_Head": {
+        "normal0ItemName01": "Armor_078_Head",
+        "normal0ItemName02": "Item_FishGet_X",
+        "normal0ItemName03": "Item_PlantGet_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_079_Lower": {
+        "normal0ItemName01": "Armor_078_Lower",
+        "normal0ItemName02": "Animal_Fish_X",
+        "normal0ItemName03": "Item_PlantGet_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_079_Upper": {
+        "normal0ItemName01": "Armor_078_Upper",
+        "normal0ItemName02": "Item_FishGet_X",
+        "normal0ItemName03": "Item_PlantGet_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_083_Head": {
+        "normal0ItemName01": "Armor_014_Head",
+        "normal0ItemName02": "Item_Enemy_18",
+        "normal0ItemName03": "Item_Mushroom_D",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_083_Lower": {
+        "normal0ItemName01": "Armor_014_Lower",
+        "normal0ItemName02": "Item_Enemy_18",
+        "normal0ItemName03": "Item_Mushroom_D",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_083_Upper": {
+        "normal0ItemName01": "Armor_014_Upper",
+        "normal0ItemName02": "Item_Enemy_18",
+        "normal0ItemName03": "Item_Mushroom_D",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_084_Head": {
+        "normal0ItemName01": "Armor_083_Head",
+        "normal0ItemName02": "Item_Enemy_45",
+        "normal0ItemName03": "Animal_Insect_S",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_084_Lower": {
+        "normal0ItemName01": "Armor_083_Lower",
+        "normal0ItemName02": "Item_Enemy_45",
+        "normal0ItemName03": "Animal_Insect_S",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_084_Upper": {
+        "normal0ItemName01": "Armor_083_Upper",
+        "normal0ItemName02": "Item_Enemy_45",
+        "normal0ItemName03": "Animal_Insect_S",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_085_Head": {
+        "normal0ItemName01": "Armor_084_Head",
+        "normal0ItemName02": "Item_Enemy_46",
+        "normal0ItemName03": "Animal_Insect_A",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_085_Lower": {
+        "normal0ItemName01": "Armor_084_Lower",
+        "normal0ItemName02": "Item_Enemy_46",
+        "normal0ItemName03": "Animal_Insect_A",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_085_Upper": {
+        "normal0ItemName01": "Armor_084_Upper",
+        "normal0ItemName02": "Item_Enemy_46",
+        "normal0ItemName03": "Animal_Insect_A",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_086_Head": {
+        "normal0ItemName01": "Armor_085_Head",
+        "normal0ItemName02": "Item_Enemy_44",
+        "normal0ItemName03": "Item_PlantGet_O",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "15"
+    },
+    "Armor_086_Lower": {
+        "normal0ItemName01": "Armor_085_Lower",
+        "normal0ItemName02": "Item_Enemy_44",
+        "normal0ItemName03": "Item_PlantGet_O",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "15"
+    },
+    "Armor_086_Upper": {
+        "normal0ItemName01": "Armor_085_Upper",
+        "normal0ItemName02": "Item_Enemy_44",
+        "normal0ItemName03": "Item_PlantGet_O",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "15"
+    },
+    "Armor_087_Head": {
+        "normal0ItemName01": "Armor_017_Head",
+        "normal0ItemName02": "Item_Ore_G",
+        "normal0ItemName03": "Item_Enemy_02",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_087_Lower": {
+        "normal0ItemName01": "Armor_017_Lower",
+        "normal0ItemName02": "Item_Ore_G",
+        "normal0ItemName03": "Item_Enemy_02",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_087_Upper": {
+        "normal0ItemName01": "Armor_017_Upper",
+        "normal0ItemName02": "Item_Ore_G",
+        "normal0ItemName03": "Item_Enemy_02",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_088_Head": {
+        "normal0ItemName01": "Armor_087_Head",
+        "normal0ItemName02": "Item_Ore_G",
+        "normal0ItemName03": "Item_Enemy_08",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_088_Lower": {
+        "normal0ItemName01": "Armor_087_Lower",
+        "normal0ItemName02": "Item_Ore_G",
+        "normal0ItemName03": "Item_Enemy_08",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_088_Upper": {
+        "normal0ItemName01": "Armor_087_Upper",
+        "normal0ItemName02": "Item_Ore_G",
+        "normal0ItemName03": "Item_Enemy_08",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_089_Head": {
+        "normal0ItemName01": "Armor_088_Head",
+        "normal0ItemName02": "Item_Ore_G",
+        "normal0ItemName03": "Item_Enemy_25",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_089_Lower": {
+        "normal0ItemName01": "Armor_088_Lower",
+        "normal0ItemName02": "Item_Ore_G",
+        "normal0ItemName03": "Item_Enemy_25",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_089_Upper": {
+        "normal0ItemName01": "Armor_088_Upper",
+        "normal0ItemName02": "Item_Ore_G",
+        "normal0ItemName03": "Item_Enemy_25",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_090_Head": {
+        "normal0ItemName01": "Armor_089_Head",
+        "normal0ItemName02": "Item_Ore_G",
+        "normal0ItemName03": "Item_Enemy_14",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "20",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_090_Lower": {
+        "normal0ItemName01": "Armor_089_Lower",
+        "normal0ItemName02": "Item_Ore_G",
+        "normal0ItemName03": "Item_Enemy_14",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "20",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_090_Upper": {
+        "normal0ItemName01": "Armor_089_Upper",
+        "normal0ItemName02": "Item_Ore_G",
+        "normal0ItemName03": "Item_Enemy_14",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "20",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_095_Head": {
+        "normal0ItemName01": "Armor_020_Head",
+        "normal0ItemName02": "Item_Enemy_40",
+        "normal0ItemName03": "Item_Enemy_02",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_095_Lower": {
+        "normal0ItemName01": "Armor_020_Lower",
+        "normal0ItemName02": "Item_Enemy_40",
+        "normal0ItemName03": "Item_Enemy_02",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_095_Upper": {
+        "normal0ItemName01": "Armor_020_Upper",
+        "normal0ItemName02": "Item_Enemy_40",
+        "normal0ItemName03": "Item_Enemy_02",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_096_Head": {
+        "normal0ItemName01": "Armor_095_Head",
+        "normal0ItemName02": "Item_Enemy_19",
+        "normal0ItemName03": "Item_Enemy_08",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_096_Lower": {
+        "normal0ItemName01": "Armor_095_Lower",
+        "normal0ItemName02": "Item_Enemy_19",
+        "normal0ItemName03": "Item_Enemy_08",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_096_Upper": {
+        "normal0ItemName01": "Armor_095_Upper",
+        "normal0ItemName02": "Item_Enemy_19",
+        "normal0ItemName03": "Item_Enemy_08",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_097_Head": {
+        "normal0ItemName01": "Armor_096_Head",
+        "normal0ItemName02": "Item_Enemy_05",
+        "normal0ItemName03": "Item_Enemy_34",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_097_Lower": {
+        "normal0ItemName01": "Armor_096_Lower",
+        "normal0ItemName02": "Item_Enemy_05",
+        "normal0ItemName03": "Item_Enemy_34",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_097_Upper": {
+        "normal0ItemName01": "Armor_096_Upper",
+        "normal0ItemName02": "Item_Enemy_05",
+        "normal0ItemName03": "Item_Enemy_34",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_098_Head": {
+        "normal0ItemName01": "Armor_097_Head",
+        "normal0ItemName02": "Item_Enemy_13",
+        "normal0ItemName03": "Item_Enemy_14",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_098_Lower": {
+        "normal0ItemName01": "Armor_097_Lower",
+        "normal0ItemName02": "Item_Enemy_13",
+        "normal0ItemName03": "Item_Enemy_14",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_098_Upper": {
+        "normal0ItemName01": "Armor_097_Upper",
+        "normal0ItemName02": "Item_Enemy_13",
+        "normal0ItemName03": "Item_Enemy_14",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_099_Head": {
+        "normal0ItemName01": "Armor_021_Head",
+        "normal0ItemName02": "Item_Enemy_27",
+        "normal0ItemName03": "Item_Enemy_28",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_099_Lower": {
+        "normal0ItemName01": "Armor_021_Lower",
+        "normal0ItemName02": "Item_Enemy_27",
+        "normal0ItemName03": "Item_Enemy_28",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_099_Upper": {
+        "normal0ItemName01": "Armor_021_Upper",
+        "normal0ItemName02": "Item_Enemy_27",
+        "normal0ItemName03": "Item_Enemy_28",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_100_Head": {
+        "normal0ItemName01": "Armor_099_Head",
+        "normal0ItemName02": "Item_Enemy_28",
+        "normal0ItemName03": "Item_Enemy_26",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_100_Lower": {
+        "normal0ItemName01": "Armor_099_Lower",
+        "normal0ItemName02": "Item_Enemy_28",
+        "normal0ItemName03": "Item_Enemy_26",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_100_Upper": {
+        "normal0ItemName01": "Armor_099_Upper",
+        "normal0ItemName02": "Item_Enemy_28",
+        "normal0ItemName03": "Item_Enemy_26",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_101_Head": {
+        "normal0ItemName01": "Armor_100_Head",
+        "normal0ItemName02": "Item_Enemy_29",
+        "normal0ItemName03": "Item_Enemy_30",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_101_Lower": {
+        "normal0ItemName01": "Armor_100_Lower",
+        "normal0ItemName02": "Item_Enemy_29",
+        "normal0ItemName03": "Item_Enemy_30",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_101_Upper": {
+        "normal0ItemName01": "Armor_100_Upper",
+        "normal0ItemName02": "Item_Enemy_29",
+        "normal0ItemName03": "Item_Enemy_30",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_102_Head": {
+        "normal0ItemName01": "Armor_101_Head",
+        "normal0ItemName02": "Item_Ore_J",
+        "normal0ItemName03": "Item_Enemy_31",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_102_Lower": {
+        "normal0ItemName01": "Armor_101_Lower",
+        "normal0ItemName02": "Item_Ore_J",
+        "normal0ItemName03": "Item_Enemy_31",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_102_Upper": {
+        "normal0ItemName01": "Armor_101_Upper",
+        "normal0ItemName02": "Item_Ore_J",
+        "normal0ItemName03": "Item_Enemy_31",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_103_Head": {
+        "normal0ItemName01": "Armor_046_Head",
+        "normal0ItemName02": "Item_Enemy_16",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_103_Lower": {
+        "normal0ItemName01": "Armor_046_Lower",
+        "normal0ItemName02": "Item_Enemy_16",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_103_Upper": {
+        "normal0ItemName01": "Armor_046_Upper",
+        "normal0ItemName02": "Item_Enemy_16",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_104_Head": {
+        "normal0ItemName01": "Armor_103_Head",
+        "normal0ItemName02": "Item_Enemy_16",
+        "normal0ItemName03": "Item_Fruit_C",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_104_Lower": {
+        "normal0ItemName01": "Armor_103_Lower",
+        "normal0ItemName02": "Item_Enemy_16",
+        "normal0ItemName03": "Item_Fruit_C",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_104_Upper": {
+        "normal0ItemName01": "Armor_103_Upper",
+        "normal0ItemName02": "Item_Enemy_16",
+        "normal0ItemName03": "Item_Fruit_C",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_105_Head": {
+        "normal0ItemName01": "Armor_104_Head",
+        "normal0ItemName02": "Item_Mushroom_H",
+        "normal0ItemName03": "Item_Enemy_43",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_105_Lower": {
+        "normal0ItemName01": "Armor_104_Lower",
+        "normal0ItemName02": "Item_Mushroom_H",
+        "normal0ItemName03": "Item_Enemy_43",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_105_Upper": {
+        "normal0ItemName01": "Armor_104_Upper",
+        "normal0ItemName02": "Item_Mushroom_H",
+        "normal0ItemName03": "Item_Enemy_43",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_106_Head": {
+        "normal0ItemName01": "Armor_105_Head",
+        "normal0ItemName02": "Item_Enemy_43",
+        "normal0ItemName03": "Item_Ore_D",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_106_Lower": {
+        "normal0ItemName01": "Armor_105_Lower",
+        "normal0ItemName02": "Item_Enemy_43",
+        "normal0ItemName03": "Item_Ore_D",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_106_Upper": {
+        "normal0ItemName01": "Armor_105_Upper",
+        "normal0ItemName02": "Item_Enemy_43",
+        "normal0ItemName03": "Item_Ore_D",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_111_Head": {
+        "normal0ItemName01": "Armor_048_Head",
+        "normal0ItemName02": "Item_Enemy_12",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1"
+    },
+    "Armor_111_Lower": {
+        "normal0ItemName01": "Armor_048_Lower",
+        "normal0ItemName02": "Item_Enemy_12",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1"
+    },
+    "Armor_111_Upper": {
+        "normal0ItemName01": "Armor_048_Upper",
+        "normal0ItemName02": "Item_Enemy_12",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1"
+    },
+    "Armor_112_Head": {
+        "normal0ItemName01": "Armor_111_Head",
+        "normal0ItemName02": "Item_Enemy_12",
+        "normal0ItemName03": "Item_Enemy_13",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_112_Lower": {
+        "normal0ItemName01": "Armor_111_Lower",
+        "normal0ItemName02": "Item_Enemy_12",
+        "normal0ItemName03": "Item_Enemy_13",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_112_Upper": {
+        "normal0ItemName01": "Armor_111_Upper",
+        "normal0ItemName02": "Item_Enemy_12",
+        "normal0ItemName03": "Item_Enemy_13",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_113_Head": {
+        "normal0ItemName01": "Armor_112_Head",
+        "normal0ItemName02": "Item_Enemy_13",
+        "normal0ItemName03": "Item_Enemy_14",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "4",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_113_Lower": {
+        "normal0ItemName01": "Armor_112_Lower",
+        "normal0ItemName02": "Item_Enemy_13",
+        "normal0ItemName03": "Item_Enemy_14",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "4",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_113_Upper": {
+        "normal0ItemName01": "Armor_112_Upper",
+        "normal0ItemName02": "Item_Enemy_13",
+        "normal0ItemName03": "Item_Enemy_14",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "4",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_114_Head": {
+        "normal0ItemName01": "Armor_113_Head",
+        "normal0ItemName02": "Item_Enemy_14",
+        "normal0ItemName03": "Item_Enemy_48",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_114_Lower": {
+        "normal0ItemName01": "Armor_113_Lower",
+        "normal0ItemName02": "Item_Enemy_14",
+        "normal0ItemName03": "Item_Enemy_52",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_114_Upper": {
+        "normal0ItemName01": "Armor_113_Upper",
+        "normal0ItemName02": "Item_Enemy_14",
+        "normal0ItemName03": "Item_Enemy_56",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_117_Head": {
+        "normal0ItemName01": "Armor_024_Head",
+        "normal0ItemName02": "Item_Ore_A",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_118_Head": {
+        "normal0ItemName01": "Armor_117_Head",
+        "normal0ItemName02": "Item_Ore_A",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "4",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_119_Head": {
+        "normal0ItemName01": "Armor_118_Head",
+        "normal0ItemName02": "Item_Ore_A",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "6",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_120_Head": {
+        "normal0ItemName01": "Armor_119_Head",
+        "normal0ItemName02": "Item_Ore_A",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_121_Head": {
+        "normal0ItemName01": "Armor_025_Head",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_122_Head": {
+        "normal0ItemName01": "Armor_121_Head",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "4",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_123_Head": {
+        "normal0ItemName01": "Armor_122_Head",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "6",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_124_Head": {
+        "normal0ItemName01": "Armor_123_Head",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_125_Head": {
+        "normal0ItemName01": "Armor_026_Head",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_126_Head": {
+        "normal0ItemName01": "Armor_125_Head",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "4",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_127_Head": {
+        "normal0ItemName01": "Armor_126_Head",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "6",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_128_Head": {
+        "normal0ItemName01": "Armor_127_Head",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_129_Head": {
+        "normal0ItemName01": "Armor_027_Head",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_130_Head": {
+        "normal0ItemName01": "Armor_129_Head",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "4",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_131_Head": {
+        "normal0ItemName01": "Armor_130_Head",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "6",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_132_Head": {
+        "normal0ItemName01": "Armor_131_Head",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_133_Head": {
+        "normal0ItemName01": "Armor_028_Head",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_134_Head": {
+        "normal0ItemName01": "Armor_133_Head",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "8",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_135_Head": {
+        "normal0ItemName01": "Armor_134_Head",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "16",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_136_Head": {
+        "normal0ItemName01": "Armor_135_Head",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "20",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_137_Head": {
+        "normal0ItemName01": "Armor_029_Head",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_138_Head": {
+        "normal0ItemName01": "Armor_137_Head",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_139_Head": {
+        "normal0ItemName01": "Armor_138_Head",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "20",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_140_Head": {
+        "normal0ItemName01": "Armor_139_Head",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_I",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "30",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_148_Upper": {
+        "normal0ItemName01": "Armor_116_Upper",
+        "normal0ItemName02": "Item_PlantGet_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3"
+    },
+    "Armor_149_Upper": {
+        "normal0ItemName01": "Armor_148_Upper",
+        "normal0ItemName02": "Item_PlantGet_J",
+        "normal0ItemName03": "Item_Enemy_56",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_150_Upper": {
+        "normal0ItemName01": "Armor_149_Upper",
+        "normal0ItemName02": "Item_PlantGet_J",
+        "normal0ItemName03": "Item_Enemy_52",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_151_Upper": {
+        "normal0ItemName01": "Armor_150_Upper",
+        "normal0ItemName02": "Item_PlantGet_J",
+        "normal0ItemName03": "Item_Enemy_48",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_152_Lower": {
+        "normal0ItemName01": "Armor_049_Lower",
+        "normal0ItemName02": "Item_Enemy_24",
+        "normal0ItemName03": "Animal_Insect_S",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_153_Lower": {
+        "normal0ItemName01": "Armor_152_Lower",
+        "normal0ItemName02": "Item_Enemy_24",
+        "normal0ItemName03": "Item_PlantGet_M",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_154_Lower": {
+        "normal0ItemName01": "Armor_153_Lower",
+        "normal0ItemName02": "Item_Enemy_25",
+        "normal0ItemName03": "Item_Mushroom_D",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "15"
+    },
+    "Armor_155_Lower": {
+        "normal0ItemName01": "Armor_154_Lower",
+        "normal0ItemName02": "Item_Enemy_25",
+        "normal0ItemName03": "Item_PlantGet_O",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "4",
+        "normal0ItemNum03": "15"
+    },
+    "Armor_156_Lower": {
+        "normal0ItemName01": "Armor_141_Lower",
+        "normal0ItemName02": "Item_Enemy_20",
+        "normal0ItemName03": "Animal_Insect_S",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_157_Lower": {
+        "normal0ItemName01": "Armor_156_Lower",
+        "normal0ItemName02": "Item_Enemy_57",
+        "normal0ItemName03": "Item_PlantGet_M",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_158_Lower": {
+        "normal0ItemName01": "Armor_157_Lower",
+        "normal0ItemName02": "Item_Enemy_21",
+        "normal0ItemName03": "Item_Mushroom_D",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "15"
+    },
+    "Armor_159_Lower": {
+        "normal0ItemName01": "Armor_158_Lower",
+        "normal0ItemName02": "Item_Enemy_49",
+        "normal0ItemName03": "Item_PlantGet_O",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "15"
+    },
+    "Armor_168_Head": {
+        "normal0ItemName01": "Armor_199_Head",
+        "normal0ItemName02": "Item_Enemy_29",
+        "normal0ItemName03": "Item_Enemy_30",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_169_Head": {
+        "normal0ItemName01": "Armor_168_Head",
+        "normal0ItemName02": "Item_Ore_J",
+        "normal0ItemName03": "Item_Enemy_31",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_186_Head": {
+        "normal0ItemName01": "Armor_181_Head",
+        "normal0ItemName02": "Item_Enemy_27",
+        "normal0ItemName03": "Item_Enemy_28",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_187_Head": {
+        "normal0ItemName01": "Armor_186_Head",
+        "normal0ItemName02": "Item_Enemy_28",
+        "normal0ItemName03": "Item_Enemy_26",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_188_Head": {
+        "normal0ItemName01": "Armor_187_Head",
+        "normal0ItemName02": "Item_Enemy_29",
+        "normal0ItemName03": "Item_Enemy_30",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_189_Head": {
+        "normal0ItemName01": "Armor_188_Head",
+        "normal0ItemName02": "Item_Ore_J",
+        "normal0ItemName03": "Item_Enemy_31",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_190_Head": {
+        "normal0ItemName01": "Armor_182_Head",
+        "normal0ItemName02": "Item_Enemy_27",
+        "normal0ItemName03": "Item_Enemy_28",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_191_Head": {
+        "normal0ItemName01": "Armor_190_Head",
+        "normal0ItemName02": "Item_Enemy_28",
+        "normal0ItemName03": "Item_Enemy_26",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_192_Head": {
+        "normal0ItemName01": "Armor_191_Head",
+        "normal0ItemName02": "Item_Enemy_29",
+        "normal0ItemName03": "Item_Enemy_30",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_193_Head": {
+        "normal0ItemName01": "Armor_192_Head",
+        "normal0ItemName02": "Item_Ore_J",
+        "normal0ItemName03": "Item_Enemy_31",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_194_Head": {
+        "normal0ItemName01": "Armor_183_Head",
+        "normal0ItemName02": "Item_Enemy_27",
+        "normal0ItemName03": "Item_Enemy_28",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_195_Head": {
+        "normal0ItemName01": "Armor_194_Head",
+        "normal0ItemName02": "Item_Enemy_28",
+        "normal0ItemName03": "Item_Enemy_26",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_196_Head": {
+        "normal0ItemName01": "Armor_195_Head",
+        "normal0ItemName02": "Item_Enemy_29",
+        "normal0ItemName03": "Item_Enemy_30",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_197_Head": {
+        "normal0ItemName01": "Armor_196_Head",
+        "normal0ItemName02": "Item_Ore_J",
+        "normal0ItemName03": "Item_Enemy_31",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_198_Head": {
+        "normal0ItemName01": "Armor_184_Head",
+        "normal0ItemName02": "Item_Enemy_27",
+        "normal0ItemName03": "Item_Enemy_28",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "5"
+    },
+    "Armor_199_Head": {
+        "normal0ItemName01": "Armor_198_Head",
+        "normal0ItemName02": "Item_Enemy_28",
+        "normal0ItemName03": "Item_Enemy_26",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "10"
+    },
+    "Armor_201_Head": {
+        "normal0ItemName01": "Armor_200_Head",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_201_Lower": {
+        "normal0ItemName01": "Armor_200_Lower",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_201_Upper": {
+        "normal0ItemName01": "Armor_200_Upper",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_202_Head": {
+        "normal0ItemName01": "Armor_201_Head",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_202_Lower": {
+        "normal0ItemName01": "Armor_201_Lower",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_202_Upper": {
+        "normal0ItemName01": "Armor_201_Upper",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_203_Head": {
+        "normal0ItemName01": "Armor_202_Head",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_203_Lower": {
+        "normal0ItemName01": "Armor_202_Lower",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_203_Upper": {
+        "normal0ItemName01": "Armor_202_Upper",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_204_Head": {
+        "normal0ItemName01": "Armor_203_Head",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "30",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_204_Lower": {
+        "normal0ItemName01": "Armor_203_Lower",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "30",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_204_Upper": {
+        "normal0ItemName01": "Armor_203_Upper",
+        "normal0ItemName02": "Item_Ore_F",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "30",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_206_Head": {
+        "normal0ItemName01": "Armor_205_Head",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_206_Lower": {
+        "normal0ItemName01": "Armor_205_Lower",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_206_Upper": {
+        "normal0ItemName01": "Armor_205_Upper",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_207_Head": {
+        "normal0ItemName01": "Armor_206_Head",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_207_Lower": {
+        "normal0ItemName01": "Armor_206_Lower",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_207_Upper": {
+        "normal0ItemName01": "Armor_206_Upper",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_208_Head": {
+        "normal0ItemName01": "Armor_207_Head",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_208_Lower": {
+        "normal0ItemName01": "Armor_207_Lower",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_208_Upper": {
+        "normal0ItemName01": "Armor_207_Upper",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_209_Head": {
+        "normal0ItemName01": "Armor_208_Head",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "20",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_209_Lower": {
+        "normal0ItemName01": "Armor_208_Lower",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "20",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_209_Upper": {
+        "normal0ItemName01": "Armor_208_Upper",
+        "normal0ItemName02": "Item_Ore_E",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "20",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_211_Head": {
+        "normal0ItemName01": "Armor_210_Head",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_211_Lower": {
+        "normal0ItemName01": "Armor_210_Lower",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_211_Upper": {
+        "normal0ItemName01": "Armor_210_Upper",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_212_Head": {
+        "normal0ItemName01": "Armor_211_Head",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_212_Lower": {
+        "normal0ItemName01": "Armor_211_Lower",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_212_Upper": {
+        "normal0ItemName01": "Armor_211_Upper",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_213_Head": {
+        "normal0ItemName01": "Armor_212_Head",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_213_Lower": {
+        "normal0ItemName01": "Armor_212_Lower",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_213_Upper": {
+        "normal0ItemName01": "Armor_212_Upper",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_214_Head": {
+        "normal0ItemName01": "Armor_213_Head",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_214_Lower": {
+        "normal0ItemName01": "Armor_213_Lower",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_214_Upper": {
+        "normal0ItemName01": "Armor_213_Upper",
+        "normal0ItemName02": "Item_Ore_D",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_216_Head": {
+        "normal0ItemName01": "Armor_215_Head",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_216_Lower": {
+        "normal0ItemName01": "Armor_215_Lower",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_216_Upper": {
+        "normal0ItemName01": "Armor_215_Upper",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_217_Head": {
+        "normal0ItemName01": "Armor_216_Head",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_217_Lower": {
+        "normal0ItemName01": "Armor_216_Lower",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_217_Upper": {
+        "normal0ItemName01": "Armor_216_Upper",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_218_Head": {
+        "normal0ItemName01": "Armor_217_Head",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_218_Lower": {
+        "normal0ItemName01": "Armor_217_Lower",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_218_Upper": {
+        "normal0ItemName01": "Armor_217_Upper",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_219_Head": {
+        "normal0ItemName01": "Armor_218_Head",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_219_Lower": {
+        "normal0ItemName01": "Armor_218_Lower",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_219_Upper": {
+        "normal0ItemName01": "Armor_218_Upper",
+        "normal0ItemName02": "Item_Ore_C",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_221_Head": {
+        "normal0ItemName01": "Armor_220_Head",
+        "normal0ItemName02": "Item_Plant_J",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_222_Head": {
+        "normal0ItemName01": "Armor_221_Head",
+        "normal0ItemName02": "Item_Plant_J",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "2"
+    },
+    "Armor_223_Head": {
+        "normal0ItemName01": "Armor_222_Head",
+        "normal0ItemName02": "Item_Plant_J",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "3"
+    },
+    "Armor_224_Head": {
+        "normal0ItemName01": "Armor_223_Head",
+        "normal0ItemName02": "Item_Plant_J",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "4",
+        "normal0ItemNum03": "4"
+    },
+    "Armor_226_Head": {
+        "normal0ItemName01": "Armor_225_Head",
+        "normal0ItemName02": "Item_Enemy_32",
+        "normal0ItemName03": "Item_Enemy_38",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_226_Lower": {
+        "normal0ItemName01": "Armor_225_Lower",
+        "normal0ItemName02": "Item_Enemy_32",
+        "normal0ItemName03": "Item_Enemy_53",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_226_Upper": {
+        "normal0ItemName01": "Armor_225_Upper",
+        "normal0ItemName02": "Item_Enemy_32",
+        "normal0ItemName03": "Item_Enemy_49",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_227_Head": {
+        "normal0ItemName01": "Armor_226_Head",
+        "normal0ItemName02": "Item_Enemy_33",
+        "normal0ItemName03": "Item_Enemy_39",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_227_Lower": {
+        "normal0ItemName01": "Armor_226_Lower",
+        "normal0ItemName02": "Item_Enemy_33",
+        "normal0ItemName03": "Item_Enemy_54",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_227_Upper": {
+        "normal0ItemName01": "Armor_226_Upper",
+        "normal0ItemName02": "Item_Enemy_33",
+        "normal0ItemName03": "Item_Enemy_50",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_228_Head": {
+        "normal0ItemName01": "Armor_227_Head",
+        "normal0ItemName02": "Item_Enemy_34",
+        "normal0ItemName03": "Item_Enemy_47",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_228_Lower": {
+        "normal0ItemName01": "Armor_227_Lower",
+        "normal0ItemName02": "Item_Enemy_34",
+        "normal0ItemName03": "Item_Enemy_55",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_228_Upper": {
+        "normal0ItemName01": "Armor_227_Upper",
+        "normal0ItemName02": "Item_Enemy_34",
+        "normal0ItemName03": "Item_Enemy_51",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_229_Head": {
+        "normal0ItemName01": "Armor_228_Head",
+        "normal0ItemName02": "Item_Enemy_14",
+        "normal0ItemName03": "Item_Enemy_48",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_229_Lower": {
+        "normal0ItemName01": "Armor_228_Lower",
+        "normal0ItemName02": "Item_Enemy_14",
+        "normal0ItemName03": "Item_Enemy_56",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_229_Upper": {
+        "normal0ItemName01": "Armor_228_Upper",
+        "normal0ItemName02": "Item_Enemy_14",
+        "normal0ItemName03": "Item_Enemy_52",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "2",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_231_Head": {
+        "normal0ItemName01": "Armor_230_Head",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_231_Lower": {
+        "normal0ItemName01": "Armor_230_Lower",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_231_Upper": {
+        "normal0ItemName01": "Armor_230_Upper",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "1",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_232_Head": {
+        "normal0ItemName01": "Armor_231_Head",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_232_Lower": {
+        "normal0ItemName01": "Armor_231_Lower",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_232_Upper": {
+        "normal0ItemName01": "Armor_231_Upper",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "3",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_233_Head": {
+        "normal0ItemName01": "Armor_232_Head",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_233_Lower": {
+        "normal0ItemName01": "Armor_232_Lower",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_233_Upper": {
+        "normal0ItemName01": "Armor_232_Upper",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_234_Head": {
+        "normal0ItemName01": "Armor_233_Head",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_234_Lower": {
+        "normal0ItemName01": "Armor_233_Lower",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Armor_234_Upper": {
+        "normal0ItemName01": "Armor_233_Upper",
+        "normal0ItemName02": "Item_Ore_B",
+        "normal0ItemName03": "Item_Ore_J",
+        "normal0ItemNum01": "1",
+        "normal0ItemNum02": "10",
+        "normal0ItemNum03": "1"
+    },
+    "Weapon_Bow_023": {
+        "normal0ItemName01": "Item_Enemy_26",
+        "normal0ItemName02": "Item_Enemy_28",
+        "normal0ItemName03": "Item_Enemy_31",
+        "normal0ItemNum01": "10",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "1"
+    },
+    "Weapon_Lsword_023": {
+        "normal0ItemName01": "Item_Enemy_27",
+        "normal0ItemName02": "Item_Enemy_29",
+        "normal0ItemName03": "Item_Enemy_30",
+        "normal0ItemNum01": "15",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "2"
+    },
+    "Weapon_Shield_038": {
+        "normal0ItemName01": "Item_Enemy_26",
+        "normal0ItemName02": "Item_Enemy_28",
+        "normal0ItemName03": "Item_Enemy_31",
+        "normal0ItemNum01": "10",
+        "normal0ItemNum02": "15",
+        "normal0ItemNum03": "1"
+    },
+    "Weapon_Spear_023": {
+        "normal0ItemName01": "Item_Enemy_26",
+        "normal0ItemName02": "Item_Enemy_29",
+        "normal0ItemName03": "Item_Enemy_30",
+        "normal0ItemNum01": "15",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "2"
+    },
+    "Weapon_Sword_023": {
+        "normal0ItemName01": "Item_Enemy_28",
+        "normal0ItemName02": "Item_Enemy_29",
+        "normal0ItemName03": "Item_Enemy_30",
+        "normal0ItemNum01": "15",
+        "normal0ItemNum02": "5",
+        "normal0ItemNum03": "2"
+    }
+}
