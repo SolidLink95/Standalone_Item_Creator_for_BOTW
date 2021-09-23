@@ -61,6 +61,9 @@ class Window(QMainWindow, Ui_SIC):
 
 
     def setup_ui_local(self):
+        #hide
+        self.korok_mask.hide()
+        self.anims.hide()
         #config
         conf = Config()
         config = configparser.ConfigParser()
