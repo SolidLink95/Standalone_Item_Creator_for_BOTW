@@ -215,7 +215,7 @@ def random_crafting_requirements(window):
         window.item1.setCurrentText(window.items_rev[random.choice(itemki_local)])
         window.item1_n.setText(str(random.randint(1, 11)))
     item2 = random.choice(itemki_local)
-    itemki_local.remove(item2)
+    if item2 in itemki_local: itemki_local.remove(item2)
     item3 = random.choice(itemki_local)
     window.item2.setCurrentText(window.items_rev[item2])
     window.item3.setCurrentText(window.items_rev[item3])
@@ -225,9 +225,9 @@ def random_crafting_requirements(window):
 def random_crafting_requirements_2(window):
     itemki_local = list(window.items.values())
     item1 = window.items_rev[random.choice(itemki_local)]
-    itemki_local.remove(item1)
+    if item1 in itemki_local: itemki_local.remove(item1)
     item2 = window.items_rev[random.choice(itemki_local)]
-    itemki_local.remove(item2)
+    if item2 in itemki_local: itemki_local.remove(item2)
     item3 = window.items_rev[random.choice(itemki_local)]
     window.item1_2.setCurrentText(window.items_rev[item1])
     window.item2_2.setCurrentText(window.items_rev[item2])
