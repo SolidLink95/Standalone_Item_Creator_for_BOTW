@@ -9,42 +9,16 @@ from shutil import copyfile
 
 class Armor:
     def __init__(self, data, armor, pack_name):
-        self.bfres = ''; self.mainmodel = '' ; self.bfres_template = '';self.armorNextRankName = '';self.armorStarNum = '';self.itemUseIconActorName = '';
-
-        if 'armorNextRankName' in data['Armors'][armor]: self.armorNextRankName = data['Armors'][armor]['armorNextRankName']
-        if 'armorStarNum' in data['Armors'][armor]:self.armorStarNum = data['Armors'][armor]['armorStarNum']
-        if 'itemUseIconActorName' in data['Armors'][armor]:self.itemUseIconActorName = data['Armors'][armor]['itemUseIconActorName']
-        self.base = str(data['Armors'][armor]['base'])
-        self.name = str(data['Armors'][armor]['name'])
-        self.defence = str(data['Armors'][armor]['defence'])
-        self.elink = str(data['Armors'][armor]['elink'])
-        self.effect = str(data['Armors'][armor]['effect'])
-        if str(data['Armors'][armor]['effect_lv']) == '': self.effect_lv = 0
-        else: self.effect_lv = str(data['Armors'][armor]['effect_lv'])
-        self.slink = str(data['Armors'][armor]['slink'])
-        self.profile = str(data['Armors'][armor]['profile'])
-        self.series = str(data['Armors'][armor]['series'])
-        self.price = str(data['Armors'][armor]['price'])
-        if 'bfres' in data['Armors'][armor]: self.bfres = str(data['Armors'][armor]['bfres'])
-        if 'mainmodel' in data['Armors'][armor]: self.mainmodel = str(data['Armors'][armor]['mainmodel'])
-        if 'bfres_template' in data['Armors'][armor]: self.bfres_template = str(data['Armors'][armor]['bfres_template'])
-        self.name_desc = str(data['Armors'][armor]['name_desc'])
-        self.desc = str(data['Armors'][armor]['desc'])
-        self.item1 = data['Armors'][armor]['Crafting']['item1']
-        self.item1_n = data['Armors'][armor]['Crafting']['item1_n']
-        self.item2 = data['Armors'][armor]['Crafting']['item2']
-        self.item2_n = data['Armors'][armor]['Crafting']['item2_n']
-        self.item3 = data['Armors'][armor]['Crafting']['item3']
-        self.item3_n = data['Armors'][armor]['Crafting']['item3_n']
+        for elem in data['Armors'][armor]:
+            setattr(self, elem, data['Armors'][armor][elem])
+        for elem in data['Armors'][armor]['Crafting']:
+            setattr(self, elem, data['Armors'][armor]['Crafting'][elem])
+        self.pack_name = pack_name
+        
+      
         self.data = self.get_actorpack_data()
         self.bfres_folder = self.get_model_folder()
         self.pack_name = pack_name
-        self.physics = ''
-        self.korok_mask = False
-        if 'physics' in data['Armors'][armor]:
-            self.physics = data['Armors'][armor]['physics']
-        if 'korok_mask' in data['Armors'][armor]:
-            self.korok_mask = bool(data['Armors'][armor]['korok_mask'])
 
     def get_actorpack_data(self):
         #file = get_def_path() + '\\Actor\\Pack\\' + self.base + '.sbactorpack'

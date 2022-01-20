@@ -14,40 +14,12 @@ from shutil import copyfile
 
 class Weapon:
     def __init__(self, data, wep, pack_name):
-        self.name = data['Weapons'][wep]['name']
-        self.attack = data['Weapons'][wep]['attack']
-        self.dur = data['Weapons'][wep]['dur']
-        self.islifeinfinite = data['Weapons'][wep]['islifeinfinite']
-        self.base = data['Weapons'][wep]['base']
-        self.sheath = data['Weapons'][wep]['sheath']
-        self.elink = data['Weapons'][wep]['elink']
-        self.slink = data['Weapons'][wep]['slink']
-        self.profile = data['Weapons'][wep]['profile']
-        self.magicpower = data['Weapons'][wep]['magicpower']
-        self.magic = data['Weapons'][wep]['magic']
-        self.magicradius = data['Weapons'][wep]['magicradius']
-        self.magicrange = data['Weapons'][wep]['magicrange']
-        self.magicspeed = data['Weapons'][wep]['magicspeed']
-        self.magicgravity = data['Weapons'][wep]['magicgravity']
-        self.ismagicinf = data['Weapons'][wep]['ismagicinf']
-        self.subtype = data['Weapons'][wep]['subtype']
-        self.price = data['Weapons'][wep]['price']
-        self.name_desc = data['Weapons'][wep]['name_desc']
-        self.desc = data['Weapons'][wep]['desc']
-        self.item1 = data['Weapons'][wep]['Crafting']['item1']
-        self.item1_n = data['Weapons'][wep]['Crafting']['item1_n']
-        self.item2 = data['Weapons'][wep]['Crafting']['item2']
-        self.item2_n = data['Weapons'][wep]['Crafting']['item2_n']
-        self.item3 = data['Weapons'][wep]['Crafting']['item3']
-        self.item3_n = data['Weapons'][wep]['Crafting']['item3_n']
-        self.data = self.get_actorpack_data()
+        for elem in data['Weapons'][wep]:
+            setattr(self, elem, data['Weapons'][wep][elem])
+        for elem in data['Weapons'][wep]['Crafting']:
+            setattr(self, elem, data['Weapons'][wep]['Crafting'][elem])
         self.pack_name = pack_name
-        self.physics = ''
-        self.anims = False
-        if 'physics' in data['Weapons'][wep]:
-            self.physics = data['Weapons'][wep]['physics']
-        if 'anims' in data['Weapons'][wep]:
-            self.anims = bool(data['Weapons'][wep]['anims'])
+        self.data = self.get_actorpack_data()
 
 
     def get_actorpack_data(self):
@@ -152,10 +124,9 @@ class Weapon:
                 sheath = ''
             else:
                 sheath = self.sheath
-            #print('Sheath ' + sheath)
-            pio.objects[self.profile.replace('Weapon', '')].params["PodName"] = oead.aamp.Parameter(oead.FixedSafeString32(sheath))
-
-
+            if 'LargeSword' in pio.objects: pio.objects['LargeSword'].params["PodName"] = oead.aamp.Parameter(oead.FixedSafeString32(sheath))
+            elif 'SmallSword' in pio.objects: pio.objects['SmallSword'].params["PodName"] = oead.aamp.Parameter(oead.FixedSafeString32(sheath))
+            else: print(f'No valid sheath entry found for sheath [{self.sheath}] and profile [{self.profile}]')
         #print_aamp(pio)
         update_sarc(pio, self.data, old_name, new_name)
 
