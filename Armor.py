@@ -87,7 +87,10 @@ class Armor:
         return PhysicsUser
 
     def do_gparam(self):
-        eff_lv = int(self.effect_lv)
+        if self.effect_lv.isnumeric():
+            eff_lv = int(self.effect_lv)
+        else:
+            eff_lv = 0
         if eff_lv > 3: eff_lv = 3
         old_name = self.get_name_from_sarc('bgparamlist')
         new_name = f'Actor/GeneralParamList/{self.name}.bgparamlist'
