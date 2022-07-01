@@ -7,9 +7,10 @@ from files_manage import get_endianness
 class Sarc_file:
     def __init__(self, file):
         self.file = file
-        self.data_sarc = self.init()
-        self.data_writer = SarcWriter.from_sarc(self.data_sarc)
-        set_sarc_endian(self.data_writer)
+        if file is not None:
+            self.data_sarc = self.init()
+            self.data_writer = SarcWriter.from_sarc(self.data_sarc)
+            set_sarc_endian(self.data_writer)
 
     def init(self):
         with open(self.file + '', 'rb') as f:

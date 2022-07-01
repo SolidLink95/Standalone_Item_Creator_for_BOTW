@@ -5,3 +5,4 @@ Pymsyt
 bs4
 pyqt5-tools
 requests
+pywin32

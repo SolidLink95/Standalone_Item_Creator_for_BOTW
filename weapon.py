@@ -3,6 +3,9 @@ import ctypes
 import json
 import os
 import sys
+
+import win32gui
+
 from Sheaths import Sheath
 import zlib
 from sarc_class import Sarc_file
@@ -28,8 +31,8 @@ class Weapon:
         if os.path.exists(file):
             return Sarc_file(file)
         else:
-            print(f'Cant find base actor {file}')
-            sys.exit()
+            win32gui.MessageBox(0, f'Cannot find file: \n {file}', "Error", 0)
+            return None
 
     def do_actorlink(self):
         old_name = f'Actor/ActorLink/{self.base}.bxml'
@@ -63,7 +66,7 @@ class Weapon:
         if os.path.exists(file):
             data = Sarc_file(file)
         else:
-            print(f'Cant find base actor {file}')
+            win32gui.MessageBox(0,f'Cannot find file: \n {file}',"Error",0)
             return ''
 
         #Removing old physics files from actorpack
@@ -219,16 +222,17 @@ class Weapon:
         return os.path.basename(new_AI).split('.')[0], os.path.basename(new_name_baslist).split('.')[0]
 
     def create_weapon(self):
-        self.do_actorlink()
-        self.get_recipe()
-        self.do_gparam()
-        self.do_model()
-        self.do_sheath()
-        Bfres_Dup(self.base, self.name, self.profile, self.pack_name).duplicate()
-        actorpack = f'{self.pack_name}\\content\\Actor\\Pack\\{self.name}.sbactorpack'
-        if not os.path.exists(actorpack):
-            with open(actorpack, 'wb') as f:
-                f.write(oead.yaz0.compress(self.data.data_writer.write()[1]))
+        if self.data is not None:
+            self.do_actorlink()
+            self.get_recipe()
+            self.do_gparam()
+            self.do_model()
+            self.do_sheath()
+            Bfres_Dup(self.base, self.name, self.profile, self.pack_name).duplicate()
+            actorpack = f'{self.pack_name}\\content\\Actor\\Pack\\{self.name}.sbactorpack'
+            if not os.path.exists(actorpack):
+                with open(actorpack, 'wb') as f:
+                    f.write(oead.yaz0.compress(self.data.data_writer.write()[1]))
 
 
 

@@ -1,16 +1,15 @@
-import binascii
-import ctypes
-import json
 import os
 import sys
 import pathlib
 import zlib
+import win32gui
 from sarc_class import Sarc_file
 import oead
 from oead import FixedSafeString32, FixedSafeString64
 from bfres_dup import Bfres_Dup
 from files_manage import get_def_path, create_folder, get_endianness, get_file_path
 from shutil import copyfile
+
 
 class Sheath:
     def __init__(self, base, name, pack_name):
@@ -19,16 +18,14 @@ class Sheath:
         self.base = 'Weapon_Sheath_001'
         self.data = self.get_actorpack_data()
 
-
     def get_actorpack_data(self):
-        #file = f'{get_def_path()}\\Actor\\Pack\\{self.base}.sbactorpack'
+        # file = f'{get_def_path()}\\Actor\\Pack\\{self.base}.sbactorpack'
         file = get_file_path(f'Actor\\Pack\\{self.base}.sbactorpack')
         if os.path.exists(file):
             return Sarc_file(file)
         else:
-            print(f'Cant find base actor {file}')
-            sys.exit()
-
+            win32gui.MessageBox(0, f'Cannot find file: \n {file}', "Error", 0)
+            return None
 
     def do_actorlink(self):
         old_name = f'Actor/ActorLink/{self.base}.bxml'
@@ -50,18 +47,18 @@ class Sheath:
         pio.lists['ModelData'].lists['ModelData_0'].lists['Unit'].objects['Unit_0'].params['UnitName'] \
             = FixedSafeString64(self.name)
 
-        #print_aamp(pio)
+        # print_aamp(pio)
         update_sarc(pio, self.data, old_name, new_name)
 
     def do_bfres(self):
-        #path = f'{get_def_path()}\\Model\\'
+        # path = f'{get_def_path()}\\Model\\'
         if get_endianness():
-            #files = [f'{path}{self.base}.sbfres', f'{path}{self.base}.Tex1.sbfres', f'{path}{self.base}.Tex2.sbfres']
+            # files = [f'{path}{self.base}.sbfres', f'{path}{self.base}.Tex1.sbfres', f'{path}{self.base}.Tex2.sbfres']
             files = [get_file_path(f'Model\\{self.base}.sbfres'),
                      get_file_path(f'Model\\{self.base}.Tex1.sbfres'),
                      get_file_path(f'Model\\{self.base}.Tex2.sbfres')]
         else:
-            #files = [f'{path}{self.base}.sbfres', f'{path}{self.base}.Tex.sbfres']
+            # files = [f'{path}{self.base}.sbfres', f'{path}{self.base}.Tex.sbfres']
             files = [get_file_path(f'Model\\{self.base}.sbfres'),
                      get_file_path(f'Model\\{self.base}.Tex.sbfres')]
         for file in files:
@@ -71,25 +68,28 @@ class Sheath:
             if not os.path.exists(output):
                 with open(file, "rb") as f:
                     content = oead.yaz0.decompress(f.read())
-                to_write = content.replace(self.base.replace('Weapon_','').encode(), self.name.replace('Weapon_','').encode())
+                to_write = content.replace(self.base.replace('Weapon_', '').encode(),
+                                           self.name.replace('Weapon_', '').encode())
                 to_write = oead.yaz0.compress(to_write)
                 with open(output, "wb") as f:
                     f.write(to_write)
 
     def create_sheath(self):
         actorpack = f'{self.pack_name}\\content\\Actor\\Pack\\{self.name}.sbactorpack'
-        if os.path.exists(actorpack): return
-        self.do_actorlink()
-        self.do_model()
-        self.do_bfres()
+        if self.data is not None:
+            if os.path.exists(actorpack): return
+            self.do_actorlink()
+            self.do_model()
+            self.do_bfres()
 
+            with open(actorpack, 'wb') as f:
+                f.write(oead.yaz0.compress(self.data.data_writer.write()[1]))
 
-        with open(actorpack, 'wb') as f:
-            f.write(oead.yaz0.compress(self.data.data_writer.write()[1]))
 
 def update_sarc(pio, data, old_name, new_name):
     data.data_writer.files[new_name] = oead.aamp.ParameterIO.to_binary(pio)
     del data.data_writer.files[old_name]
+
 
 def get_raw_data(data_sarc, file):
     data = data_sarc.get_file(file).data.tobytes()

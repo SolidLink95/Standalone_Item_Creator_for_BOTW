@@ -112,3 +112,4 @@ tmp/*
 temp/*
 config.ini
 cache
+.idea/*

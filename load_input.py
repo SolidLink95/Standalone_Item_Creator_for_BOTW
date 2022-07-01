@@ -52,9 +52,9 @@ class Load_Input:
         if self.progressbar: self.progressbar.setValue(self.progressbar.value() + step)
         #print('Creating actorinfo entries...')
         actorinfo = Actorinfo(Weapons, Armors, self.pack_name)
-        actorinfo.do_actorinfo()
+        actorinfo.update_actorinfo()
         boot = BootupPack(Weapons, Armors, self.pack_name, self.lang)
-        if data['Weapons']:
+        if data['Weapons'] and boot.errors is None:
             #print('Creating Save flags...')
             if self.progressbar: self.progressbar.setFormat('Creating Save flags')
             if self.progressbar: self.progressbar.setValue(self.progressbar.value() + step)
@@ -62,7 +62,8 @@ class Load_Input:
         #print('Creating descriptions...')
         if self.progressbar: self.progressbar.setFormat('Creating descriptions...')
         if self.progressbar: self.progressbar.setValue(self.progressbar.value() + step)
-        boot.insert_descriptions()
+        if boot.errors is None:
+            boot.insert_descriptions()
         #print('Inserting oven...')
         if self.progressbar: self.progressbar.setFormat('Inserting oven...')
         if self.progressbar: self.progressbar.setValue(self.progressbar.value() + step)

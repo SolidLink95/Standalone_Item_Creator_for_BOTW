@@ -2,15 +2,18 @@ import binascii
 import ctypes
 import os
 import sys
+
+import win32gui
 from pymsyt import Msbt
 import zlib
-from oead import byml, SarcWriter, Sarc,yaz0, aamp, S32
+from oead import byml, SarcWriter, Sarc, yaz0, aamp, S32
 import oead
 from files_manage import get_def_path, create_folder, json_to_file, get_res, get_endianness, get_file_path
 from shutil import copyfile
 from sarc_class import Sarc_file, set_sarc_endian
 import pymsyt
 from shutil import rmtree, copytree
+
 
 class BootupPack:
     def __init__(self, Weapons, Armors, pack_name, lang):
@@ -19,24 +22,30 @@ class BootupPack:
         self.pack_name = pack_name
         self.lang = lang
         self.eu = self.lang.split('_')[-1]
-        self.init()
+        self.errors = self.init()
 
     def init(self):
-        #path = get_def_path() + '\\Pack'
+        # path = get_def_path() + '\\Pack'
         create_folder('cache')
-        if not os.path.exists('cache\\Bootup.pack'):
-            #copyfile(f'{path}\\Bootup.pack', 'cache\\Bootup.pack')
-            copyfile(get_file_path(f'Pack\\Bootup.pack'), 'cache\\Bootup.pack')
+        if not os.path.exists(r'cache\Bootup.pack'):
+            source_file = get_file_path(r'Pack\Bootup.pack')
+            if not os.path.exists(source_file):
+                win32gui.MessageBox(0, f'Cannot find file: \n {source_file}', "Error", 0)
+                return "Error"
+            copyfile(source_file, r'cache\Bootup.pack')
         if not os.path.exists(f'cache\\{self.lang}.pack'):
-            #copyfile(f'{path}\\{self.lang}.pack', f'cache\\{self.lang}.pack')
-            copyfile(get_file_path(f'Pack\\{self.lang}.pack'), f'cache\\{self.lang}.pack')
-
+            source_file = get_file_path(f'Pack\\{self.lang}.pack')
+            if not os.path.exists(source_file):
+                win32gui.MessageBox(0, f'Cannot find file: \n {source_file}', "Error", 0)
+                return "Error"
+            copyfile(source_file, f'cache\\{self.lang}.pack')
+        return None
 
     def insert_hashes(self):
         if not self.Weapons: return
-        source = 'cache\\Bootup.pack'
-        output = f'{self.pack_name}\\content\\Pack\\Bootup.pack'
-        with open(source + '', 'rb') as f:
+        source = os.path.join('cache', 'Bootup.pack')
+        output = os.path.join(self.pack_name, r'content\Pack\Bootup.pack')
+        with open(source, 'rb') as f:
             writer = SarcWriter.from_sarc(Sarc(f.read()))
             set_sarc_endian(writer)
         gamedata = SarcWriter.from_sarc(Sarc(yaz0.decompress(writer.files['GameData/gamedata.ssarc'])))
@@ -45,24 +54,25 @@ class BootupPack:
 
         for wep in self.Weapons:
             flags = iteration(flags, wep)
-        gamedata.files['/bool_data_0.bgdata'] =\
+        gamedata.files['/bool_data_0.bgdata'] = \
             byml.to_binary(flags, big_endian=get_endianness())
-        writer.files['GameData/gamedata.ssarc'] =\
+        writer.files['GameData/gamedata.ssarc'] = \
             yaz0.compress(gamedata.write()[1])
 
         with open(output, 'wb') as f:
             f.write(writer.write()[1])
 
     def insert_descriptions(self):
-        profiles = ['WeaponSmallSword', 'WeaponLargeSword', 'WeaponSpear', 'WeaponShield', 'WeaponBow', 'ArmorHead', 'ArmorUpper', 'ArmorLower']
+        profiles = ['WeaponSmallSword', 'WeaponLargeSword', 'WeaponSpear', 'WeaponShield', 'WeaponBow', 'ArmorHead',
+                    'ArmorUpper', 'ArmorLower']
 
-        source = f'cache\\{self.lang}.pack'
+        source = os.path.join('cache', f'{self.lang}.pack')
         with open(source, 'rb') as f:
             data_sarc = oead.Sarc(f.read())
             writer = oead.SarcWriter.from_sarc(data_sarc)
             set_sarc_endian(writer)
 
-        product_data_sarc =  Sarc(yaz0.decompress((writer.files[f'Message/Msg_{self.eu}.product.ssarc'])))
+        product_data_sarc = Sarc(yaz0.decompress((writer.files[f'Message/Msg_{self.eu}.product.ssarc'])))
         product_writer = oead.SarcWriter.from_sarc(product_data_sarc)
         set_sarc_endian(product_writer)
 
@@ -82,12 +92,9 @@ class BootupPack:
             to_write = Msbt.from_dict(msbt_dict).to_binary(big_endian=get_endianness())
             product_writer.files[msbt_path] = to_write
 
-
         writer.files[f'Message/Msg_{self.eu}.product.ssarc'] = yaz0.compress(product_writer.write()[1])
-        with open(f'{self.pack_name}\\content\\Pack\\{self.lang}.pack', 'wb') as f:
+        with open(os.path.join(self.pack_name, r'content\Pack', f'{self.lang}.pack'), 'wb') as f:
             f.write(writer.write()[1])
-
-
 
 
 def descs_to_json(Weapons, Armors, profiles):
@@ -105,8 +112,8 @@ def descs_to_json(Weapons, Armors, profiles):
         if not wep.profile in res:
             res[wep.profile] = {}
         res[wep.profile][name] = {
-            "name_desc" : name_desc,
-            "desc" : desc
+            "name_desc": name_desc,
+            "desc": desc
         }
 
     for armor in Armors:
@@ -122,12 +129,11 @@ def descs_to_json(Weapons, Armors, profiles):
         if not armor.profile in res:
             res[armor.profile] = {}
         res[armor.profile][name] = {
-            "name_desc" : name_desc,
-            "desc" : desc
+            "name_desc": name_desc,
+            "desc": desc
         }
 
     return res
-
 
 
 def iteration(flags, wep):
@@ -141,6 +147,7 @@ def iteration(flags, wep):
     del new_entry
     return flags
 
+
 def print_msbt(msbt):
     for ent in msbt['entries']:
         try:
@@ -149,11 +156,13 @@ def print_msbt(msbt):
         except:
             pass
 
+
 def get_base_msyt(name):
     pref = name.split('_')[-1]
-    base = name[:(len(name)-len(pref))]
+    base = name[:(len(name) - len(pref))]
     base += '001'
     return base
+
 
 def get_profile_from_name(s):
     profiles = get_res('profiles')
@@ -172,10 +181,10 @@ def create_hash(x):
     return ctypes.c_int32(binascii.crc32(bytes(x, 'utf-8'))).value
 
 
-
 def print_byml(byml):
     for elem in byml:
         print(dict(elem))
+
 
 def get_entry(byml, name):
     for i in range(len(byml)):
@@ -183,10 +192,12 @@ def get_entry(byml, name):
             return i
     return None
 
+
 def print_sarc_cont(writer):
     for elem in writer.files:
-    #for elem in self.data.data_sarc.get_files():
+        # for elem in self.data.data_sarc.get_files():
         print(elem)
+
 
 def get_raw_data(data_sarc, file):
     data = data_sarc.get_file(file).data.tobytes()

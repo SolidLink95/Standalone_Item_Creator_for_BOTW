@@ -8,6 +8,7 @@ import urllib.request
 from os import listdir
 from os.path import isfile, join
 
+
 def create_folder(dir):
     pathlib.Path(dir).mkdir(parents=True, exist_ok=True)
 
@@ -18,17 +19,22 @@ def dir_to_list(mypath):
 
 def calc_profile(s):
     profiles = get_res('profiles')
-    if s in profiles:       return s
-    if 'Lsword' in s:       return 'WeaponLargeSword'
-    if 'Sword' in s:        return 'WeaponSmallSword'
-    if 'Bow' in s:          return 'WeaponBow'
-    if 'Spear' in s:        return 'WeaponSpear'
-    if 'Shield' in s:        return 'WeaponShield'
-    if 'Head' in s:   return 'ArmorHead'
-    if 'Lower' in s:  return 'ArmorLower'
-    if 'Upper' in s:  return 'ArmorUpper'
+    data = {
+        "Lsword": "WeaponLargeSword",
+        "Sword": "WeaponSmallSword",
+        "Bow": "WeaponBow",
+        "Spear": "WeaponSpear",
+        "Shield": "WeaponShield",
+        "Head": "ArmorHead",
+        "Lower": "ArmorLower",
+        "Upper": "ArmorUpper"
+    }
+    if s in profiles:
+        return s
+    for key, item in data.items():
+        if key in s:
+            return item
     return ''
-
 
 
 def file_to_str(file):
@@ -39,27 +45,20 @@ def file_to_str(file):
         print('File does not exist: ' + file)
 
 
-def file_to_json(file):
-    with open(file,encoding="utf8") as json_file:
+def file_to_dict(file):
+    with open(file, encoding="utf8") as json_file:
         return json.load(json_file)
 
+
 def get_langs():
-    langs =['Bootup_EUde', 'Bootup_EUen', 'Bootup_EUes', 'Bootup_EUfr', 'Bootup_EUit', 'Bootup_EUnl', 'Bootup_EUru', 'Bootup_USen']
+    langs = ['Bootup_EUde', 'Bootup_EUen', 'Bootup_EUes', 'Bootup_EUfr', 'Bootup_EUit', 'Bootup_EUnl', 'Bootup_EUru',
+             'Bootup_USen']
     config = configparser.ConfigParser()
     config.read('config.ini')
     if str(config['DEFAULT']['lang']) in langs:
         langs.remove(config['DEFAULT']['lang'])
         langs.insert(0, config['DEFAULT']['lang'])
     return langs
-    #try:
-    #    files = dir_to_list(f'{get_def_path()}\\Pack')
-    #    langs = []
-    #   for file in files:
-    #       if 'Bootup_' in file and not 'Graph' in file:
-    #            langs.append(file.split('.')[0])
-    #    return langs
-    #except:
-    #    return ''
 
 
 def get_def_path():
@@ -67,30 +66,32 @@ def get_def_path():
         config = configparser.ConfigParser()
         config.read('config.ini')
         if get_endianness():
-            the_path = str(config['DEFAULT']['wiiu_update'])
             return str(config['DEFAULT']['wiiu_path'])
         else:
             return str(config['DEFAULT']['switch_path'])
-        return str(config['DEFAULT']['path'])
     except:
         return ''
+
 
 def get_file_path(file):
     config = configparser.ConfigParser()
     config.read('config.ini')
     if get_endianness():
         the_path = str(config['DEFAULT']['wiiu_update'])
-        if os.path.exists(os.path.join(the_path,file)): the_path = os.path.join(str(config['DEFAULT']['wiiu_update']),file)
-        else: the_path = os.path.join(str(config['DEFAULT']['wiiu_path']),file)
+        if os.path.exists(os.path.join(the_path, file)):
+            the_path = os.path.join(str(config['DEFAULT']['wiiu_update']), file)
+        else:
+            the_path = os.path.join(str(config['DEFAULT']['wiiu_path']), file)
         print(the_path)
         return the_path
     else:
-        return os.path.join(str(config['DEFAULT']['switch_path']),file)
+        return os.path.join(str(config['DEFAULT']['switch_path']), file)
 
-def get_def_lang():
+
+def get_def_lang(config_file='config.ini'):
     try:
         config = configparser.ConfigParser()
-        config.read('config.ini')
+        config.read(config_file)
         langs = get_langs()
         if str(config['DEFAULT']['lang']) in langs:
             return str(config['DEFAULT']['lang'])
@@ -99,13 +100,15 @@ def get_def_lang():
     except:
         return ''
 
-def get_endianness():
+
+def get_endianness(config_file='config.ini'):
     config = configparser.ConfigParser()
-    config.read('config.ini')
+    config.read(config_file)
     if config['DEFAULT']['mode'] == 'wiiu':
         return True
     elif config['DEFAULT']['mode'] == 'switch':
         return False
+
 
 def get_mods_path():
     config = configparser.ConfigParser()
@@ -113,9 +116,11 @@ def get_mods_path():
     pathlib.Path(str(config['DEFAULT']['mods_path'])).mkdir(parents=True, exist_ok=True)
     return str(config['DEFAULT']['mods_path'])
 
+
 def json_to_file(file, JSON):
     with open(file, 'w', encoding='utf-8') as f:
         json.dump(JSON, f, indent=4, sort_keys=True)
+
 
 def get_main_json():
     file = 'res\\botw_names.json'
@@ -131,20 +136,21 @@ def get_main_json():
     with open(file) as f:
         return json.load(f)
 
+
 def clear_json():
     return {
         "Weapons": {},
         "Armors": {},
     }
 
+
 def remove_dups(mylist):
-    mylist = list(dict.fromkeys(mylist))
-    mylist.sort()
-    return mylist
+    return list(set(mylist))
+
 
 def get_res(att):
     if att == 'Actors':
-        res = file_to_json('res\\Actors.json')
+        res = file_to_dict('res\\Actors.json')
     else:
-        res = file_to_json('res\\res.json')
+        res = file_to_dict('res\\res.json')
     return res[att]

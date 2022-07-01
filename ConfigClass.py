@@ -1,6 +1,6 @@
 import configparser
 import os, sys
-from files_manage import file_to_json
+from files_manage import file_to_dict
 
 
 class Config:
@@ -14,7 +14,7 @@ class Config:
         self.settings = os.path.join(self.bcml_path, 'settings.json')
 
     def get_paths(self):
-        data = file_to_json(self.settings)
+        data = file_to_dict(self.settings)
         self.wiiu_base = data['game_dir']
         self.wiiu_update = data['update_dir']
         self.switch = data['game_dir_nx']

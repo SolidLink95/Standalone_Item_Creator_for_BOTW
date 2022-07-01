@@ -3,7 +3,7 @@ import os,sys
 import random
 from copy import deepcopy
 
-from files_manage import file_to_json, json_to_file, get_res
+from files_manage import file_to_dict, json_to_file, get_res
 
 def validateConfig(config_file):
     config = configparser.ConfigParser()
@@ -278,7 +278,7 @@ def validate_test(window):
     itemki_local = list(window.items.values())
     window.armors_rev = rev_json(window.armors)
     defence_step = 5
-    recipes = file_to_json(r'res\recipes.json')
+    recipes = file_to_dict(r'res\recipes.json')
     to_add_armors = {}
     for armor in window.data['Armors']:
         if window.data['Armors'][armor]['upgradeable']:

@@ -3,6 +3,8 @@ import ctypes
 import sys
 import zlib
 import oead
+import win32gui
+
 from files_manage import create_folder, get_def_path, dir_to_list, get_res, get_endianness, get_file_path
 from shutil import copyfile
 import os
@@ -15,14 +17,15 @@ class Actorinfo:
         self.pack_name = pack_name
 
 
-    def do_actorinfo(self):
+    def update_actorinfo(self):
         actors = get_res('Actors')
         A = 'ActorInfo.product.sbyml'
-        source = f'cache\\{A}'
-        #path = get_def_path() + '\\Actor'
-        path = get_file_path(f'Actor\\{A}')
+        source = os.path.join('cache', A)
+        path = get_file_path(os.path.join('Actor', A))
         if not os.path.exists(source):
-            #copyfile(f'{path}\\{A}', source)
+            if not os.path.exists(path):
+                win32gui.MessageBox(0, f'Cannot find file: \n {path}', "Error", 0)
+                return None
             copyfile(path, source)
         with open(source, "rb") as f:
             byml = oead.yaz0.decompress(f.read())
@@ -55,10 +58,11 @@ def armor_iter(armor, actorinfo, actors):
     armor.base = get_def_item(armor.base, actors)
     old_hash = create_hash(armor.base)
     new_hash = create_hash(armor.name)
+    new_hash_int = int(new_hash)
 
     loc = 0
     for x in actorinfo['Hashes']:
-        if int(new_hash) < int(x):
+        if new_hash_int < int(x):
             break
         loc += 1
 
@@ -98,26 +102,26 @@ def armor_iter(armor, actorinfo, actors):
     new_entry["sortKey"] = S32(int(new_entry["sortKey"]) + 1)
     #new_entry["armorNextRankName"] = ''
 
-    if armor.item1 and armor.item1_n:
+    if armor.item1 and armor.item1_n and armor.item1_n.isnumeric():
         new_entry["normal0ItemName01"] = armor.item1
         new_entry["normal0ItemNum01"] = oead.S32(int(armor.item1_n))
+        if armor.item2 and armor.item2_n and armor.item2_n.isnumeric():
+            new_entry["normal0ItemName02"] = armor.item2
+            new_entry["normal0ItemNum02"] = oead.S32(int(armor.item2_n))
+            if armor.item3 and armor.item3_n and armor.item3_n.isnumeric():
+                new_entry["normal0ItemName03"] = armor.item3
+                new_entry["normal0ItemNum03"] = oead.S32(int(armor.item3_n))
+            else:
+                new_entry["normal0ItemName03"] = 'Item_Enemy_28'
+                new_entry["normal0ItemNum03"] = oead.S32(1)
+        else:
+            new_entry["normal0ItemName02"] = 'Item_Enemy_00'
+            new_entry["normal0ItemNum02"] = oead.S32(1)
     else:
         new_entry["normal0ItemName01"] = 'Item_Enemy_26'
         new_entry["normal0ItemNum01"] = oead.S32(1)
 
-    if armor.item1 and armor.item1_n and armor.item2 and armor.item2_n:
-        new_entry["normal0ItemName02"] = armor.item2
-        new_entry["normal0ItemNum02"] = oead.S32(int(armor.item2_n))
-    else:
-        new_entry["normal0ItemName02"] = 'Item_Enemy_00'
-        new_entry["normal0ItemNum02"] = oead.S32(1)
 
-    if armor.item1 and armor.item1_n and armor.item2 and armor.item2_n and armor.item3 and armor.item3_n:
-        new_entry["normal0ItemName03"] = armor.item3
-        new_entry["normal0ItemNum03"] = oead.S32(int(armor.item3_n))
-    else:
-        new_entry["normal0ItemName03"] = 'Item_Enemy_28'
-        new_entry["normal0ItemNum03"] = oead.S32(1)
     new_entry["normal0StuffNum"] = oead.S32(1)
     if armor.price:
         new_entry["itemBuyingPrice"] = oead.S32(int(armor.price))
@@ -199,10 +203,7 @@ def get_arr_index(arr, elem):
 
 def create_hash(x):
     result = zlib.crc32(bytes(x.encode()))
-    if result < 2147483647:
-        return oead.S32(result)
-    else:
-        return oead.U32(result)
+    return oead.S32(result) if result < 2147483647 else oead.U32(result)
 
 def get_def_item(base, actors):
     if f'{base}.sbactorpack' in actors:
